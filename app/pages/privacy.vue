@@ -1,7 +1,7 @@
 <script setup lang="ts">
 useSeoMeta({
   title: 'Privacy Policy',
-  description: 'DigSolutions privacy policy — how we collect, use, and protect information submitted through our website.',
+  description: 'DigSolutions privacy policy: how we collect, use, and protect information submitted through our website.',
   robots: 'noindex, follow'
 })
 </script>
@@ -14,7 +14,7 @@ useSeoMeta({
 
       <div class="prose-content mt-10 space-y-6 text-navy-600">
         <p>
-          This placeholder privacy policy covers the information DigSolutions collects through this website — primarily contact form submissions (name, email, company, and project details) and standard analytics data collected via Google Analytics and Google Tag Manager.
+          This placeholder privacy policy covers the information DigSolutions collects through this website, primarily contact form submissions (name, email, company, and project details) and standard analytics data collected via Google Analytics and Google Tag Manager.
         </p>
         <p>
           Contact form information is used solely to respond to your inquiry and is not sold or shared with third parties outside the tools directly used to deliver our services (such as our email delivery provider).

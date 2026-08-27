@@ -4,7 +4,7 @@
   --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
   --font-display: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
 
-  /* Brand blue — primary accent */
+  /* Brand blue: primary accent */
   --color-brand-50: #eef4ff;
   --color-brand-100: #dfe9ff;
   --color-brand-200: #c1d4ff;
@@ -17,7 +17,7 @@
   --color-brand-900: #1c3382;
   --color-brand-950: #141f4d;
 
-  /* Navy — text / dark surfaces */
+  /* Navy: text / dark surfaces */
   --color-navy-50: #f4f6f9;
   --color-navy-100: #e7ebf1;
   --color-navy-200: #cbd4e1;
@@ -53,5 +53,71 @@
 
   .text-balance {
     text-wrap: balance;
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(14px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  }
+
+  .reveal-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Dot-grid texture, used to break up flat backgrounds */
+  .bg-dot-grid {
+    background-image: radial-gradient(circle, var(--dot-color, rgb(28 41 66 / 0.12)) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+
+  /* Drifting gradient blobs for hero / section backdrops */
+  .bg-mesh {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+  }
+
+  .bg-mesh-blob {
+    position: absolute;
+    border-radius: 9999px;
+    filter: blur(70px);
+    opacity: 0.35;
+    animation: mesh-drift 18s ease-in-out infinite alternate;
+  }
+
+  @keyframes mesh-drift {
+    0% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(3%, 4%) scale(1.08); }
+    100% { transform: translate(-3%, -2%) scale(0.96); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .bg-mesh-blob {
+      animation: none;
+    }
+  }
+
+  /* Cursor-tracked spotlight glow, position set via --spot-x / --spot-y */
+  .spotlight {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    background: radial-gradient(600px circle at var(--spot-x, 50%) var(--spot-y, 50%), rgb(61 107 255 / 0.14), transparent 65%);
+  }
+
+  .spotlight-active {
+    opacity: 1;
+  }
+
+  /* Tilt-on-hover cards */
+  .tilt-card {
+    transform: perspective(800px) rotateX(var(--tilt-x, 0deg)) rotateY(var(--tilt-y, 0deg));
+    transition: transform 0.15s ease-out;
+    will-change: transform;
   }
 }

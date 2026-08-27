@@ -7,13 +7,17 @@ defineProps<{ caseStudy: CaseStudy }>()
 <template>
   <NuxtLink
     :to="`/portfolio/${caseStudy.slug}`"
-    class="group flex flex-col overflow-hidden rounded-2xl border border-navy-100 bg-white transition hover:-translate-y-0.5 hover:shadow-lg hover:shadow-navy-900/5"
+    class="group flex flex-col overflow-hidden rounded-2xl border border-navy-100 bg-white transition duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-navy-900/5"
   >
-    <div
-      class="flex h-40 items-end bg-gradient-to-br p-5"
-      :class="caseStudy.gradient"
-    >
-      <span class="rounded-full bg-white/15 px-3 py-1 text-xs font-medium text-white backdrop-blur">
+    <div class="relative h-44 overflow-hidden">
+      <img
+        :src="caseStudy.image"
+        :alt="caseStudy.imageAlt"
+        loading="lazy"
+        class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+      >
+      <div class="absolute inset-0 bg-gradient-to-t from-navy-950/70 via-navy-950/10 to-transparent" />
+      <span class="absolute bottom-4 left-5 rounded-full bg-white/15 px-3 py-1 text-xs font-medium text-white backdrop-blur">
         {{ caseStudy.industry }}
       </span>
     </div>

@@ -35,14 +35,15 @@ useSchemaOrg([
 
 <template>
   <div v-if="service">
-    <section class="border-b border-navy-100 bg-navy-50/50 py-16 sm:py-20">
-      <div class="container-page">
+    <section class="relative overflow-hidden border-b border-navy-100 bg-navy-50/50 py-16 sm:py-20">
+      <div class="absolute inset-0 bg-dot-grid opacity-50 [mask-image:radial-gradient(ellipse_65%_60%_at_0%_0%,black,transparent)]" />
+      <div class="container-page relative">
         <nav class="flex items-center gap-2 text-xs text-navy-500">
           <NuxtLink to="/services" class="hover:text-navy-700">Services</NuxtLink>
           <Icon name="lucide:chevron-right" size="12" />
           <span class="text-navy-700">{{ service.title }}</span>
         </nav>
-        <div class="mt-6 flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
+        <div class="mt-6 flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between" v-reveal>
           <div class="max-w-2xl">
             <span class="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-600 text-white">
               <Icon :name="service.icon" size="24" />

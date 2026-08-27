@@ -19,6 +19,7 @@ useSeoMeta({
   description: post.metaDescription,
   ogTitle: post.title,
   ogDescription: post.metaDescription,
+  ogImage: post.image,
   articleModifiedTime: post.date,
   articlePublishedTime: post.date
 })
@@ -27,6 +28,7 @@ useSchemaOrg([
   defineArticle({
     headline: post.title,
     description: post.metaDescription,
+    image: post.image,
     datePublished: post.date,
     dateModified: post.date
   }),
@@ -43,7 +45,7 @@ useSchemaOrg([
 <template>
   <article v-if="post">
     <section class="border-b border-navy-100 bg-navy-50/50 py-16 sm:py-20">
-      <div class="container-page mx-auto max-w-3xl">
+      <div class="container-page mx-auto max-w-3xl" v-reveal>
         <nav class="flex items-center gap-2 text-xs text-navy-500">
           <NuxtLink to="/blog" class="hover:text-navy-700">Blog</NuxtLink>
           <Icon name="lucide:chevron-right" size="12" />
@@ -56,7 +58,7 @@ useSchemaOrg([
           {{ post.title }}
         </h1>
         <div class="mt-5 flex items-center gap-3 text-sm text-navy-500">
-          <span>{{ post.author }}</span>
+          <span class="font-medium text-navy-700">{{ post.author }}</span>
           <span>·</span>
           <time :datetime="post.date">{{ formatDate(post.date) }}</time>
           <span>·</span>
@@ -65,15 +67,38 @@ useSchemaOrg([
       </div>
     </section>
 
+    <div class="container-page -mt-10 mx-auto max-w-4xl sm:-mt-14" v-reveal>
+      <img
+        :src="post.image"
+        :alt="post.imageAlt"
+        class="aspect-[16/8] w-full rounded-2xl object-cover shadow-lg shadow-navy-900/10"
+      >
+    </div>
+
     <section class="container-page py-16 sm:py-20">
       <div class="mx-auto max-w-3xl">
-        <p
-          v-for="(paragraph, i) in post.content"
-          :key="i"
-          class="mb-6 text-lg leading-relaxed text-navy-700"
-        >
-          {{ paragraph }}
-        </p>
+        <div class="rounded-2xl border border-brand-100 bg-brand-50/60 p-6" v-reveal>
+          <h2 class="flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-brand-700">
+            <Icon name="lucide:list-checks" size="16" />
+            Key takeaways
+          </h2>
+          <ul class="mt-4 space-y-2.5">
+            <li v-for="point in post.keyTakeaways" :key="point" class="flex items-start gap-2.5 text-sm leading-relaxed text-navy-700">
+              <Icon name="lucide:check" size="15" class="mt-0.5 shrink-0 text-brand-500" />
+              {{ point }}
+            </li>
+          </ul>
+        </div>
+
+        <div class="mt-10">
+          <p
+            v-for="(paragraph, i) in post.content"
+            :key="i"
+            class="mb-6 text-lg leading-relaxed text-navy-700"
+          >
+            {{ paragraph }}
+          </p>
+        </div>
       </div>
     </section>
 

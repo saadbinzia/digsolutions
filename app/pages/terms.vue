@@ -14,7 +14,7 @@ useSeoMeta({
 
       <div class="prose-content mt-10 space-y-6 text-navy-600">
         <p>
-          This is placeholder terms-of-service content for the DigSolutions website. It covers general use of this site's content and contact tools, and does not constitute a services agreement — actual client engagements are governed by separate signed contracts (statements of work, master service agreements, etc.).
+          This is placeholder terms-of-service content for the DigSolutions website. It covers general use of this site's content and contact tools, and does not constitute a services agreement. Actual client engagements are governed by separate signed contracts (statements of work, master service agreements, etc.).
         </p>
         <p>
           Replace this page with terms reviewed by counsel before launch.

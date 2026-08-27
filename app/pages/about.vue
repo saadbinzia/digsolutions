@@ -2,7 +2,7 @@
 useSeoMeta({
   title: 'About',
   description: 'DigSolutions is a full-stack software development company building web, mobile, AI, and enterprise systems for clients worldwide. Learn about our approach and team.',
-  ogTitle: 'About — DigSolutions',
+  ogTitle: 'About | DigSolutions',
   ogDescription: 'A full-stack engineering team building web, mobile, AI, and enterprise software.'
 })
 
@@ -10,7 +10,7 @@ const values = [
   {
     icon: 'lucide:target',
     title: 'Stack decisions serve the product',
-    description: 'We choose Next.js, Nuxt, React, Vue, Angular, or .NET based on your team and requirements — never based on what\'s easiest for us to staff.'
+    description: 'We choose Next.js, Nuxt, React, Vue, Angular, or .NET based on your team and requirements, never based on what\'s easiest for us to staff.'
   },
   {
     icon: 'lucide:eye',
@@ -20,7 +20,7 @@ const values = [
   {
     icon: 'lucide:scale',
     title: 'Right-sized engineering',
-    description: 'We build for the scale you actually have, with a clear path to the scale you\'re growing into — not speculative architecture for traffic you may never see.'
+    description: 'We build for the scale you actually have, with a clear path to the scale you\'re growing into, not speculative architecture for traffic you may never see.'
   },
   {
     icon: 'lucide:handshake',
@@ -39,37 +39,38 @@ const team = [
 
 <template>
   <div>
-    <section class="border-b border-navy-100 bg-navy-50/50 py-16 sm:py-20">
-      <div class="container-page">
+    <section class="relative overflow-hidden border-b border-navy-100 bg-navy-50/50 py-16 sm:py-20">
+      <div class="absolute inset-0 bg-dot-grid opacity-50 [mask-image:radial-gradient(ellipse_65%_60%_at_0%_0%,black,transparent)]" />
+      <div class="container-page relative" v-reveal>
         <span class="text-sm font-semibold uppercase tracking-wider text-brand-600">About DigSolutions</span>
         <h1 class="mt-3 max-w-2xl text-balance text-4xl font-bold tracking-tight text-navy-900 sm:text-5xl">
           We started this company because too much custom software gets built around the vendor's comfort zone
         </h1>
         <p class="mt-5 max-w-2xl text-balance text-lg text-navy-500">
-          DigSolutions exists to build software matched to what a business actually needs — the right stack, the right scope, and AI used where it genuinely helps rather than where it's fashionable.
+          DigSolutions exists to build software matched to what a business actually needs: the right stack, the right scope, and AI used where it genuinely helps rather than where it's fashionable.
         </p>
       </div>
     </section>
 
     <section class="container-page py-16 sm:py-20">
       <div class="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-center">
-        <div>
+        <div v-reveal>
           <h2 class="text-2xl font-bold tracking-tight text-navy-900">Full-stack, in the literal sense</h2>
           <p class="mt-4 leading-relaxed text-navy-600">
-            Most development shops specialize in one framework and try to fit every client into it. We built DigSolutions the other way around: our engineers work across Next.js, Nuxt, React, Vue, Angular, and .NET, so the technology decision is driven by your team, your existing systems, and your hiring plans — not by our staffing constraints.
+            Most development shops specialize in one framework and try to fit every client into it. We built DigSolutions the other way around: our engineers work across Next.js, Nuxt, React, Vue, Angular, and .NET, so the technology decision is driven by your team, your existing systems, and your hiring plans, not by our staffing constraints.
           </p>
           <p class="mt-4 leading-relaxed text-navy-600">
-            That same philosophy extends to AI. We don't bolt a chatbot widget onto a product and call it an AI feature. We build retrieval-augmented systems grounded in real data, custom agents that take real action, and the evaluation infrastructure that keeps AI features reliable in production — because that's the difference between an AI demo and an AI feature customers actually trust.
+            That same philosophy extends to AI. We don't bolt a chatbot widget onto a product and call it an AI feature. We build retrieval-augmented systems grounded in real data, custom agents that take real action, and the evaluation infrastructure that keeps AI features reliable in production, because that's the difference between an AI demo and an AI feature customers actually trust.
           </p>
         </div>
-        <div class="grid grid-cols-2 gap-5">
+        <div class="grid grid-cols-2 gap-5" v-reveal="120">
           <div v-for="stat in [
-            { value: '9', label: 'Years building software' },
-            { value: '120+', label: 'Projects delivered' },
-            { value: '8', label: 'Core service disciplines' },
-            { value: '98%', label: 'Client retention rate' }
+            { target: 9, suffix: '', label: 'Years building software' },
+            { target: 120, suffix: '+', label: 'Projects delivered' },
+            { target: 8, suffix: '', label: 'Core service disciplines' },
+            { target: 98, suffix: '%', label: 'Client retention rate' }
           ]" :key="stat.label" class="rounded-2xl border border-navy-100 p-6 text-center">
-            <div class="text-3xl font-bold text-navy-900">{{ stat.value }}</div>
+            <div class="text-3xl font-bold text-navy-900"><StatCounter :target="stat.target" :suffix="stat.suffix" /></div>
             <div class="mt-1 text-sm text-navy-500">{{ stat.label }}</div>
           </div>
         </div>
@@ -78,12 +79,12 @@ const team = [
 
     <section class="border-t border-navy-100 bg-navy-50/50 py-16 sm:py-20">
       <div class="container-page">
-        <div class="mx-auto max-w-2xl text-center">
+        <div class="mx-auto max-w-2xl text-center" v-reveal>
           <span class="text-sm font-semibold uppercase tracking-wider text-brand-600">How we operate</span>
           <h2 class="mt-3 text-balance text-3xl font-bold tracking-tight text-navy-900">Principles we don't compromise on</h2>
         </div>
         <div class="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2">
-          <div v-for="value in values" :key="value.title" class="rounded-2xl border border-navy-100 bg-white p-6">
+          <div v-for="(value, i) in values" :key="value.title" v-reveal="(i % 2) * 90" class="rounded-2xl border border-navy-100 bg-white p-6">
             <span class="flex h-11 w-11 items-center justify-center rounded-xl bg-brand-50 text-brand-600">
               <Icon :name="value.icon" size="20" />
             </span>
@@ -95,13 +96,13 @@ const team = [
     </section>
 
     <section class="container-page py-16 sm:py-20">
-      <div class="mx-auto max-w-2xl text-center">
+      <div class="mx-auto max-w-2xl text-center" v-reveal>
         <span class="text-sm font-semibold uppercase tracking-wider text-brand-600">Our team</span>
         <h2 class="mt-3 text-balance text-3xl font-bold tracking-tight text-navy-900">Senior engineers across every discipline</h2>
-        <p class="mt-4 text-navy-500">You work directly with the people building your product — not a rotating cast of account managers.</p>
+        <p class="mt-4 text-navy-500">You work directly with the people building your product, not a rotating cast of account managers.</p>
       </div>
       <div class="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-        <div v-for="group in team" :key="group.role" class="rounded-2xl border border-navy-100 p-6 text-center">
+        <div v-for="(group, i) in team" :key="group.role" v-reveal="(i % 4) * 70" class="rounded-2xl border border-navy-100 p-6 text-center">
           <div class="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-navy-100 text-navy-500">
             <Icon name="lucide:user" size="22" />
           </div>

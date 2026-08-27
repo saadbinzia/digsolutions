@@ -28,7 +28,7 @@ export default defineEventHandler(async (event) => {
   const config = useRuntimeConfig()
 
   if (!config.resendApiKey) {
-    console.warn('[contact] RESEND_API_KEY is not set — logging submission instead of sending email.')
+    console.warn('[contact] RESEND_API_KEY is not set, logging submission instead of sending email.')
     console.info('[contact submission]', { name, email, company, service, message })
     return { ok: true, delivered: false }
   }

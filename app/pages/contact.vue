@@ -4,7 +4,7 @@ import { services } from '~/data/services'
 useSeoMeta({
   title: 'Contact',
   description: 'Tell DigSolutions about your web, mobile, AI, or enterprise software project. We respond within one business day.',
-  ogTitle: 'Contact — DigSolutions',
+  ogTitle: 'Contact | DigSolutions',
   ogDescription: 'Start a conversation about your next software project.'
 })
 
@@ -46,8 +46,9 @@ const contactPoints = [
 
 <template>
   <div>
-    <section class="border-b border-navy-100 bg-navy-50/50 py-16 sm:py-20">
-      <div class="container-page text-center">
+    <section class="relative overflow-hidden border-b border-navy-100 bg-navy-50/50 py-16 sm:py-20">
+      <div class="absolute inset-0 bg-dot-grid opacity-50 [mask-image:radial-gradient(ellipse_65%_60%_at_50%_0%,black,transparent)]" />
+      <div class="container-page relative text-center" v-reveal>
         <span class="text-sm font-semibold uppercase tracking-wider text-brand-600">Contact</span>
         <h1 class="mx-auto mt-3 max-w-2xl text-balance text-4xl font-bold tracking-tight text-navy-900 sm:text-5xl">
           Let's talk about what you're building
@@ -155,7 +156,7 @@ const contactPoints = [
             </span>
             <h2 class="mt-5 text-xl font-semibold text-navy-900">Message sent</h2>
             <p class="mt-2 max-w-sm text-sm text-navy-500">
-              Thanks for reaching out — we'll get back to you within one business day.
+              Thanks for reaching out, we'll get back to you within one business day.
             </p>
             <button
               type="button"

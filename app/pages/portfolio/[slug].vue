@@ -16,7 +16,8 @@ useSeoMeta({
   title: caseStudy.title,
   description: caseStudy.summary,
   ogTitle: caseStudy.title,
-  ogDescription: caseStudy.summary
+  ogDescription: caseStudy.summary,
+  ogImage: caseStudy.image
 })
 
 useSchemaOrg([
@@ -32,8 +33,14 @@ useSchemaOrg([
 
 <template>
   <div v-if="caseStudy">
-    <section class="relative overflow-hidden bg-gradient-to-br py-20 sm:py-24" :class="caseStudy.gradient">
-      <div class="container-page relative">
+    <section class="relative overflow-hidden">
+      <img
+        :src="caseStudy.image"
+        :alt="caseStudy.imageAlt"
+        class="absolute inset-0 h-full w-full object-cover"
+      >
+      <div class="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/80 to-navy-950/40" />
+      <div class="container-page relative py-20 sm:py-24">
         <nav class="flex items-center gap-2 text-xs text-white/70">
           <NuxtLink to="/portfolio" class="hover:text-white">Portfolio</NuxtLink>
           <Icon name="lucide:chevron-right" size="12" />
@@ -46,23 +53,52 @@ useSchemaOrg([
           {{ caseStudy.title }}
         </h1>
         <p class="mt-4 max-w-2xl text-balance text-white/80">{{ caseStudy.summary }}</p>
+        <div class="mt-8 flex flex-wrap gap-8 text-sm text-white/70">
+          <div>
+            <div class="text-xs uppercase tracking-wider text-white/50">Client</div>
+            <div class="mt-1 font-medium text-white">{{ caseStudy.client }}</div>
+          </div>
+          <div>
+            <div class="text-xs uppercase tracking-wider text-white/50">Timeline</div>
+            <div class="mt-1 font-medium text-white">{{ caseStudy.timeline }}</div>
+          </div>
+          <div>
+            <div class="text-xs uppercase tracking-wider text-white/50">Team</div>
+            <div class="mt-1 font-medium text-white">{{ caseStudy.teamSize }}</div>
+          </div>
+        </div>
       </div>
     </section>
 
     <section class="container-page py-16 sm:py-20">
       <div class="grid grid-cols-1 gap-12 lg:grid-cols-3">
-        <div class="space-y-10 lg:col-span-2">
+        <div class="space-y-10 lg:col-span-2" v-reveal>
           <div>
             <h2 class="text-xl font-semibold text-navy-900">The challenge</h2>
             <p class="mt-3 leading-relaxed text-navy-600">{{ caseStudy.challenge }}</p>
           </div>
           <div>
+            <h2 class="text-xl font-semibold text-navy-900">Our approach</h2>
+            <p class="mt-3 leading-relaxed text-navy-600">{{ caseStudy.approach }}</p>
+          </div>
+          <div>
             <h2 class="text-xl font-semibold text-navy-900">The solution</h2>
             <p class="mt-3 leading-relaxed text-navy-600">{{ caseStudy.solution }}</p>
           </div>
+
+          <figure class="rounded-2xl bg-navy-50 p-6">
+            <Icon name="lucide:quote" size="22" class="text-brand-300" />
+            <blockquote class="mt-3 text-lg leading-relaxed text-navy-800">
+              "{{ caseStudy.testimonial.quote }}"
+            </blockquote>
+            <figcaption class="mt-4 text-sm">
+              <span class="font-semibold text-navy-900">{{ caseStudy.testimonial.name }}</span>
+              <span class="text-navy-500">, {{ caseStudy.testimonial.role }}</span>
+            </figcaption>
+          </figure>
         </div>
 
-        <aside class="space-y-6">
+        <aside class="space-y-6" v-reveal="120">
           <div class="rounded-2xl border border-navy-100 p-6">
             <h3 class="text-sm font-semibold uppercase tracking-wider text-navy-500">Results</h3>
             <dl class="mt-4 space-y-4">

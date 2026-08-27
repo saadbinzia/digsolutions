@@ -4,14 +4,15 @@ withDefaults(defineProps<{
   description?: string
 }>(), {
   title: 'Ready to talk about your project?',
-  description: 'Tell us what you\'re building. We\'ll respond within one business day with next steps — no sales runaround.'
+  description: 'Tell us what you\'re building. We\'ll respond within one business day with next steps, no sales runaround.'
 })
 </script>
 
 <template>
   <section class="container-page py-16 sm:py-20">
-    <div class="relative overflow-hidden rounded-3xl bg-navy-950 px-8 py-14 text-center sm:px-16 sm:py-16">
+    <div class="relative overflow-hidden rounded-3xl bg-navy-950 px-8 py-14 text-center sm:px-16 sm:py-16" v-reveal>
       <div class="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-brand-700/30 via-navy-950 to-navy-950" />
+      <div class="pointer-events-none absolute inset-0 bg-dot-grid opacity-40 [--dot-color:rgb(255_255_255_/_0.08)] [mask-image:radial-gradient(ellipse_70%_70%_at_50%_40%,black,transparent)]" />
       <div class="relative">
         <h2 class="mx-auto max-w-2xl text-balance text-3xl font-bold tracking-tight text-white sm:text-4xl">
           {{ title }}

@@ -33,7 +33,7 @@ export default defineNuxtConfig({
   site: {
     url: process.env.NUXT_PUBLIC_SITE_URL || 'https://www.digsolutions.com',
     name: 'DigSolutions',
-    description: 'DigSolutions builds web, mobile, AI/LLM-powered, and enterprise SaaS software for ambitious companies — full-stack .NET and JavaScript engineering, custom AI integrations, and CRM/ERP systems built to scale.',
+    description: 'DigSolutions builds web, mobile, AI/LLM-powered, and enterprise SaaS software for ambitious companies: full-stack .NET and JavaScript engineering, custom AI integrations, and CRM/ERP systems built to scale.',
     defaultLocale: 'en',
     identity: {
       type: 'Organization'
@@ -42,7 +42,7 @@ export default defineNuxtConfig({
     trailingSlash: false
   },
 
-  // https://nuxtseo.com/sitemap — dynamic routes aren't file-based, so register them explicitly
+  // https://nuxtseo.com/sitemap (dynamic routes aren't file-based, so register them explicitly)
   sitemap: {
     urls: () => [
       ...services.map(s => ({ loc: `/services/${s.slug}` })),

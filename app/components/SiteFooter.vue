@@ -20,7 +20,7 @@ const company = [
             <LogoMark dark />
           </NuxtLink>
           <p class="mt-4 max-w-sm text-sm leading-relaxed text-navy-400">
-            We design and build web, mobile, AI-powered, and enterprise software for companies that need technology to be a real advantage — not just a checkbox.
+            We design and build web, mobile, AI-powered, and enterprise software for companies that need technology to be a real advantage, not just a checkbox.
           </p>
           <div class="mt-6 flex gap-3">
             <a

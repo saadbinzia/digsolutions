@@ -11,19 +11,32 @@ function formatDate(date: string) {
 <template>
   <NuxtLink
     :to="`/blog/${post.slug}`"
-    class="group flex flex-col rounded-2xl border border-navy-100 bg-white p-6 transition hover:-translate-y-0.5 hover:border-brand-200 hover:shadow-lg hover:shadow-navy-900/5"
+    class="group flex flex-col overflow-hidden rounded-2xl border border-navy-100 bg-white transition duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-navy-900/5"
   >
-    <span class="inline-flex w-fit items-center rounded-full bg-brand-50 px-2.5 py-1 text-xs font-semibold text-brand-700">
-      {{ post.category }}
-    </span>
-    <h3 class="mt-4 text-lg font-semibold leading-snug text-navy-900 group-hover:text-brand-700">
-      {{ post.title }}
-    </h3>
-    <p class="mt-2 flex-1 text-sm leading-relaxed text-navy-500">{{ post.excerpt }}</p>
-    <div class="mt-5 flex items-center gap-2 text-xs text-navy-400">
-      <time :datetime="post.date">{{ formatDate(post.date) }}</time>
-      <span>·</span>
-      <span>{{ post.readTime }}</span>
+    <div class="relative h-44 overflow-hidden">
+      <img
+        :src="post.image"
+        :alt="post.imageAlt"
+        loading="lazy"
+        class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+      >
+      <div class="absolute inset-0 bg-gradient-to-t from-navy-950/60 via-transparent to-transparent" />
+      <span class="absolute bottom-4 left-5 rounded-full bg-white/15 px-3 py-1 text-xs font-medium text-white backdrop-blur">
+        {{ post.category }}
+      </span>
+    </div>
+    <div class="flex flex-1 flex-col p-6">
+      <h3 class="text-lg font-semibold leading-snug text-navy-900 group-hover:text-brand-700">
+        {{ post.title }}
+      </h3>
+      <p class="mt-2 flex-1 text-sm leading-relaxed text-navy-500">{{ post.excerpt }}</p>
+      <div class="mt-5 flex items-center gap-2 text-xs text-navy-400">
+        <span class="font-medium text-navy-600">{{ post.author }}</span>
+        <span>·</span>
+        <time :datetime="post.date">{{ formatDate(post.date) }}</time>
+        <span>·</span>
+        <span>{{ post.readTime }}</span>
+      </div>
     </div>
   </NuxtLink>
 </template>
