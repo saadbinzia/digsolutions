@@ -82,7 +82,15 @@ const navLinks = [
       </div>
 
       <div class="hidden items-center gap-3 lg:flex">
-        <a href="tel:+15555550123" class="text-sm font-medium text-navy-600 hover:text-navy-900">+1 (555) 555-0123</a>
+        <a href="tel:+13075003832" class="text-sm font-medium text-navy-600 hover:text-navy-900">+1 (307) 500-3832</a>
+        <a
+          href="https://calendly.com/digsolutions/consultation"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="rounded-lg border border-navy-200 px-4 py-2.5 text-sm font-semibold text-navy-800 transition hover:border-navy-300"
+        >
+          Book a call
+        </a>
         <NuxtLink
           to="/contact"
           class="rounded-lg bg-navy-900 px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-brand-600"
@@ -119,9 +127,17 @@ const navLinks = [
           >
             {{ link.label }}
           </NuxtLink>
+          <a
+            href="https://calendly.com/digsolutions/consultation"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="mt-2 rounded-lg border border-navy-200 px-4 py-3 text-center text-sm font-semibold text-navy-800"
+          >
+            Book a call
+          </a>
           <NuxtLink
             to="/contact"
-            class="mt-2 rounded-lg bg-navy-900 px-4 py-3 text-center text-sm font-semibold text-white"
+            class="rounded-lg bg-navy-900 px-4 py-3 text-center text-sm font-semibold text-white"
           >
             Start a project
           </NuxtLink>

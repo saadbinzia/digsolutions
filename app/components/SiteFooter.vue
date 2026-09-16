@@ -20,25 +20,8 @@ const company = [
             <LogoMark dark />
           </NuxtLink>
           <p class="mt-4 max-w-sm text-sm leading-relaxed text-navy-400">
-            We design and build web, mobile, AI-powered, and enterprise software for companies that need technology to be a real advantage, not just a checkbox.
+            A 20-person team across the US and Pakistan, building web platforms, AI automation, and e-commerce ERP systems.
           </p>
-          <div class="mt-6 flex gap-3">
-            <a
-              v-for="social in [
-                { icon: 'lucide:linkedin', label: 'LinkedIn', href: 'https://linkedin.com' },
-                { icon: 'lucide:twitter', label: 'Twitter / X', href: 'https://twitter.com' },
-                { icon: 'lucide:github', label: 'GitHub', href: 'https://github.com' }
-              ]"
-              :key="social.label"
-              :href="social.href"
-              :aria-label="social.label"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="flex h-9 w-9 items-center justify-center rounded-lg border border-navy-800 text-navy-400 transition hover:border-brand-500 hover:text-white"
-            >
-              <Icon :name="social.icon" size="16" />
-            </a>
-          </div>
         </div>
 
         <div class="lg:col-span-3">
@@ -73,15 +56,15 @@ const company = [
           <ul class="mt-4 space-y-3 text-sm text-navy-400">
             <li class="flex items-center gap-2.5">
               <Icon name="lucide:mail" size="15" class="shrink-0 text-navy-500" />
-              <a href="mailto:hello@digsolutions.com" class="transition hover:text-white">hello@digsolutions.com</a>
+              <a href="mailto:hello@digsolutions.net" class="transition hover:text-white">hello@digsolutions.net</a>
             </li>
             <li class="flex items-center gap-2.5">
               <Icon name="lucide:phone" size="15" class="shrink-0 text-navy-500" />
-              <a href="tel:+15555550123" class="transition hover:text-white">+1 (555) 555-0123</a>
+              <a href="tel:+13075003832" class="transition hover:text-white">+1 (307) 500-3832</a>
             </li>
             <li class="flex items-start gap-2.5">
-              <Icon name="lucide:map-pin" size="15" class="mt-0.5 shrink-0 text-navy-500" />
-              <span>Remote-first, serving clients worldwide</span>
+              <Icon name="lucide:globe" size="15" class="mt-0.5 shrink-0 text-navy-500" />
+              <span>Distributed team, US & Pakistan</span>
             </li>
           </ul>
         </div>

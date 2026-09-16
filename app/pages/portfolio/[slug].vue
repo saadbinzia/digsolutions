@@ -16,8 +16,7 @@ useSeoMeta({
   title: caseStudy.title,
   description: caseStudy.summary,
   ogTitle: caseStudy.title,
-  ogDescription: caseStudy.summary,
-  ogImage: caseStudy.image
+  ogDescription: caseStudy.summary
 })
 
 useSchemaOrg([
@@ -33,13 +32,13 @@ useSchemaOrg([
 
 <template>
   <div v-if="caseStudy">
-    <section class="relative overflow-hidden">
-      <img
-        :src="caseStudy.image"
-        :alt="caseStudy.imageAlt"
-        class="absolute inset-0 h-full w-full object-cover"
-      >
-      <div class="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/80 to-navy-950/40" />
+    <section class="relative overflow-hidden bg-navy-950">
+      <div class="bg-mesh">
+        <div class="bg-mesh-blob bg-brand-600" style="width: 420px; height: 420px; top: -120px; right: -100px; opacity: 0.25;" />
+      </div>
+      <div class="absolute inset-0 flex items-center justify-end pr-16 opacity-10">
+        <Icon :name="caseStudy.icon" size="240" class="text-white" />
+      </div>
       <div class="container-page relative py-20 sm:py-24">
         <nav class="flex items-center gap-2 text-xs text-white/70">
           <NuxtLink to="/portfolio" class="hover:text-white">Portfolio</NuxtLink>
@@ -62,10 +61,6 @@ useSchemaOrg([
             <div class="text-xs uppercase tracking-wider text-white/50">Timeline</div>
             <div class="mt-1 font-medium text-white">{{ caseStudy.timeline }}</div>
           </div>
-          <div>
-            <div class="text-xs uppercase tracking-wider text-white/50">Team</div>
-            <div class="mt-1 font-medium text-white">{{ caseStudy.teamSize }}</div>
-          </div>
         </div>
       </div>
     </section>
@@ -85,17 +80,6 @@ useSchemaOrg([
             <h2 class="text-xl font-semibold text-navy-900">The solution</h2>
             <p class="mt-3 leading-relaxed text-navy-600">{{ caseStudy.solution }}</p>
           </div>
-
-          <figure class="rounded-2xl bg-navy-50 p-6">
-            <Icon name="lucide:quote" size="22" class="text-brand-300" />
-            <blockquote class="mt-3 text-lg leading-relaxed text-navy-800">
-              "{{ caseStudy.testimonial.quote }}"
-            </blockquote>
-            <figcaption class="mt-4 text-sm">
-              <span class="font-semibold text-navy-900">{{ caseStudy.testimonial.name }}</span>
-              <span class="text-navy-500">, {{ caseStudy.testimonial.role }}</span>
-            </figcaption>
-          </figure>
         </div>
 
         <aside class="space-y-6" v-reveal="120">

@@ -3,9 +3,9 @@ import { services } from '~/data/services'
 
 useSeoMeta({
   title: 'Services',
-  description: 'Web application development, mobile apps, AI & custom LLM integration, SaaS, CRM/ERP systems, database engineering, media platforms, and custom enterprise software.',
+  description: 'Web application development, AI & custom LLM integration, and CRM/ERP systems for multi-channel e-commerce and content operations.',
   ogTitle: 'Services | DigSolutions',
-  ogDescription: 'Full-stack web, mobile, AI, and enterprise software development services.'
+  ogDescription: 'Web application development, AI integration, and CRM/ERP systems.'
 })
 </script>
 

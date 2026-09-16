@@ -9,8 +9,8 @@ useSeoMeta({
 const values = [
   {
     icon: 'lucide:target',
-    title: 'Stack decisions serve the product',
-    description: 'We choose Next.js, Nuxt, React, Vue, Angular, or .NET based on your team and requirements, never based on what\'s easiest for us to staff.'
+    title: 'We build what we can prove',
+    description: 'We stay to four disciplines, web & .NET platforms, AI automation, ERP/e-commerce integration, and Windows desktop applications, because those are the ones we\'ve actually shipped, not a list of every technology we\'d like to be hired for.'
   },
   {
     icon: 'lucide:eye',
@@ -30,10 +30,10 @@ const values = [
 ]
 
 const team = [
-  { role: 'Full-Stack Engineering', description: 'Web, mobile, and .NET/JS engineers covering every layer of the stack.' },
-  { role: 'AI & Machine Learning', description: 'Specialists in LLM integration, RAG systems, and production AI infrastructure.' },
-  { role: 'Solutions Architecture', description: 'CRM, ERP, and enterprise systems architects who\'ve shipped inside large organizations.' },
-  { role: 'Product & Delivery', description: 'Project leads who keep engagements accountable to scope, timeline, and outcomes.' }
+  { role: 'Web & Platform Engineering', description: 'Engineers building the web platforms, automation pipelines, and integrations clients run on day to day.' },
+  { role: 'AI Engineering', description: 'Engineers scoping and shipping the AI features embedded inside those systems, from clip extraction to catalog review.' },
+  { role: '.NET & Desktop Engineering', description: 'Engineers building .NET backends, Angular front ends, and native Windows desktop applications.' },
+  { role: 'Delivery', description: 'The people keeping engagements accountable to scope, timeline, and outcomes.' }
 ]
 </script>
 
@@ -44,10 +44,10 @@ const team = [
       <div class="container-page relative" v-reveal>
         <span class="text-sm font-semibold uppercase tracking-wider text-brand-600">About DigSolutions</span>
         <h1 class="mt-3 max-w-2xl text-balance text-4xl font-bold tracking-tight text-navy-900 sm:text-5xl">
-          We started this company because too much custom software gets built around the vendor's comfort zone
+          A distributed team that builds the automation behind content and multi-channel commerce
         </h1>
         <p class="mt-5 max-w-2xl text-balance text-lg text-navy-500">
-          DigSolutions exists to build software matched to what a business actually needs: the right stack, the right scope, and AI used where it genuinely helps rather than where it's fashionable.
+          We're a 20-person team working across the US and Pakistan. We take on problems where AI and integration work can replace a genuinely manual process, not wherever AI happens to be trendy.
         </p>
       </div>
     </section>
@@ -55,20 +55,20 @@ const team = [
     <section class="container-page py-16 sm:py-20">
       <div class="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-center">
         <div v-reveal>
-          <h2 class="text-2xl font-bold tracking-tight text-navy-900">Full-stack, in the literal sense</h2>
+          <h2 class="text-2xl font-bold tracking-tight text-navy-900">Distributed by design, not by cost-cutting</h2>
           <p class="mt-4 leading-relaxed text-navy-600">
-            Most development shops specialize in one framework and try to fit every client into it. We built DigSolutions the other way around: our engineers work across Next.js, Nuxt, React, Vue, Angular, and .NET, so the technology decision is driven by your team, your existing systems, and your hiring plans, not by our staffing constraints.
+            We're a 20-person team split across the US and Pakistan. We built it that way on purpose: it means clients get overlap with US business hours and a larger, senior engineering bench than a US-only shop the same size could staff.
           </p>
           <p class="mt-4 leading-relaxed text-navy-600">
-            That same philosophy extends to AI. We don't bolt a chatbot widget onto a product and call it an AI feature. We build retrieval-augmented systems grounded in real data, custom agents that take real action, and the evaluation infrastructure that keeps AI features reliable in production, because that's the difference between an AI demo and an AI feature customers actually trust.
+            We focus on three disciplines: web platforms, AI features scoped to a specific task, and ERP/e-commerce integration, because those are the areas where we've actually shipped production systems, not a long list of technologies we'd like to be hired for.
           </p>
         </div>
         <div class="grid grid-cols-2 gap-5" v-reveal="120">
           <div v-for="stat in [
-            { target: 9, suffix: '', label: 'Years building software' },
-            { target: 120, suffix: '+', label: 'Projects delivered' },
-            { target: 8, suffix: '', label: 'Core service disciplines' },
-            { target: 98, suffix: '%', label: 'Client retention rate' }
+            { target: 20, suffix: '', label: 'People on the team' },
+            { target: 2, suffix: '', label: 'Countries: US & Pakistan' },
+            { target: 3, suffix: '', label: 'Core disciplines' },
+            { target: 2, suffix: '', label: 'Production systems shipped' }
           ]" :key="stat.label" class="rounded-2xl border border-navy-100 p-6 text-center">
             <div class="text-3xl font-bold text-navy-900"><StatCounter :target="stat.target" :suffix="stat.suffix" /></div>
             <div class="mt-1 text-sm text-navy-500">{{ stat.label }}</div>

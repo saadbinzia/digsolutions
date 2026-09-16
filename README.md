@@ -35,7 +35,7 @@ Copy `.env.example` to `.env` and fill in as needed:
 | `NUXT_PUBLIC_GTM_ID` | Google Tag Manager container ID | Optional, analytics disabled if blank |
 | `NUXT_PUBLIC_GA_ID` | GA4 Measurement ID | Optional, analytics disabled if blank |
 | `RESEND_API_KEY` | API key from [resend.com](https://resend.com) for the contact form | Without it, submissions are logged server-side instead of emailed |
-| `CONTACT_TO_EMAIL` | Where contact form submissions are delivered | Defaults to `hello@digsolutions.com` |
+| `CONTACT_TO_EMAIL` | Where contact form submissions are delivered | Defaults to `hello@digsolutions.net` |
 | `CONTACT_FROM_EMAIL` | Verified sender in your Resend account | Defaults to Resend's sandbox sender |
 
 ## Deployment (Vercel)

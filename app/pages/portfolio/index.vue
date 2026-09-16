@@ -3,9 +3,9 @@ import { caseStudies } from '~/data/portfolio'
 
 useSeoMeta({
   title: 'Portfolio & Case Studies',
-  description: 'Case studies from DigSolutions client work across CRM/ERP systems, AI integrations, mobile apps, SaaS platforms, media, and database engineering.',
+  description: 'Case studies from DigSolutions client work: AI-powered content automation and multi-channel e-commerce ERP systems.',
   ogTitle: 'Portfolio | DigSolutions',
-  ogDescription: 'Real client engagements across AI, mobile, SaaS, CRM/ERP, and media platform development.'
+  ogDescription: 'Real engagements in AI-powered automation and e-commerce ERP integration.'
 })
 </script>
 
@@ -19,7 +19,7 @@ useSeoMeta({
           Work built for real outcomes, not just launches
         </h1>
         <p class="mx-auto mt-5 max-w-2xl text-balance text-navy-500">
-          A sample of engagements across CRM/ERP, AI integration, mobile, SaaS, media, and data engineering.
+          Client names are anonymized where we don't have permission to share them, but the problems and results are real. Ask us for references on either engagement.
         </p>
       </div>
     </section>

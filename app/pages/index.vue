@@ -3,46 +3,44 @@ import { services } from '~/data/services'
 import { caseStudies } from '~/data/portfolio'
 
 useSeoMeta({
-  title: 'Web, Mobile, AI & Enterprise Software Development',
-  description: 'DigSolutions builds web, mobile, AI/LLM-powered, and enterprise SaaS software across Next.js, Nuxt, React, Vue, Angular, and .NET. Full-stack engineering, custom AI integrations, and CRM/ERP systems built to scale.',
-  ogTitle: 'DigSolutions | Web, Mobile, AI & Enterprise Software Development',
-  ogDescription: 'Full-stack web, mobile, AI/LLM, and enterprise software development. Every major stack. One engineering partner.',
+  title: 'Web, .NET, AI & E-commerce ERP Development',
+  description: 'DigSolutions builds custom web and .NET platforms, AI-powered content automation, native Windows desktop applications, and multi-channel e-commerce ERP systems for teams that have outgrown manual processes and off-the-shelf tools.',
+  ogTitle: 'DigSolutions | Web, .NET, AI & E-commerce ERP Development',
+  ogDescription: 'Custom web and .NET platforms, AI-powered automation, desktop applications, and e-commerce ERP systems, built by a distributed team across the US and Pakistan.',
   ogType: 'website'
 })
 
 const techStack = [
-  'Next.js', 'Nuxt', 'React', 'Vue', 'Angular', '.NET / C#',
-  'Node.js', 'TypeScript', 'PostgreSQL', 'SQL Server', 'AWS', 'Azure'
+  'Next.js', 'Nuxt', 'React', 'Angular', '.NET / C#', 'Node.js', 'TypeScript', 'PostgreSQL', 'OpenAI / Anthropic', 'AWS'
 ]
 
 const valueProps = [
   {
-    icon: 'lucide:git-branch',
-    title: 'Stack-agnostic by design',
-    description: 'We hire and train across Next.js, Nuxt, React, Vue, Angular, and .NET so the technology fits your team and roadmap, not our comfort zone.'
+    icon: 'lucide:workflow',
+    title: 'Built to replace manual work',
+    description: 'Our best engagements start with a process someone is still doing by hand: reconciling stock across storefronts, clipping video by eye. We automate that, not just the easy parts around it.'
   },
   {
     icon: 'lucide:sparkles',
-    title: 'AI built in, not bolted on',
-    description: 'From RAG systems to custom agents, our AI work is engineered for production: evaluated, guarded, and cost-aware from day one.'
+    title: 'AI scoped to a real task',
+    description: 'We use AI for specific, well-defined jobs inside a system, like flagging the right video clip or the right product to update, not as a general-purpose chatbot bolted onto the product.'
   },
   {
-    icon: 'lucide:shield-check',
-    title: 'Enterprise-grade delivery',
-    description: 'Security, testing, and documentation standards suited to CRM, ERP, and regulated systems, not just prototypes.'
+    icon: 'lucide:git-merge',
+    title: 'Built around your existing systems',
+    description: 'Most of our work connects to platforms you already run, Amazon, Shopify, WooCommerce, and more, so you get one source of truth instead of a system to migrate to.'
   },
   {
     icon: 'lucide:users',
-    title: 'Senior engineers, dedicated teams',
-    description: 'You work directly with the engineers building your product. No offshore hand-offs, no rotating juniors mid-project.'
+    title: 'A team you work with directly',
+    description: 'We\'re a 20-person team spread across the US and Pakistan. You work with the engineers building your product, not a rotating account-management layer.'
   }
 ]
 
 const stats = [
-  { target: 120, suffix: '+', label: 'Projects delivered' },
-  { target: 40, suffix: '+', label: 'Enterprise clients' },
-  { target: 9, suffix: '', label: 'Years in operation' },
-  { target: 98, suffix: '%', label: 'Client retention' }
+  { target: 20, suffix: '', label: 'People on the team' },
+  { target: 2, suffix: '', label: 'Countries we work from' },
+  { target: 4, suffix: '', label: 'Core disciplines' }
 ]
 
 const process = [
@@ -52,59 +50,42 @@ const process = [
   { step: '04', title: 'Launch & support', description: 'We stay engaged post-launch. Monitoring, iteration, and support are built into every engagement.' }
 ]
 
-const testimonials = [
-  {
-    quote: 'DigSolutions rebuilt our CRM around how our sales team actually works instead of forcing us into another generic platform. Adoption went from a fight to automatic.',
-    name: 'VP of Sales Operations',
-    company: 'Financial Services Client'
-  },
-  {
-    quote: 'They shipped a production RAG support system that our team actually trusts, with the evaluation and guardrails to back it up. That\'s rarer than it should be.',
-    name: 'Head of Customer Support',
-    company: 'B2B SaaS Client'
-  },
-  {
-    quote: 'We came in wanting a rewrite. They talked us into a modernization plan instead, and it was the right call: zero downtime, and the business never noticed the migration.',
-    name: 'CTO',
-    company: 'Manufacturing Client'
-  }
-]
-
 const featuredCaseStudies = caseStudies.slice(0, 3)
 
 const codeTabs = [
   {
-    label: 'RAG query',
-    file: 'ai-copilot.service.ts',
-    code: `<span class="text-brand-400">const</span> answer = <span class="text-brand-400">await</span> ragPipeline.query({
-  input: userQuestion,
-  sources: [tenantDocs, ticketHistory],
-  guardrails: [confidenceThreshold, citationCheck],
-  fallback: <span class="text-green-400">'escalate_to_human'</span>
+    label: 'Clip extraction',
+    file: 'webinar-pipeline.ts',
+    code: `<span class="text-brand-400">const</span> clips = <span class="text-brand-400">await</span> extractClips({
+  recording: webinar.videoUrl,
+  speakers: webinar.speakers,
+  criteria: [<span class="text-green-400">'quotable'</span>, <span class="text-green-400">'high-engagement'</span>]
 })
 
-<span class="text-navy-500">// grounded, cited, production-evaluated</span>`
+<span class="text-brand-400">await</span> distribute(clips, [social, email])
+<span class="text-navy-500">// same-day, not next-week</span>`
   },
   {
-    label: 'Agent action',
-    file: 'agent-runner.ts',
-    code: `<span class="text-brand-400">const</span> result = <span class="text-brand-400">await</span> agent.run({
-  goal: <span class="text-green-400">'Escalate unresolved billing tickets'</span>,
-  tools: [crmLookup, ticketUpdate, slackNotify],
-  maxSteps: <span class="text-brand-300">4</span>
-})
+    label: 'Storefront sync',
+    file: 'inventory-sync.ts',
+    code: `<span class="text-brand-400">const</span> product = <span class="text-brand-400">await</span> erp.updateProduct(sku, changes)
 
-<span class="text-navy-500">// the agent decides which tools to call, in order</span>`
+<span class="text-brand-400">await</span> Promise.all([
+  amazon.sync(product),
+  shopify.sync(product),
+  woocommerce.sync(product)
+])
+<span class="text-navy-500">// one update, every storefront</span>`
   },
   {
-    label: 'Evaluation',
-    file: 'eval.spec.ts',
-    code: `<span class="text-brand-400">const</span> score = <span class="text-brand-400">await</span> evaluate(response, {
-  against: goldenAnswers,
-  checks: [citationPresent, factualMatch]
+    label: 'Product flagging',
+    file: 'catalog-review.ts',
+    code: `<span class="text-brand-400">const</span> flagged = <span class="text-brand-400">await</span> ai.reviewCatalog({
+  products: erp.activeListings,
+  signals: [<span class="text-green-400">'stock'</span>, <span class="text-green-400">'sales trend'</span>, <span class="text-green-400">'listing age'</span>]
 })
 
-<span class="text-brand-400">if</span> (score.confidence &lt; <span class="text-brand-300">0.7</span>) <span class="text-brand-400">return</span> escalate()`
+<span class="text-navy-500">// surfaces what actually needs attention</span>`
   }
 ]
 const activeTab = ref(0)
@@ -124,15 +105,23 @@ const activeTab = ref(0)
         <div class="mx-auto max-w-2xl text-center">
           <span v-reveal class="inline-flex items-center gap-2 rounded-full border border-navy-200 bg-white px-4 py-1.5 text-xs font-semibold text-navy-600 shadow-sm">
             <Icon name="lucide:sparkles" size="14" class="text-brand-500" />
-            Full-stack development · Custom AI & LLM integration
+            Web & .NET · AI automation · E-commerce ERP · Desktop apps
           </span>
           <h1 v-reveal="80" class="mt-6 text-balance text-4xl font-bold tracking-tight text-navy-900 sm:text-5xl lg:text-6xl">
-            Software engineering for the AI era
+            One engineering partner, four disciplines you can verify
           </h1>
           <p v-reveal="140" class="mx-auto mt-6 max-w-xl text-balance text-lg leading-relaxed text-navy-500">
-            We build web apps, mobile apps, custom AI/LLM integrations, and enterprise SaaS, CRM, and ERP systems, across Next.js, Nuxt, React, Vue, Angular, and .NET.
+            Web & .NET development, AI automation, e-commerce ERP, and desktop applications, each backed by work we've actually shipped, built by a distributed team across the US and Pakistan.
           </p>
           <div v-reveal="200" class="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
+            <!-- <a
+              href="https://calendly.com/digsolutions/consultation"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="w-full rounded-lg bg-navy-900 px-6 py-3.5 text-sm font-semibold text-white shadow-sm transition hover:bg-brand-600 sm:w-auto"
+            >
+              Book a call
+            </a> -->
             <NuxtLink
               to="/contact"
               class="w-full rounded-lg bg-navy-900 px-6 py-3.5 text-sm font-semibold text-white shadow-sm transition hover:bg-brand-600 sm:w-auto"
@@ -154,7 +143,7 @@ const activeTab = ref(0)
     <section class="border-y border-navy-100 bg-navy-50/50 py-8">
       <div class="container-page">
         <p class="text-center text-xs font-semibold uppercase tracking-wider text-navy-400">
-          Engineering across every major stack
+          Tools we build with
         </p>
         <div class="mt-5 flex flex-wrap items-center justify-center gap-x-8 gap-y-3">
           <span
@@ -175,10 +164,10 @@ const activeTab = ref(0)
         <div class="mx-auto max-w-2xl text-center" v-reveal>
           <span class="text-sm font-semibold uppercase tracking-wider text-brand-600">What we build</span>
           <h2 class="mt-3 text-balance text-3xl font-bold tracking-tight text-navy-900 sm:text-4xl">
-            Every discipline your product needs, under one roof
+            Four disciplines, chosen because we can actually prove them
           </h2>
           <p class="mt-4 text-balance text-navy-500">
-            From customer-facing apps to the AI and data infrastructure behind them, we cover the full stack.
+            We'd rather be specific about four things than vague about ten.
           </p>
         </div>
         <div class="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
@@ -202,17 +191,17 @@ const activeTab = ref(0)
               AI & Custom LLM Integration
             </span>
             <h2 class="mt-5 text-balance text-3xl font-bold tracking-tight text-white sm:text-4xl">
-              We build AI features that survive contact with production
+              AI scoped to one job, wired into a system you already run
             </h2>
             <p class="mt-4 leading-relaxed text-navy-300">
-              Custom LLM integrations, retrieval-augmented generation grounded in your own data, agent workflows that take real action, and the evaluation and guardrail infrastructure that separates a demo from a product feature customers can rely on.
+              We don't sell a general-purpose chatbot. We use AI for a specific task inside a pipeline: finding the clip worth publishing out of an hour of footage, or the product listing that actually needs attention out of hundreds.
             </p>
             <ul class="mt-8 space-y-3">
               <li v-for="item in [
-                'Custom LLM integration into existing products and workflows',
-                'RAG systems grounded in proprietary data, not generic prompts',
-                'AI agents and tool-calling for real task automation',
-                'Evaluation, guardrails, and cost/latency engineering'
+                'Custom LLM integration into an existing product or workflow',
+                'AI scoped to one narrow, verifiable task, not an open-ended assistant',
+                'Built to sync with the storefronts and tools you already use',
+                'Evaluated against real examples before it ships'
               ]" :key="item" class="flex items-start gap-3 text-sm text-navy-200">
                 <Icon name="lucide:check" size="16" class="mt-0.5 shrink-0 text-brand-400" />
                 {{ item }}
@@ -281,8 +270,8 @@ const activeTab = ref(0)
       <div class="bg-mesh">
         <div class="bg-mesh-blob bg-brand-700" style="width: 360px; height: 360px; top: -140px; left: 20%; opacity: 0.3;" />
       </div>
-      <div class="container-page relative grid grid-cols-2 gap-8 sm:grid-cols-4">
-        <div v-for="(stat, i) in stats" :key="stat.label" v-reveal="(i % 4) * 70" class="text-center">
+      <div class="container-page relative grid grid-cols-3 gap-8">
+        <div v-for="(stat, i) in stats" :key="stat.label" v-reveal="(i % 3) * 70" class="text-center">
           <div class="text-4xl font-bold tracking-tight text-white">
             <StatCounter :target="stat.target" :suffix="stat.suffix" />
           </div>
@@ -331,25 +320,16 @@ const activeTab = ref(0)
       </div>
     </section>
 
-    <!-- Testimonials -->
+    <!-- References -->
     <section class="container-page py-20 sm:py-24">
-      <div class="mx-auto max-w-2xl text-center" v-reveal>
-        <span class="text-sm font-semibold uppercase tracking-wider text-brand-600">Client feedback</span>
-        <h2 class="mt-3 text-balance text-3xl font-bold tracking-tight text-navy-900 sm:text-4xl">
-          What it's like to work with us
+      <div class="mx-auto max-w-2xl rounded-2xl border border-navy-100 bg-navy-50/50 p-8 text-center sm:p-10" v-reveal>
+        <Icon name="lucide:message-circle" size="24" class="mx-auto text-brand-500" />
+        <h2 class="mt-4 text-balance text-xl font-semibold text-navy-900">
+          We'd rather connect you with a real client than post a quote you can't verify
         </h2>
-      </div>
-      <div class="mt-12 grid grid-cols-1 gap-6 lg:grid-cols-3">
-        <figure v-for="(t, i) in testimonials" :key="t.name" v-reveal="(i % 3) * 80" class="flex flex-col rounded-2xl border border-navy-100 p-6">
-          <Icon name="lucide:quote" size="24" class="text-brand-200" />
-          <blockquote class="mt-4 flex-1 text-sm leading-relaxed text-navy-700">
-            "{{ t.quote }}"
-          </blockquote>
-          <figcaption class="mt-5 border-t border-navy-100 pt-4">
-            <div class="text-sm font-semibold text-navy-900">{{ t.name }}</div>
-            <div class="text-xs text-navy-500">{{ t.company }}</div>
-          </figcaption>
-        </figure>
+        <p class="mt-3 text-sm leading-relaxed text-navy-500">
+          We haven't published client names or testimonials here out of respect for confidentiality, not because the work isn't real. Ask us during a call and we'll arrange a reference from either engagement above.
+        </p>
       </div>
     </section>
 

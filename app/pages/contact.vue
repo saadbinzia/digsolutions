@@ -38,10 +38,12 @@ async function onSubmit() {
 }
 
 const contactPoints = [
-  { icon: 'lucide:mail', label: 'Email', value: 'hello@digsolutions.com', href: 'mailto:hello@digsolutions.com' },
-  { icon: 'lucide:phone', label: 'Phone', value: '+1 (555) 555-0123', href: 'tel:+15555550123' },
-  { icon: 'lucide:map-pin', label: 'Location', value: 'Remote-first, serving clients worldwide', href: null }
+  { icon: 'lucide:mail', label: 'Email', value: 'hello@digsolutions.net', href: 'mailto:hello@digsolutions.net' },
+  { icon: 'lucide:phone', label: 'Phone', value: '+1 (307) 500-3832', href: 'tel:+13075003832' },
+  { icon: 'lucide:globe', label: 'Team', value: 'Distributed across the US and Pakistan', href: null }
 ]
+
+const calendlyUrl = 'https://calendly.com/digsolutions/consultation'
 </script>
 
 <template>
@@ -56,6 +58,15 @@ const contactPoints = [
         <p class="mx-auto mt-5 max-w-xl text-balance text-navy-500">
           Tell us about your project and we'll respond within one business day with next steps.
         </p>
+        <a
+          :href="calendlyUrl"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="mt-8 inline-flex items-center gap-2 rounded-lg bg-navy-900 px-6 py-3.5 text-sm font-semibold text-white shadow-sm transition hover:bg-brand-600"
+        >
+          <Icon name="lucide:calendar" size="16" />
+          Book a call directly
+        </a>
       </div>
     </section>
 
