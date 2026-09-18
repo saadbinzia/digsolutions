@@ -1,11 +1,13 @@
 <script setup lang="ts">
-withDefaults(defineProps<{
+const { t } = useI18n()
+
+const props = defineProps<{
   title?: string
   description?: string
-}>(), {
-  title: 'Ready to talk about your project?',
-  description: 'Tell us what you\'re building. We\'ll respond within one business day with next steps, no sales runaround.'
-})
+}>()
+
+const resolvedTitle = computed(() => props.title ?? t('ctaBanner.defaultTitle'))
+const resolvedDescription = computed(() => props.description ?? t('ctaBanner.defaultDescription'))
 </script>
 
 <template>
@@ -15,24 +17,24 @@ withDefaults(defineProps<{
       <div class="pointer-events-none absolute inset-0 bg-dot-grid opacity-40 [--dot-color:rgb(255_255_255_/_0.08)] [mask-image:radial-gradient(ellipse_70%_70%_at_50%_40%,black,transparent)]" />
       <div class="relative">
         <h2 class="mx-auto max-w-2xl text-balance text-3xl font-bold tracking-tight text-white sm:text-4xl">
-          {{ title }}
+          {{ resolvedTitle }}
         </h2>
         <p class="mx-auto mt-4 max-w-xl text-balance text-navy-300">
-          {{ description }}
+          {{ resolvedDescription }}
         </p>
         <div class="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
-          <NuxtLink
+          <NuxtLinkLocale
             to="/contact"
             class="w-full rounded-lg bg-white px-6 py-3 text-sm font-semibold text-navy-900 shadow-sm transition hover:bg-brand-50 sm:w-auto"
           >
-            Start a project
-          </NuxtLink>
-          <NuxtLink
+            {{ t('common.startProject') }}
+          </NuxtLinkLocale>
+          <NuxtLinkLocale
             to="/portfolio"
             class="w-full rounded-lg border border-navy-700 px-6 py-3 text-sm font-semibold text-white transition hover:border-navy-500 sm:w-auto"
           >
-            See our work
-          </NuxtLink>
+            {{ t('common.seeOurWork') }}
+          </NuxtLinkLocale>
         </div>
       </div>
     </div>

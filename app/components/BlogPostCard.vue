@@ -3,13 +3,15 @@ import type { BlogPost } from '~/data/blog'
 
 defineProps<{ post: BlogPost }>()
 
+const { locale } = useI18n()
+
 function formatDate(date: string) {
-  return new Date(date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })
+  return new Date(date).toLocaleDateString(locale.value, { year: 'numeric', month: 'long', day: 'numeric' })
 }
 </script>
 
 <template>
-  <NuxtLink
+  <NuxtLinkLocale
     :to="`/blog/${post.slug}`"
     class="group flex flex-col overflow-hidden rounded-2xl border border-navy-100 bg-white transition duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-navy-900/5"
   >
@@ -38,5 +40,5 @@ function formatDate(date: string) {
         <span>{{ post.readTime }}</span>
       </div>
     </div>
-  </NuxtLink>
+  </NuxtLinkLocale>
 </template>

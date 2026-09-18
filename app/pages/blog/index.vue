@@ -1,25 +1,26 @@
 <script setup lang="ts">
-import { blogPosts } from '~/data/blog'
+const { blogPosts } = useContent()
+const { t, locale } = useI18n()
 
 useSeoMeta({
-  title: 'Blog',
-  description: 'Engineering, AI, and software strategy insights from the DigSolutions team, covering framework choice, production AI systems, SaaS architecture, and enterprise modernization.',
-  ogTitle: 'Blog | DigSolutions',
-  ogDescription: 'Engineering and AI insights from the DigSolutions team.'
+  title: () => t('blog.seo.title'),
+  description: () => t('blog.seo.description'),
+  ogTitle: () => t('blog.seo.ogTitle'),
+  ogDescription: () => t('blog.seo.ogDescription')
 })
 
-const categories = ['All', ...new Set(blogPosts.map(p => p.category))]
 const activeCategory = ref('All')
+const categories = computed(() => ['All', ...new Set(blogPosts.value.map(p => p.category))])
 
 const filteredPosts = computed(() =>
-  activeCategory.value === 'All' ? blogPosts : blogPosts.filter(p => p.category === activeCategory.value)
+  activeCategory.value === 'All' ? blogPosts.value : blogPosts.value.filter(p => p.category === activeCategory.value)
 )
 
 const featuredPost = computed(() => filteredPosts.value[0])
 const restPosts = computed(() => filteredPosts.value.slice(1))
 
 function formatDate(date: string) {
-  return new Date(date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })
+  return new Date(date).toLocaleDateString(locale.value, { year: 'numeric', month: 'long', day: 'numeric' })
 }
 </script>
 
@@ -28,12 +29,12 @@ function formatDate(date: string) {
     <section class="relative overflow-hidden border-b border-navy-100 bg-navy-50/50 py-16 sm:py-20">
       <div class="absolute inset-0 bg-dot-grid opacity-50 [mask-image:radial-gradient(ellipse_65%_60%_at_50%_0%,black,transparent)]" />
       <div class="container-page relative text-center" v-reveal>
-        <span class="text-sm font-semibold uppercase tracking-wider text-brand-600">Blog</span>
+        <span class="text-sm font-semibold uppercase tracking-wider text-brand-600">{{ t('blog.eyebrow') }}</span>
         <h1 class="mx-auto mt-3 max-w-2xl text-balance text-4xl font-bold tracking-tight text-navy-900 sm:text-5xl">
-          Notes from the engineering team
+          {{ t('blog.title') }}
         </h1>
         <p class="mx-auto mt-5 max-w-2xl text-balance text-navy-500">
-          Practical write-ups on framework choices, production AI systems, SaaS architecture, and modernizing enterprise software.
+          {{ t('blog.subtitle') }}
         </p>
       </div>
     </section>
@@ -50,12 +51,12 @@ function formatDate(date: string) {
             : 'border-navy-200 text-navy-600 hover:border-navy-300 hover:bg-navy-50'"
           @click="activeCategory = category"
         >
-          {{ category }}
+          {{ category === 'All' ? t('blog.allCategory') : category }}
         </button>
       </div>
 
       <TransitionGroup name="blog-fade" tag="div">
-        <NuxtLink
+        <NuxtLinkLocale
           v-if="featuredPost"
           :key="featuredPost.slug"
           :to="`/blog/${featuredPost.slug}`"
@@ -68,7 +69,7 @@ function formatDate(date: string) {
               class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
             >
             <span class="absolute left-5 top-5 rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-navy-700 backdrop-blur">
-              Latest
+              {{ t('blog.latestBadge') }}
             </span>
           </div>
           <div class="flex flex-col justify-center p-8 sm:p-10">
@@ -87,11 +88,11 @@ function formatDate(date: string) {
               <span>{{ featuredPost.readTime }}</span>
             </div>
             <span class="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-600">
-              Read article
+              {{ t('common.readArticle') }}
               <Icon name="lucide:arrow-right" size="15" class="transition group-hover:translate-x-0.5" />
             </span>
           </div>
-        </NuxtLink>
+        </NuxtLinkLocale>
       </TransitionGroup>
 
       <div v-if="restPosts.length" class="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">

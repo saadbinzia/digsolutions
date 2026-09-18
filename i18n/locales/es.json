@@ -1,0 +1,323 @@
+{
+  "common": {
+    "bookACall": "Reservar una llamada",
+    "startProject": "Iniciar un proyecto",
+    "seeOurWork": "Ver nuestro trabajo",
+    "learnMore": "Más información",
+    "readCaseStudy": "Leer caso de éxito",
+    "readArticle": "Leer artículo",
+    "discussProject": "Hablar sobre su proyecto",
+    "backToHome": "Volver al inicio",
+    "close": "Cerrar",
+    "language": "Idioma"
+  },
+  "nav": {
+    "services": "Servicios",
+    "portfolio": "Portafolio",
+    "about": "Nosotros",
+    "blog": "Blog",
+    "toggleMenu": "Alternar menú"
+  },
+  "footer": {
+    "tagline": "Un equipo de 20 personas entre Estados Unidos y Pakistán, que desarrolla plataformas web, automatización con IA y sistemas ERP para comercio electrónico.",
+    "servicesHeading": "Servicios",
+    "viewAllServices": "Ver todos los servicios →",
+    "companyHeading": "Empresa",
+    "contact": "Contacto",
+    "getInTouchHeading": "Póngase en contacto",
+    "team": "Equipo distribuido entre EE. UU. y Pakistán",
+    "copyright": "© {year} DigSolutions. Todos los derechos reservados.",
+    "privacyPolicy": "Política de privacidad",
+    "termsOfService": "Términos de servicio",
+    "cookiePreferences": "Preferencias de cookies"
+  },
+  "cookieBanner": {
+    "title": "Utilizamos cookies",
+    "description": "Utilizamos cookies esenciales para el funcionamiento de este sitio, y cookies analíticas opcionales (Google Analytics / Tag Manager) para entender cómo los visitantes lo usan. Consulte nuestra",
+    "descriptionAfterLink": "para más información.",
+    "necessaryTitle": "Necesarias",
+    "necessaryDescription": "Necesarias para que el sitio funcione. Siempre activas.",
+    "alwaysActive": "Siempre activas",
+    "analyticsTitle": "Análisis",
+    "analyticsDescription": "Google Analytics / Tag Manager, nos ayuda a entender el uso del sitio.",
+    "toggleAriaLabel": "Alternar cookies de análisis",
+    "acceptAll": "Aceptar todo",
+    "rejectAll": "Rechazar no esenciales",
+    "managePreferences": "Gestionar preferencias",
+    "savePreferences": "Guardar preferencias"
+  },
+  "ctaBanner": {
+    "defaultTitle": "¿Listo para hablar sobre su proyecto?",
+    "defaultDescription": "Cuéntenos qué está construyendo. Le responderemos en un día hábil con los siguientes pasos, sin rodeos comerciales."
+  },
+  "error": {
+    "notFoundTitle": "Esta página no existe",
+    "genericTitle": "Algo salió mal",
+    "defaultMessage": "Compruebe la URL o vuelva a la página de inicio.",
+    "helpHeading": "O prueba con una de estas páginas"
+  },
+  "home": {
+    "seo": {
+      "title": "Desarrollo Web, .NET, IA y ERP para E-commerce",
+      "description": "DigSolutions desarrolla plataformas web y .NET a medida, automatización de contenido con IA, aplicaciones de escritorio nativas para Windows y sistemas ERP multicanal para comercio electrónico, para equipos que ya han superado los procesos manuales y las herramientas genéricas.",
+      "ogTitle": "DigSolutions {'|'} Desarrollo Web, .NET, IA y ERP para E-commerce",
+      "ogDescription": "Plataformas web y .NET a medida, automatización con IA, aplicaciones de escritorio y sistemas ERP para comercio electrónico, desarrollados por un equipo distribuido entre Estados Unidos y Pakistán."
+    },
+    "badge": "Web y .NET · Automatización con IA · ERP para e-commerce · Aplicaciones de escritorio",
+    "title": "Un solo socio de ingeniería, cuatro disciplinas que puede comprobar",
+    "subtitle": "Desarrollo web y .NET, automatización con IA, ERP para comercio electrónico y aplicaciones de escritorio, cada una respaldada por trabajo que realmente hemos entregado, desarrollado por un equipo distribuido entre Estados Unidos y Pakistán.",
+    "toolsHeading": "Herramientas con las que trabajamos",
+    "servicesEyebrow": "Lo que construimos",
+    "servicesTitle": "Cuatro disciplinas, elegidas porque podemos demostrarlas",
+    "servicesSubtitle": "Preferimos ser concretos en cuatro cosas antes que vagos en diez.",
+    "aiEyebrow": "IA e integración de LLM a medida",
+    "aiTitle": "IA enfocada en una sola tarea, integrada en un sistema que usted ya utiliza",
+    "aiDescription": "No vendemos un chatbot genérico. Usamos IA para una tarea específica dentro de un flujo de trabajo: encontrar el clip que vale la pena publicar entre una hora de grabación, o la ficha de producto que realmente necesita atención entre cientos.",
+    "aiPoints": [
+      "Integración de LLM a medida en un producto o flujo de trabajo existente",
+      "IA enfocada en una tarea acotada y verificable, no un asistente de propósito abierto",
+      "Diseñada para sincronizar con las tiendas y herramientas que ya utiliza",
+      "Evaluada con ejemplos reales antes de salir a producción"
+    ],
+    "aiCta": "Explorar integración de IA y LLM",
+    "codeTabs": {
+      "clipExtraction": "Extracción de clips",
+      "storefrontSync": "Sincronización de tiendas",
+      "productFlagging": "Señalización de productos"
+    },
+    "whyEyebrow": "Por qué DigSolutions",
+    "whyTitle": "Diseñado para adaptarse a su stack, no al revés",
+    "valueProps": [
+      {
+        "title": "Diseñado para reemplazar el trabajo manual",
+        "description": "Nuestros mejores proyectos comienzan con un proceso que alguien todavía hace a mano: conciliar el stock entre tiendas, recortar video a ojo. Automatizamos eso, no solo las partes fáciles a su alrededor."
+      },
+      {
+        "title": "IA enfocada en una tarea real",
+        "description": "Usamos IA para tareas específicas y bien definidas dentro de un sistema, como señalar el clip de video correcto o el producto correcto que actualizar, no como un chatbot genérico añadido al producto."
+      },
+      {
+        "title": "Construido alrededor de sus sistemas existentes",
+        "description": "La mayor parte de nuestro trabajo se conecta con plataformas que usted ya utiliza, Amazon, Shopify, WooCommerce y más, para que tenga una única fuente de verdad en lugar de un sistema al que migrar."
+      },
+      {
+        "title": "Un equipo con el que trabaja directamente",
+        "description": "Somos un equipo de 20 personas distribuido entre Estados Unidos y Pakistán. Usted trabaja con los ingenieros que construyen su producto, no con una capa rotativa de gestión de cuentas."
+      }
+    ],
+    "statsLabels": [
+      "Personas en el equipo",
+      "Países desde los que trabajamos",
+      "Disciplinas principales"
+    ],
+    "processEyebrow": "Cómo trabajamos",
+    "processTitle": "Un proceso diseñado para la responsabilidad, no para la ceremonia",
+    "process": [
+      {
+        "step": "01",
+        "title": "Descubrimiento",
+        "description": "Analizamos sus requisitos, restricciones y sistemas existentes antes de escribir una sola línea de código."
+      },
+      {
+        "step": "02",
+        "title": "Arquitectura",
+        "description": "Las decisiones de stack, modelo de datos e infraestructura de IA se toman de forma deliberada y quedan documentadas."
+      },
+      {
+        "step": "03",
+        "title": "Construcción",
+        "description": "Entrega ágil en ciclos cortos, con entornos de staging y demostraciones que usted puede probar de verdad."
+      },
+      {
+        "step": "04",
+        "title": "Lanzamiento y soporte",
+        "description": "Seguimos involucrados después del lanzamiento. El monitoreo, la iteración y el soporte forman parte de cada proyecto."
+      }
+    ],
+    "recentWorkEyebrow": "Trabajo reciente",
+    "recentWorkTitle": "Resultados, no solo entregables",
+    "viewAllCaseStudies": "Ver todos los casos de éxito",
+    "referencesTitle": "Preferimos ponerlo en contacto con un cliente real antes que publicar una cita que no pueda verificar",
+    "referencesDescription": "No hemos publicado nombres de clientes ni testimonios aquí por respeto a la confidencialidad, no porque el trabajo no sea real. Pregúntenos en una llamada y le pondremos en contacto con una referencia de cualquiera de los proyectos anteriores."
+  },
+  "about": {
+    "seo": {
+      "title": "Nosotros",
+      "description": "DigSolutions es una empresa de desarrollo de software full-stack que construye sistemas web, móviles, de IA y empresariales para clientes en todo el mundo. Conozca nuestro enfoque y nuestro equipo.",
+      "ogTitle": "Nosotros {'|'} DigSolutions",
+      "ogDescription": "Un equipo de ingeniería full-stack que construye software web, móvil, de IA y empresarial."
+    },
+    "eyebrow": "Sobre DigSolutions",
+    "title": "Un equipo distribuido que construye la automatización detrás del contenido y el comercio multicanal",
+    "subtitle": "Somos un equipo de 20 personas que trabaja entre Estados Unidos y Pakistán. Asumimos problemas donde la IA y el trabajo de integración pueden reemplazar un proceso genuinamente manual, no donde la IA simplemente está de moda.",
+    "distributedTitle": "Distribuidos por diseño, no por recorte de costos",
+    "distributedP1": "Somos un equipo de 20 personas repartido entre Estados Unidos y Pakistán. Lo construimos así a propósito: significa que los clientes obtienen superposición con el horario laboral de EE. UU. y un banco de ingenieros senior más amplio del que podría tener una empresa del mismo tamaño solo en EE. UU.",
+    "distributedP2": "Nos enfocamos en tres disciplinas: plataformas web, funciones de IA acotadas a una tarea específica, e integración de ERP/e-commerce, porque son las áreas donde realmente hemos puesto en producción sistemas reales, no una larga lista de tecnologías para las que nos gustaría que nos contrataran.",
+    "stats": [
+      "Personas en el equipo",
+      "Países: EE. UU. y Pakistán",
+      "Disciplinas principales",
+      "Sistemas en producción entregados"
+    ],
+    "operateEyebrow": "Cómo operamos",
+    "operateTitle": "Principios que no negociamos",
+    "values": [
+      {
+        "title": "Construimos lo que podemos demostrar",
+        "description": "Nos limitamos a cuatro disciplinas, plataformas web y .NET, automatización con IA, integración de ERP/e-commerce y aplicaciones de escritorio para Windows, porque son las que realmente hemos entregado, no una lista de todas las tecnologías para las que nos gustaría que nos contrataran."
+      },
+      {
+        "title": "Sin cajas negras",
+        "description": "Usted tiene acceso a los mismos repositorios, tableros y entornos que usamos internamente. Nada sobre cómo funciona su producto debería ser un misterio para usted."
+      },
+      {
+        "title": "Ingeniería del tamaño adecuado",
+        "description": "Construimos para la escala que realmente tiene, con un camino claro hacia la escala a la que está creciendo, no una arquitectura especulativa para un tráfico que quizás nunca reciba."
+      },
+      {
+        "title": "Relaciones a largo plazo antes que proyectos puntuales",
+        "description": "La mayoría de nuestros proyectos comienzan como un encargo único y se convierten en asociaciones continuas, porque el software sigue necesitando evolucionar después del lanzamiento."
+      }
+    ],
+    "teamEyebrow": "Nuestro equipo",
+    "teamTitle": "Ingenieros senior en cada disciplina",
+    "teamSubtitle": "Usted trabaja directamente con las personas que construyen su producto, no con un elenco rotativo de gestores de cuenta.",
+    "team": [
+      {
+        "role": "Ingeniería Web y de Plataformas",
+        "description": "Ingenieros que construyen las plataformas web, los pipelines de automatización y las integraciones que los clientes usan día a día."
+      },
+      {
+        "role": "Ingeniería de IA",
+        "description": "Ingenieros que definen el alcance y ponen en producción las funciones de IA integradas en esos sistemas, desde la extracción de clips hasta la revisión de catálogos."
+      },
+      {
+        "role": "Ingeniería .NET y de Escritorio",
+        "description": "Ingenieros que construyen backends en .NET, frontends en Angular y aplicaciones de escritorio nativas para Windows."
+      },
+      {
+        "role": "Entrega",
+        "description": "Las personas que mantienen los proyectos alineados con el alcance, el cronograma y los resultados."
+      }
+    ],
+    "ctaTitle": "¿Quiere trabajar con nosotros?"
+  },
+  "contact": {
+    "seo": {
+      "title": "Contacto",
+      "description": "Cuéntele a DigSolutions sobre su proyecto de software web, móvil, de IA o empresarial. Respondemos en un día hábil.",
+      "ogTitle": "Contacto {'|'} DigSolutions",
+      "ogDescription": "Inicie una conversación sobre su próximo proyecto de software."
+    },
+    "eyebrow": "Contacto",
+    "title": "Hablemos sobre lo que está construyendo",
+    "subtitle": "Cuéntenos sobre su proyecto y le responderemos en un día hábil con los siguientes pasos.",
+    "bookCallDirectly": "Reserve una llamada directamente",
+    "emailLabel": "Correo electrónico",
+    "phoneLabel": "Teléfono",
+    "teamLabel": "Equipo",
+    "teamValue": "Distribuido entre Estados Unidos y Pakistán",
+    "fullName": "Nombre completo",
+    "namePlaceholder": "Jane Doe",
+    "workEmail": "Correo electrónico laboral",
+    "emailPlaceholder": "jane{'@'}empresa.com",
+    "company": "Empresa",
+    "companyPlaceholder": "Empresa, S.A.",
+    "serviceOfInterest": "Servicio de interés",
+    "notSureYet": "Aún no estoy seguro",
+    "projectDetails": "Detalles del proyecto",
+    "messagePlaceholder": "¿Qué está construyendo y cuál es su cronograma?",
+    "sending": "Enviando…",
+    "sendMessage": "Enviar mensaje",
+    "genericError": "Algo salió mal. Por favor, inténtelo de nuevo.",
+    "successTitle": "Mensaje enviado",
+    "successDescription": "Gracias por contactarnos, nos pondremos en contacto en un día hábil.",
+    "sendAnother": "Enviar otro mensaje"
+  },
+  "services": {
+    "seo": {
+      "title": "Servicios",
+      "description": "Desarrollo de aplicaciones web, integración de IA y LLM a medida, y sistemas CRM/ERP para comercio electrónico multicanal y operaciones de contenido.",
+      "ogTitle": "Servicios {'|'} DigSolutions",
+      "ogDescription": "Desarrollo de aplicaciones web, integración de IA y sistemas CRM/ERP."
+    },
+    "eyebrow": "Servicios",
+    "title": "Un solo socio de ingeniería, cada disciplina que su hoja de ruta necesita",
+    "subtitle": "Ya sea que necesite un producto nuevo desde cero, IA integrada en uno existente, o un sistema empresarial reconstruido en torno a cómo trabaja realmente su equipo, cubrimos todo el stack.",
+    "ctaTitle": "¿No está seguro de qué servicio necesita?",
+    "ctaDescription": "Cuéntenos el problema que está resolviendo. Le ayudaremos a definir el alcance y el stack adecuados."
+  },
+  "serviceDetail": {
+    "whatsIncluded": "Qué incluye",
+    "technologies": "Tecnologías",
+    "idealFor": "Ideal para",
+    "relatedServices": "Servicios relacionados",
+    "ctaTitle": "¿Listo para hablar sobre {service}?"
+  },
+  "portfolio": {
+    "seo": {
+      "title": "Portafolio y Casos de Éxito",
+      "description": "Casos de éxito del trabajo con clientes de DigSolutions: automatización de contenido con IA y sistemas ERP multicanal para comercio electrónico.",
+      "ogTitle": "Portafolio {'|'} DigSolutions",
+      "ogDescription": "Proyectos reales en automatización con IA e integración de ERP para e-commerce."
+    },
+    "eyebrow": "Portafolio",
+    "title": "Trabajo construido para resultados reales, no solo lanzamientos",
+    "subtitle": "Los nombres de los clientes se anonimizan cuando no tenemos permiso para compartirlos, pero los problemas y los resultados son reales. Pregúntenos por referencias de cualquiera de los proyectos."
+  },
+  "portfolioDetail": {
+    "clientLabel": "Cliente",
+    "timelineLabel": "Cronograma",
+    "challengeHeading": "El desafío",
+    "approachHeading": "Nuestro enfoque",
+    "solutionHeading": "La solución",
+    "resultsHeading": "Resultados",
+    "technologies": "Tecnologías",
+    "relatedService": "Servicio relacionado",
+    "moreCaseStudies": "Más casos de éxito",
+    "ctaTitle": "¿Quiere resultados como estos para su producto?"
+  },
+  "blog": {
+    "seo": {
+      "title": "Blog",
+      "description": "Perspectivas de ingeniería, IA y estrategia de software del equipo de DigSolutions, sobre elección de frameworks, sistemas de IA en producción, arquitectura SaaS y modernización empresarial.",
+      "ogTitle": "Blog {'|'} DigSolutions",
+      "ogDescription": "Perspectivas de ingeniería e IA del equipo de DigSolutions."
+    },
+    "eyebrow": "Blog",
+    "title": "Notas del equipo de ingeniería",
+    "subtitle": "Artículos prácticos sobre elección de frameworks, sistemas de IA en producción, arquitectura SaaS y modernización de software empresarial.",
+    "allCategory": "Todos",
+    "latestBadge": "Reciente"
+  },
+  "blogDetail": {
+    "keyTakeaways": "Puntos clave",
+    "moreFromBlog": "Más del blog"
+  },
+  "privacy": {
+    "seo": {
+      "title": "Política de Privacidad",
+      "description": "Política de privacidad de DigSolutions: cómo recopilamos, usamos y protegemos la información enviada a través de nuestro sitio web.",
+      "ogTitle": "Política de Privacidad {'|'} DigSolutions",
+      "ogDescription": "Cómo DigSolutions recopila, usa y protege la información enviada a través de nuestro sitio web."
+    },
+    "title": "Política de Privacidad",
+    "lastUpdated": "Última actualización: 27 de agosto de 2026",
+    "p1": "Esta política de privacidad de referencia cubre la información que DigSolutions recopila a través de este sitio web, principalmente los envíos del formulario de contacto (nombre, correo electrónico, empresa y detalles del proyecto) y los datos analíticos estándar recopilados mediante Google Analytics y Google Tag Manager.",
+    "p2": "La información del formulario de contacto se utiliza únicamente para responder a su consulta y no se vende ni se comparte con terceros fuera de las herramientas utilizadas directamente para prestar nuestros servicios (como nuestro proveedor de envío de correo electrónico).",
+    "p3": "Cuando visita este sitio por primera vez, un aviso de cookies le permite aceptar o rechazar las cookies analíticas opcionales; las cookies necesarias para el funcionamiento del sitio siempre están activas. Puede cambiar su elección en cualquier momento a través del enlace \"Preferencias de cookies\" en el pie de página.",
+    "p4": "Reemplace esta página con una política de privacidad completa revisada por un asesor legal antes del lanzamiento, especialmente si planea atender a usuarios en jurisdicciones con requisitos específicos como el RGPD o la CCPA."
+  },
+  "terms": {
+    "seo": {
+      "title": "Términos de Servicio",
+      "description": "Términos de servicio del sitio web de DigSolutions.",
+      "ogTitle": "Términos de Servicio {'|'} DigSolutions",
+      "ogDescription": "Los términos de servicio que rigen el uso del sitio web de DigSolutions."
+    },
+    "title": "Términos de Servicio",
+    "lastUpdated": "Última actualización: 27 de agosto de 2026",
+    "p1": "Este es contenido de referencia de términos de servicio para el sitio web de DigSolutions. Cubre el uso general del contenido de este sitio y las herramientas de contacto, y no constituye un acuerdo de servicios. Los proyectos reales con clientes se rigen por contratos firmados independientes (declaraciones de trabajo, acuerdos marco de servicios, etc.).",
+    "p2": "Reemplace esta página con términos revisados por un asesor legal antes del lanzamiento."
+  }
+}

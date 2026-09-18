@@ -1,16 +1,16 @@
 <script setup lang="ts">
-import { services } from '~/data/services'
-
+const { services } = useContent()
 const { openPreferences } = useCookieConsent()
+const { t } = useI18n()
 
 const year = new Date().getFullYear()
 
-const company = [
-  { label: 'About', to: '/about' },
-  { label: 'Portfolio', to: '/portfolio' },
-  { label: 'Blog', to: '/blog' },
-  { label: 'Contact', to: '/contact' }
-]
+const company = computed(() => [
+  { label: t('nav.about'), to: '/about' },
+  { label: t('nav.portfolio'), to: '/portfolio' },
+  { label: t('nav.blog'), to: '/blog' },
+  { label: t('footer.contact'), to: '/contact' }
+])
 </script>
 
 <template>
@@ -18,43 +18,43 @@ const company = [
     <div class="container-page py-16">
       <div class="grid grid-cols-1 gap-12 lg:grid-cols-12">
         <div class="lg:col-span-4">
-          <NuxtLink to="/" aria-label="DigSolutions home">
+          <NuxtLinkLocale to="/" aria-label="DigSolutions home">
             <LogoMark dark />
-          </NuxtLink>
+          </NuxtLinkLocale>
           <p class="mt-4 max-w-sm text-sm leading-relaxed text-navy-400">
-            A 20-person team across the US and Pakistan, building web platforms, AI automation, and e-commerce ERP systems.
+            {{ t('footer.tagline') }}
           </p>
         </div>
 
         <div class="lg:col-span-3">
-          <h3 class="text-sm font-semibold text-white">Services</h3>
+          <h3 class="text-sm font-semibold text-white">{{ t('footer.servicesHeading') }}</h3>
           <ul class="mt-4 space-y-2.5">
             <li v-for="service in services.slice(0, 6)" :key="service.slug">
-              <NuxtLink :to="`/services/${service.slug}`" class="text-sm text-navy-400 transition hover:text-white">
+              <NuxtLinkLocale :to="`/services/${service.slug}`" class="text-sm text-navy-400 transition hover:text-white">
                 {{ service.title }}
-              </NuxtLink>
+              </NuxtLinkLocale>
             </li>
             <li>
-              <NuxtLink to="/services" class="text-sm font-medium text-brand-400 transition hover:text-brand-300">
-                View all services →
-              </NuxtLink>
+              <NuxtLinkLocale to="/services" class="text-sm font-medium text-brand-400 transition hover:text-brand-300">
+                {{ t('footer.viewAllServices') }}
+              </NuxtLinkLocale>
             </li>
           </ul>
         </div>
 
         <div class="lg:col-span-2">
-          <h3 class="text-sm font-semibold text-white">Company</h3>
+          <h3 class="text-sm font-semibold text-white">{{ t('footer.companyHeading') }}</h3>
           <ul class="mt-4 space-y-2.5">
             <li v-for="link in company" :key="link.to">
-              <NuxtLink :to="link.to" class="text-sm text-navy-400 transition hover:text-white">
+              <NuxtLinkLocale :to="link.to" class="text-sm text-navy-400 transition hover:text-white">
                 {{ link.label }}
-              </NuxtLink>
+              </NuxtLinkLocale>
             </li>
           </ul>
         </div>
 
         <div class="lg:col-span-3">
-          <h3 class="text-sm font-semibold text-white">Get in touch</h3>
+          <h3 class="text-sm font-semibold text-white">{{ t('footer.getInTouchHeading') }}</h3>
           <ul class="mt-4 space-y-3 text-sm text-navy-400">
             <li class="flex items-center gap-2.5">
               <Icon name="lucide:mail" size="15" class="shrink-0 text-navy-500" />
@@ -66,18 +66,18 @@ const company = [
             </li>
             <li class="flex items-start gap-2.5">
               <Icon name="lucide:globe" size="15" class="mt-0.5 shrink-0 text-navy-500" />
-              <span>Distributed team, US & Pakistan</span>
+              <span>{{ t('footer.team') }}</span>
             </li>
           </ul>
         </div>
       </div>
 
       <div class="mt-14 flex flex-col items-center justify-between gap-4 border-t border-navy-800 pt-8 text-xs text-navy-500 sm:flex-row">
-        <p>© {{ year }} DigSolutions. All rights reserved.</p>
+        <p>{{ t('footer.copyright', { year }) }}</p>
         <div class="flex gap-6">
-          <NuxtLink to="/privacy" class="hover:text-navy-300">Privacy Policy</NuxtLink>
-          <NuxtLink to="/terms" class="hover:text-navy-300">Terms of Service</NuxtLink>
-          <button type="button" class="hover:text-navy-300" @click="openPreferences">Cookie Preferences</button>
+          <NuxtLinkLocale to="/privacy" class="hover:text-navy-300">{{ t('footer.privacyPolicy') }}</NuxtLinkLocale>
+          <NuxtLinkLocale to="/terms" class="hover:text-navy-300">{{ t('footer.termsOfService') }}</NuxtLinkLocale>
+          <button type="button" class="hover:text-navy-300" @click="openPreferences">{{ t('footer.cookiePreferences') }}</button>
         </div>
       </div>
     </div>

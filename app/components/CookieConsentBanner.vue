@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const { consent, loaded, manageOpen, load, acceptAll, rejectAll, savePreferences } = useCookieConsent()
+const { t } = useI18n()
 
 const analyticsEnabled = ref(false)
 const showDetails = ref(false)
@@ -42,30 +43,30 @@ function close() {
           <div class="flex items-start gap-3">
             <Icon name="lucide:cookie" size="20" class="mt-0.5 shrink-0 text-brand-400" />
             <div class="min-w-0 flex-1">
-              <h2 class="text-sm font-semibold text-white">We use cookies</h2>
+              <h2 class="text-sm font-semibold text-white">{{ t('cookieBanner.title') }}</h2>
               <p class="mt-1.5 text-sm leading-relaxed text-navy-400">
-                We use essential cookies to run this site, and optional analytics cookies (Google Analytics / Tag Manager) to understand how visitors use it. Read our
-                <NuxtLink to="/privacy" class="text-brand-400 underline underline-offset-2 hover:text-brand-300">Privacy Policy</NuxtLink> for details.
+                {{ t('cookieBanner.description') }}
+                <NuxtLinkLocale to="/privacy" class="text-brand-400 underline underline-offset-2 hover:text-brand-300">{{ t('footer.privacyPolicy') }}</NuxtLinkLocale> {{ t('cookieBanner.descriptionAfterLink') }}
               </p>
 
               <div v-if="showDetails" class="mt-4 space-y-3 rounded-xl border border-navy-800 bg-navy-900 p-4">
                 <div class="flex items-center justify-between gap-4">
                   <div>
-                    <p class="text-sm font-medium text-white">Necessary</p>
-                    <p class="text-xs text-navy-400">Required for the site to function. Always on.</p>
+                    <p class="text-sm font-medium text-white">{{ t('cookieBanner.necessaryTitle') }}</p>
+                    <p class="text-xs text-navy-400">{{ t('cookieBanner.necessaryDescription') }}</p>
                   </div>
-                  <span class="shrink-0 text-xs font-medium text-navy-500">Always active</span>
+                  <span class="shrink-0 text-xs font-medium text-navy-500">{{ t('cookieBanner.alwaysActive') }}</span>
                 </div>
                 <div class="flex items-center justify-between gap-4 border-t border-navy-800 pt-3">
                   <div>
-                    <p class="text-sm font-medium text-white">Analytics</p>
-                    <p class="text-xs text-navy-400">Google Analytics / Tag Manager, helps us understand site usage.</p>
+                    <p class="text-sm font-medium text-white">{{ t('cookieBanner.analyticsTitle') }}</p>
+                    <p class="text-xs text-navy-400">{{ t('cookieBanner.analyticsDescription') }}</p>
                   </div>
                   <button
                     type="button"
                     role="switch"
                     :aria-checked="analyticsEnabled"
-                    aria-label="Toggle analytics cookies"
+                    :aria-label="t('cookieBanner.toggleAriaLabel')"
                     class="relative h-6 w-11 shrink-0 rounded-full transition"
                     :class="analyticsEnabled ? 'bg-brand-500' : 'bg-navy-700'"
                     @click="analyticsEnabled = !analyticsEnabled"
@@ -80,10 +81,10 @@ function close() {
 
               <div class="mt-5 flex flex-wrap items-center gap-3">
                 <button type="button" class="rounded-full bg-brand-500 px-4 py-2 text-sm font-semibold text-white transition hover:bg-brand-600" @click="handleAcceptAll">
-                  Accept all
+                  {{ t('cookieBanner.acceptAll') }}
                 </button>
                 <button type="button" class="rounded-full border border-navy-700 px-4 py-2 text-sm font-semibold text-navy-200 transition hover:border-navy-600 hover:text-white" @click="handleRejectAll">
-                  Reject non-essential
+                  {{ t('cookieBanner.rejectAll') }}
                 </button>
                 <button
                   v-if="!showDetails"
@@ -91,7 +92,7 @@ function close() {
                   class="text-sm font-semibold text-navy-400 underline underline-offset-2 transition hover:text-white"
                   @click="showDetails = true"
                 >
-                  Manage preferences
+                  {{ t('cookieBanner.managePreferences') }}
                 </button>
                 <button
                   v-else
@@ -99,7 +100,7 @@ function close() {
                   class="rounded-full border border-navy-700 px-4 py-2 text-sm font-semibold text-navy-200 transition hover:border-navy-600 hover:text-white"
                   @click="handleSave"
                 >
-                  Save preferences
+                  {{ t('cookieBanner.savePreferences') }}
                 </button>
                 <button
                   v-if="isUpdate"
@@ -107,7 +108,7 @@ function close() {
                   class="ml-auto text-sm text-navy-500 transition hover:text-navy-300"
                   @click="close"
                 >
-                  Close
+                  {{ t('common.close') }}
                 </button>
               </div>
             </div>

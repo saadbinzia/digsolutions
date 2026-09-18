@@ -5,7 +5,7 @@ defineProps<{ caseStudy: CaseStudy }>()
 </script>
 
 <template>
-  <NuxtLink
+  <NuxtLinkLocale
     :to="`/portfolio/${caseStudy.slug}`"
     class="group flex flex-col overflow-hidden rounded-2xl border border-navy-100 bg-white transition duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-navy-900/5"
   >
@@ -31,9 +31,9 @@ defineProps<{ caseStudy: CaseStudy }>()
         </span>
       </div>
       <span class="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-600">
-        Read case study
+        {{ $t('common.readCaseStudy') }}
         <Icon name="lucide:arrow-right" size="15" class="transition group-hover:translate-x-0.5" />
       </span>
     </div>
-  </NuxtLink>
+  </NuxtLinkLocale>
 </template>

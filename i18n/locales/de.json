@@ -1,0 +1,323 @@
+{
+  "common": {
+    "bookACall": "Termin vereinbaren",
+    "startProject": "Projekt starten",
+    "seeOurWork": "Unsere Arbeiten ansehen",
+    "learnMore": "Mehr erfahren",
+    "readCaseStudy": "Fallstudie lesen",
+    "readArticle": "Artikel lesen",
+    "discussProject": "Ihr Projekt besprechen",
+    "backToHome": "Zurück zur Startseite",
+    "close": "Schließen",
+    "language": "Sprache"
+  },
+  "nav": {
+    "services": "Leistungen",
+    "portfolio": "Portfolio",
+    "about": "Über uns",
+    "blog": "Blog",
+    "toggleMenu": "Menü ein-/ausblenden"
+  },
+  "footer": {
+    "tagline": "Ein 20-köpfiges Team in den USA und Pakistan, das Webplattformen, KI-Automatisierung und E-Commerce-ERP-Systeme entwickelt.",
+    "servicesHeading": "Leistungen",
+    "viewAllServices": "Alle Leistungen ansehen →",
+    "companyHeading": "Unternehmen",
+    "contact": "Kontakt",
+    "getInTouchHeading": "Kontakt aufnehmen",
+    "team": "Verteiltes Team, USA & Pakistan",
+    "copyright": "© {year} DigSolutions. Alle Rechte vorbehalten.",
+    "privacyPolicy": "Datenschutzerklärung",
+    "termsOfService": "Nutzungsbedingungen",
+    "cookiePreferences": "Cookie-Einstellungen"
+  },
+  "cookieBanner": {
+    "title": "Wir verwenden Cookies",
+    "description": "Wir verwenden essenzielle Cookies für den Betrieb dieser Website sowie optionale Analyse-Cookies (Google Analytics / Tag Manager), um zu verstehen, wie Besucher sie nutzen. Lesen Sie unsere",
+    "descriptionAfterLink": "für Details.",
+    "necessaryTitle": "Notwendig",
+    "necessaryDescription": "Für den Betrieb der Website erforderlich. Immer aktiv.",
+    "alwaysActive": "Immer aktiv",
+    "analyticsTitle": "Analyse",
+    "analyticsDescription": "Google Analytics / Tag Manager hilft uns, die Nutzung der Website zu verstehen.",
+    "toggleAriaLabel": "Analyse-Cookies ein-/ausschalten",
+    "acceptAll": "Alle akzeptieren",
+    "rejectAll": "Nicht notwendige ablehnen",
+    "managePreferences": "Einstellungen verwalten",
+    "savePreferences": "Einstellungen speichern"
+  },
+  "ctaBanner": {
+    "defaultTitle": "Bereit, über Ihr Projekt zu sprechen?",
+    "defaultDescription": "Erzählen Sie uns, woran Sie arbeiten. Wir antworten innerhalb eines Werktags mit den nächsten Schritten, ohne aufdringliche Verkaufsgespräche."
+  },
+  "error": {
+    "notFoundTitle": "Diese Seite existiert nicht",
+    "genericTitle": "Etwas ist schiefgelaufen",
+    "defaultMessage": "Bitte überprüfen Sie die URL oder kehren Sie zur Startseite zurück.",
+    "helpHeading": "Oder versuchen Sie es hier"
+  },
+  "home": {
+    "seo": {
+      "title": "Web-, .NET-, KI- und E-Commerce-ERP-Entwicklung",
+      "description": "DigSolutions entwickelt individuelle Web- und .NET-Plattformen, KI-gestützte Content-Automatisierung, native Windows-Desktopanwendungen und Multichannel-E-Commerce-ERP-Systeme für Teams, die manuelle Prozesse und Standardsoftware hinter sich gelassen haben.",
+      "ogTitle": "DigSolutions {'|'} Web-, .NET-, KI- und E-Commerce-ERP-Entwicklung",
+      "ogDescription": "Individuelle Web- und .NET-Plattformen, KI-gestützte Automatisierung, Desktopanwendungen und E-Commerce-ERP-Systeme, entwickelt von einem verteilten Team in den USA und Pakistan."
+    },
+    "badge": "Web & .NET · KI-Automatisierung · E-Commerce-ERP · Desktop-Apps",
+    "title": "Ein Entwicklungspartner, vier Disziplinen, die Sie überprüfen können",
+    "subtitle": "Web- & .NET-Entwicklung, KI-Automatisierung, E-Commerce-ERP und Desktopanwendungen – jede Disziplin durch tatsächlich realisierte Projekte belegt, umgesetzt von einem verteilten Team in den USA und Pakistan.",
+    "toolsHeading": "Tools, mit denen wir arbeiten",
+    "servicesEyebrow": "Was wir entwickeln",
+    "servicesTitle": "Vier Disziplinen – ausgewählt, weil wir sie tatsächlich belegen können",
+    "servicesSubtitle": "Wir sind lieber bei vier Dingen konkret als bei zehn vage.",
+    "aiEyebrow": "KI & individuelle LLM-Integration",
+    "aiTitle": "KI für eine klar definierte Aufgabe, eingebunden in ein System, das Sie bereits nutzen",
+    "aiDescription": "Wir verkaufen keinen Allzweck-Chatbot. Wir setzen KI für eine konkrete Aufgabe innerhalb einer Pipeline ein: den veröffentlichungswürdigen Clip aus einer Stunde Filmmaterial herauszufiltern oder das eine Produktlisting, das unter Hunderten wirklich Aufmerksamkeit braucht.",
+    "aiPoints": [
+      "Individuelle LLM-Integration in ein bestehendes Produkt oder einen bestehenden Workflow",
+      "KI für eine eng begrenzte, überprüfbare Aufgabe, kein offener Assistent",
+      "Entwickelt für die Synchronisation mit den Storefronts und Tools, die Sie bereits nutzen",
+      "Vor dem Go-live anhand realer Beispiele evaluiert"
+    ],
+    "aiCta": "KI- & LLM-Integration entdecken",
+    "codeTabs": {
+      "clipExtraction": "Clip-Extraktion",
+      "storefrontSync": "Storefront-Synchronisation",
+      "productFlagging": "Produktmarkierung"
+    },
+    "whyEyebrow": "Warum DigSolutions",
+    "whyTitle": "Entwickelt, um sich Ihrem Stack anzupassen – nicht umgekehrt",
+    "valueProps": [
+      {
+        "title": "Entwickelt, um manuelle Arbeit zu ersetzen",
+        "description": "Unsere besten Projekte beginnen mit einem Prozess, den noch jemand von Hand erledigt: Bestände über mehrere Storefronts hinweg abgleichen, Videos manuell schneiden. Genau das automatisieren wir, nicht nur die einfachen Teile drumherum."
+      },
+      {
+        "title": "KI für eine reale Aufgabe",
+        "description": "Wir setzen KI für konkrete, klar definierte Aufgaben innerhalb eines Systems ein, etwa den richtigen Videoclip oder das richtige Produkt für ein Update zu markieren, nicht als aufgesetzten Allzweck-Chatbot."
+      },
+      {
+        "title": "Entwickelt rund um Ihre bestehenden Systeme",
+        "description": "Der Großteil unserer Arbeit bindet sich an Plattformen an, die Sie bereits betreiben, Amazon, Shopify, WooCommerce und mehr, sodass Sie eine einzige verlässliche Datenquelle erhalten, statt zu einem neuen System migrieren zu müssen."
+      },
+      {
+        "title": "Ein Team, mit dem Sie direkt zusammenarbeiten",
+        "description": "Wir sind ein 20-köpfiges Team, verteilt über die USA und Pakistan. Sie arbeiten direkt mit den Entwicklerinnen und Entwicklern, die Ihr Produkt bauen, nicht mit wechselndem Account-Management."
+      }
+    ],
+    "statsLabels": [
+      "Personen im Team",
+      "Länder, aus denen wir arbeiten",
+      "Kerndisziplinen"
+    ],
+    "processEyebrow": "So arbeiten wir",
+    "processTitle": "Ein Prozess für Verbindlichkeit, nicht für Formalitäten",
+    "process": [
+      {
+        "step": "01",
+        "title": "Analyse",
+        "description": "Wir erfassen Ihre Anforderungen, Rahmenbedingungen und bestehenden Systeme, bevor wir eine einzige Zeile Code schreiben."
+      },
+      {
+        "step": "02",
+        "title": "Architektur",
+        "description": "Entscheidungen zu Stack, Datenmodell sowie KI- und Infrastrukturfragen treffen wir bewusst und dokumentieren sie."
+      },
+      {
+        "step": "03",
+        "title": "Umsetzung",
+        "description": "Agile Umsetzung in kurzen Zyklen, mit Staging-Umgebungen und Demos, die Sie tatsächlich selbst ausprobieren können."
+      },
+      {
+        "step": "04",
+        "title": "Launch & Support",
+        "description": "Wir bleiben auch nach dem Launch am Ball. Monitoring, Weiterentwicklung und Support sind fester Bestandteil jedes Projekts."
+      }
+    ],
+    "recentWorkEyebrow": "Aktuelle Projekte",
+    "recentWorkTitle": "Ergebnisse statt bloßer Liefergegenstände",
+    "viewAllCaseStudies": "Alle Fallstudien ansehen",
+    "referencesTitle": "Wir stellen Sie lieber einem echten Kunden vor, als ein Zitat zu veröffentlichen, das Sie nicht überprüfen können",
+    "referencesDescription": "Wir veröffentlichen hier keine Kundennamen oder Referenzen, aus Rücksicht auf die Vertraulichkeit, nicht, weil die Projekte nicht real wären. Fragen Sie uns einfach in einem Gespräch, und wir vermitteln Ihnen eine Referenz zu einem der oben genannten Projekte."
+  },
+  "about": {
+    "seo": {
+      "title": "Über uns",
+      "description": "DigSolutions ist ein Full-Stack-Softwareentwicklungsunternehmen, das Web-, Mobile-, KI- und Enterprise-Systeme für Kunden weltweit entwickelt. Erfahren Sie mehr über unseren Ansatz und unser Team.",
+      "ogTitle": "Über uns {'|'} DigSolutions",
+      "ogDescription": "Ein Full-Stack-Entwicklungsteam für Web-, Mobile-, KI- und Enterprise-Software."
+    },
+    "eyebrow": "Über DigSolutions",
+    "title": "Ein verteiltes Team, das die Automatisierung hinter Content und Multichannel-Commerce entwickelt",
+    "subtitle": "Wir sind ein 20-köpfiges Team, das in den USA und Pakistan arbeitet. Wir nehmen uns Problemen an, bei denen KI und Integrationsarbeit einen wirklich manuellen Prozess ersetzen können, nicht überall dort, wo KI gerade im Trend liegt.",
+    "distributedTitle": "Verteilt aus Überzeugung, nicht aus Kostengründen",
+    "distributedP1": "Wir sind ein 20-köpfiges Team, aufgeteilt auf die USA und Pakistan. Das ist bewusst so aufgebaut: Kunden erhalten dadurch Überschneidungen mit den US-Geschäftszeiten und einen größeren Pool erfahrener Entwicklerinnen und Entwickler, als eine gleich große, rein US-basierte Agentur aufbauen könnte.",
+    "distributedP2": "Wir konzentrieren uns auf drei Disziplinen: Webplattformen, klar abgegrenzte KI-Funktionen und ERP-/E-Commerce-Integration, denn genau in diesen Bereichen haben wir tatsächlich Systeme in den produktiven Einsatz gebracht, statt eine lange Liste an Technologien anzubieten, für die wir gerne beauftragt würden.",
+    "stats": [
+      "Personen im Team",
+      "Länder: USA & Pakistan",
+      "Kerndisziplinen",
+      "Produktivsysteme im Einsatz"
+    ],
+    "operateEyebrow": "Wie wir arbeiten",
+    "operateTitle": "Prinzipien, bei denen wir keine Kompromisse eingehen",
+    "values": [
+      {
+        "title": "Wir bauen, was wir belegen können",
+        "description": "Wir beschränken uns auf vier Disziplinen, Web- & .NET-Plattformen, KI-Automatisierung, ERP-/E-Commerce-Integration und Windows-Desktopanwendungen, weil wir genau diese tatsächlich umgesetzt haben, statt eine Liste jeder Technologie anzubieten, für die wir gerne beauftragt würden."
+      },
+      {
+        "title": "Keine Blackboxes",
+        "description": "Sie erhalten Zugriff auf dieselben Repositories, Boards und Umgebungen, die wir intern nutzen. Wie Ihr Produkt funktioniert, sollte für Sie zu keinem Zeitpunkt ein Rätsel sein."
+      },
+      {
+        "title": "Passgenau dimensionierte Entwicklung",
+        "description": "Wir entwickeln für die Größenordnung, die Sie tatsächlich haben, mit einem klaren Weg zu der Größenordnung, in die Sie hineinwachsen, nicht für spekulative Lastszenarien, die vielleicht nie eintreten."
+      },
+      {
+        "title": "Langfristige Partnerschaften statt einmaliger Projekte",
+        "description": "Die meisten unserer Projekte beginnen als einzelnes Vorhaben und entwickeln sich zu langfristigen Partnerschaften, weil Software auch nach dem Launch kontinuierlich weiterentwickelt werden muss."
+      }
+    ],
+    "teamEyebrow": "Unser Team",
+    "teamTitle": "Erfahrene Entwicklerinnen und Entwickler in jeder Disziplin",
+    "teamSubtitle": "Sie arbeiten direkt mit den Menschen zusammen, die Ihr Produkt bauen, nicht mit wechselndem Account-Management.",
+    "team": [
+      {
+        "role": "Web & Plattform-Entwicklung",
+        "description": "Entwicklerinnen und Entwickler, die die Webplattformen, Automatisierungs-Pipelines und Integrationen bauen, auf die Kunden täglich zurückgreifen."
+      },
+      {
+        "role": "KI-Entwicklung",
+        "description": "Entwicklerinnen und Entwickler, die die in diese Systeme eingebetteten KI-Funktionen konzipieren und umsetzen, von der Clip-Extraktion bis zur Katalogprüfung."
+      },
+      {
+        "role": ".NET- & Desktop-Entwicklung",
+        "description": "Entwicklerinnen und Entwickler, die .NET-Backends, Angular-Frontends und native Windows-Desktopanwendungen bauen."
+      },
+      {
+        "role": "Projektsteuerung",
+        "description": "Die Menschen, die dafür sorgen, dass Projekte in Umfang, Zeitplan und Ergebnissen verbindlich bleiben."
+      }
+    ],
+    "ctaTitle": "Lust auf eine Zusammenarbeit?"
+  },
+  "contact": {
+    "seo": {
+      "title": "Kontakt",
+      "description": "Erzählen Sie DigSolutions von Ihrem Web-, Mobile-, KI- oder Enterprise-Softwareprojekt. Wir antworten innerhalb eines Werktags.",
+      "ogTitle": "Kontakt {'|'} DigSolutions",
+      "ogDescription": "Starten Sie ein Gespräch über Ihr nächstes Softwareprojekt."
+    },
+    "eyebrow": "Kontakt",
+    "title": "Lassen Sie uns über Ihr Projekt sprechen",
+    "subtitle": "Erzählen Sie uns von Ihrem Projekt, und wir melden uns innerhalb eines Werktags mit den nächsten Schritten.",
+    "bookCallDirectly": "Direkt einen Termin vereinbaren",
+    "emailLabel": "E-Mail",
+    "phoneLabel": "Telefon",
+    "teamLabel": "Team",
+    "teamValue": "Verteilt über die USA und Pakistan",
+    "fullName": "Vollständiger Name",
+    "namePlaceholder": "Max Mustermann",
+    "workEmail": "Geschäftliche E-Mail",
+    "emailPlaceholder": "max{'@'}unternehmen.de",
+    "company": "Unternehmen",
+    "companyPlaceholder": "Muster GmbH",
+    "serviceOfInterest": "Gewünschte Leistung",
+    "notSureYet": "Noch unsicher",
+    "projectDetails": "Projektdetails",
+    "messagePlaceholder": "Woran arbeiten Sie, und wie ist Ihr Zeitrahmen?",
+    "sending": "Wird gesendet…",
+    "sendMessage": "Nachricht senden",
+    "genericError": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut.",
+    "successTitle": "Nachricht gesendet",
+    "successDescription": "Vielen Dank für Ihre Nachricht, wir melden uns innerhalb eines Werktags bei Ihnen.",
+    "sendAnother": "Weitere Nachricht senden"
+  },
+  "services": {
+    "seo": {
+      "title": "Leistungen",
+      "description": "Webanwendungsentwicklung, KI- & individuelle LLM-Integration sowie CRM-/ERP-Systeme für Multichannel-E-Commerce und Content-Operations.",
+      "ogTitle": "Leistungen {'|'} DigSolutions",
+      "ogDescription": "Webanwendungsentwicklung, KI-Integration und CRM-/ERP-Systeme."
+    },
+    "eyebrow": "Leistungen",
+    "title": "Ein Entwicklungspartner für jede Disziplin, die Ihre Roadmap braucht",
+    "subtitle": "Ob Sie ein neues Produkt von Grund auf entwickeln lassen, KI in ein bestehendes Produkt integrieren oder ein Enterprise-System so umbauen möchten, dass es wirklich zur Arbeitsweise Ihres Teams passt, wir decken den gesamten Stack ab.",
+    "ctaTitle": "Nicht sicher, welche Leistung Sie brauchen?",
+    "ctaDescription": "Erzählen Sie uns von dem Problem, das Sie lösen möchten. Wir helfen Ihnen, den passenden Umfang und Stack zu finden."
+  },
+  "serviceDetail": {
+    "whatsIncluded": "Leistungsumfang",
+    "technologies": "Technologien",
+    "idealFor": "Ideal für",
+    "relatedServices": "Verwandte Leistungen",
+    "ctaTitle": "Bereit, über {service} zu sprechen?"
+  },
+  "portfolio": {
+    "seo": {
+      "title": "Portfolio & Fallstudien",
+      "description": "Fallstudien aus Kundenprojekten von DigSolutions: KI-gestützte Content-Automatisierung und Multichannel-E-Commerce-ERP-Systeme.",
+      "ogTitle": "Portfolio {'|'} DigSolutions",
+      "ogDescription": "Reale Projekte aus KI-gestützter Automatisierung und E-Commerce-ERP-Integration."
+    },
+    "eyebrow": "Portfolio",
+    "title": "Arbeit für echte Ergebnisse, nicht nur für den Launch",
+    "subtitle": "Kundennamen werden anonymisiert, wenn wir keine Freigabe zur Veröffentlichung haben, aber die Probleme und Ergebnisse sind real. Fragen Sie uns gerne nach Referenzen zu beiden Projekten."
+  },
+  "portfolioDetail": {
+    "clientLabel": "Kunde",
+    "timelineLabel": "Zeitrahmen",
+    "challengeHeading": "Die Herausforderung",
+    "approachHeading": "Unser Ansatz",
+    "solutionHeading": "Die Lösung",
+    "resultsHeading": "Ergebnisse",
+    "technologies": "Technologien",
+    "relatedService": "Verwandte Leistung",
+    "moreCaseStudies": "Weitere Fallstudien",
+    "ctaTitle": "Möchten Sie solche Ergebnisse für Ihr Produkt?"
+  },
+  "blog": {
+    "seo": {
+      "title": "Blog",
+      "description": "Einblicke des DigSolutions-Teams in Engineering, KI und Softwarestrategie, von der Framework-Wahl über produktive KI-Systeme bis hin zu SaaS-Architektur und Enterprise-Modernisierung.",
+      "ogTitle": "Blog {'|'} DigSolutions",
+      "ogDescription": "Engineering- und KI-Einblicke des DigSolutions-Teams."
+    },
+    "eyebrow": "Blog",
+    "title": "Notizen aus dem Engineering-Team",
+    "subtitle": "Praxisnahe Beiträge zu Framework-Entscheidungen, produktiven KI-Systemen, SaaS-Architektur und der Modernisierung von Enterprise-Software.",
+    "allCategory": "Alle",
+    "latestBadge": "Neu"
+  },
+  "blogDetail": {
+    "keyTakeaways": "Die wichtigsten Erkenntnisse",
+    "moreFromBlog": "Weitere Beiträge aus dem Blog"
+  },
+  "privacy": {
+    "seo": {
+      "title": "Datenschutzerklärung",
+      "description": "Datenschutzerklärung von DigSolutions: Wie wir Informationen erfassen, nutzen und schützen, die über unsere Website übermittelt werden.",
+      "ogTitle": "Datenschutzerklärung {'|'} DigSolutions",
+      "ogDescription": "Wie DigSolutions Informationen erfasst, nutzt und schützt, die über unsere Website übermittelt werden."
+    },
+    "title": "Datenschutzerklärung",
+    "lastUpdated": "Zuletzt aktualisiert: 27. August 2026",
+    "p1": "Diese Platzhalter-Datenschutzerklärung behandelt die Informationen, die DigSolutions über diese Website erfasst, vor allem Angaben aus dem Kontaktformular (Name, E-Mail, Unternehmen und Projektdetails) sowie standardmäßige Analysedaten, die über Google Analytics und den Google Tag Manager erfasst werden.",
+    "p2": "Angaben aus dem Kontaktformular werden ausschließlich zur Beantwortung Ihrer Anfrage verwendet und nicht an Dritte verkauft oder weitergegeben, mit Ausnahme der Tools, die unmittelbar zur Erbringung unserer Leistungen eingesetzt werden (etwa unser E-Mail-Zustelldienst).",
+    "p3": "Beim ersten Besuch dieser Website können Sie über ein Cookie-Banner optionale Analyse-Cookies akzeptieren oder ablehnen; notwendige Cookies, die für den Betrieb der Website erforderlich sind, sind immer aktiv. Sie können Ihre Auswahl jederzeit über den Link „Cookie-Einstellungen“ in der Fußzeile ändern.",
+    "p4": "Ersetzen Sie diese Seite vor dem Launch durch eine vollständige, rechtlich geprüfte Datenschutzerklärung, insbesondere, wenn Sie Nutzerinnen und Nutzer in Rechtsräumen mit spezifischen Anforderungen wie der DSGVO oder dem CCPA bedienen möchten."
+  },
+  "terms": {
+    "seo": {
+      "title": "Nutzungsbedingungen",
+      "description": "Nutzungsbedingungen der DigSolutions-Website.",
+      "ogTitle": "Nutzungsbedingungen {'|'} DigSolutions",
+      "ogDescription": "Die Nutzungsbedingungen für die Nutzung der DigSolutions-Website."
+    },
+    "title": "Nutzungsbedingungen",
+    "lastUpdated": "Zuletzt aktualisiert: 27. August 2026",
+    "p1": "Dies sind Platzhalter-Nutzungsbedingungen für die DigSolutions-Website. Sie regeln die allgemeine Nutzung der Inhalte und Kontaktfunktionen dieser Website und stellen keinen Dienstleistungsvertrag dar. Tatsächliche Kundenprojekte werden durch separate, unterzeichnete Verträge geregelt (Leistungsbeschreibungen, Rahmenverträge usw.).",
+    "p2": "Ersetzen Sie diese Seite vor dem Launch durch rechtlich geprüfte Nutzungsbedingungen."
+  }
+}

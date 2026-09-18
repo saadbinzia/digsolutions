@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { services } from '~/data/services'
+const { services } = useContent()
+const { t } = useI18n()
 
 const isOpen = ref(false)
 const isServicesOpen = ref(false)
@@ -10,20 +11,20 @@ watch(() => route.fullPath, () => {
   isServicesOpen.value = false
 })
 
-const navLinks = [
-  { label: 'Services', to: '/services' },
-  { label: 'Portfolio', to: '/portfolio' },
-  { label: 'About', to: '/about' },
-  { label: 'Blog', to: '/blog' }
-]
+const navLinks = computed(() => [
+  { label: t('nav.services'), to: '/services' },
+  { label: t('nav.portfolio'), to: '/portfolio' },
+  { label: t('nav.about'), to: '/about' },
+  { label: t('nav.blog'), to: '/blog' }
+])
 </script>
 
 <template>
   <header class="sticky top-0 z-50 border-b border-navy-100 bg-white/85 backdrop-blur">
     <nav class="container-page flex h-18 items-center justify-between py-4">
-      <NuxtLink to="/" class="flex items-center" aria-label="DigSolutions home">
+      <NuxtLinkLocale to="/" class="flex items-center" aria-label="DigSolutions home">
         <LogoMark />
-      </NuxtLink>
+      </NuxtLinkLocale>
 
       <div class="hidden items-center gap-1 lg:flex">
         <div
@@ -31,13 +32,13 @@ const navLinks = [
           @mouseenter="isServicesOpen = true"
           @mouseleave="isServicesOpen = false"
         >
-          <NuxtLink
+          <NuxtLinkLocale
             to="/services"
             class="flex items-center gap-1 rounded-lg px-3.5 py-2 text-sm font-medium text-navy-700 transition hover:bg-navy-50 hover:text-navy-900"
           >
-            Services
+            {{ t('nav.services') }}
             <Icon name="lucide:chevron-down" size="15" />
-          </NuxtLink>
+          </NuxtLinkLocale>
 
           <Transition
             enter-active-class="transition duration-150 ease-out"
@@ -52,7 +53,7 @@ const navLinks = [
               class="absolute left-1/2 top-full w-[560px] -translate-x-1/2 pt-3"
             >
               <div class="grid grid-cols-2 gap-1 rounded-2xl border border-navy-100 bg-white p-3 shadow-xl shadow-navy-900/5">
-                <NuxtLink
+                <NuxtLinkLocale
                   v-for="service in services"
                   :key="service.slug"
                   :to="`/services/${service.slug}`"
@@ -65,23 +66,24 @@ const navLinks = [
                     <span class="block text-sm font-semibold text-navy-900">{{ service.title }}</span>
                     <span class="mt-0.5 block text-xs leading-snug text-navy-500">{{ service.tagline }}</span>
                   </span>
-                </NuxtLink>
+                </NuxtLinkLocale>
               </div>
             </div>
           </Transition>
         </div>
 
-        <NuxtLink
+        <NuxtLinkLocale
           v-for="link in navLinks.slice(1)"
           :key="link.to"
           :to="link.to"
           class="rounded-lg px-3.5 py-2 text-sm font-medium text-navy-700 transition hover:bg-navy-50 hover:text-navy-900"
         >
           {{ link.label }}
-        </NuxtLink>
+        </NuxtLinkLocale>
       </div>
 
       <div class="hidden items-center gap-3 lg:flex">
+        <LanguageSwitcher />
         <a href="tel:+13075003832" class="text-sm font-medium text-navy-600 hover:text-navy-900">+1 (307) 500-3832</a>
         <a
           href="https://calendly.com/digsolutions/consultation"
@@ -89,20 +91,20 @@ const navLinks = [
           rel="noopener noreferrer"
           class="rounded-lg border border-navy-200 px-4 py-2.5 text-sm font-semibold text-navy-800 transition hover:border-navy-300"
         >
-          Book a call
+          {{ t('common.bookACall') }}
         </a>
-        <NuxtLink
+        <NuxtLinkLocale
           to="/contact"
           class="rounded-lg bg-navy-900 px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-brand-600"
         >
-          Start a project
-        </NuxtLink>
+          {{ t('common.startProject') }}
+        </NuxtLinkLocale>
       </div>
 
       <button
         type="button"
         class="flex h-10 w-10 items-center justify-center rounded-lg text-navy-700 lg:hidden"
-        aria-label="Toggle menu"
+        :aria-label="t('nav.toggleMenu')"
         @click="isOpen = !isOpen"
       >
         <Icon :name="isOpen ? 'lucide:x' : 'lucide:menu'" size="24" />
@@ -119,28 +121,31 @@ const navLinks = [
     >
       <div v-if="isOpen" class="border-t border-navy-100 bg-white lg:hidden">
         <div class="container-page flex flex-col gap-1 py-4">
-          <NuxtLink
+          <NuxtLinkLocale
             v-for="link in navLinks"
             :key="link.to"
             :to="link.to"
             class="rounded-lg px-3 py-2.5 text-base font-medium text-navy-800 hover:bg-navy-50"
           >
             {{ link.label }}
-          </NuxtLink>
+          </NuxtLinkLocale>
+          <div class="mt-2 flex justify-start">
+            <LanguageSwitcher />
+          </div>
           <a
             href="https://calendly.com/digsolutions/consultation"
             target="_blank"
             rel="noopener noreferrer"
             class="mt-2 rounded-lg border border-navy-200 px-4 py-3 text-center text-sm font-semibold text-navy-800"
           >
-            Book a call
+            {{ t('common.bookACall') }}
           </a>
-          <NuxtLink
+          <NuxtLinkLocale
             to="/contact"
             class="rounded-lg bg-navy-900 px-4 py-3 text-center text-sm font-semibold text-white"
           >
-            Start a project
-          </NuxtLink>
+            {{ t('common.startProject') }}
+          </NuxtLinkLocale>
         </div>
       </div>
     </Transition>

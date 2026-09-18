@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { services, getServiceBySlug } from '~/data/services'
+const { services, getServiceBySlug } = useContent()
+const { t } = useI18n()
 
 const route = useRoute()
 const service = getServiceBySlug(route.params.slug as string)
@@ -8,7 +9,7 @@ if (!service) {
   throw createError({ statusCode: 404, statusMessage: 'Service not found' })
 }
 
-const related = services.filter(s => s.slug !== service.slug).slice(0, 3)
+const related = computed(() => services.value.filter(s => s.slug !== service.slug).slice(0, 3))
 
 useSeoMeta({
   title: service.metaTitle,
@@ -39,7 +40,7 @@ useSchemaOrg([
       <div class="absolute inset-0 bg-dot-grid opacity-50 [mask-image:radial-gradient(ellipse_65%_60%_at_0%_0%,black,transparent)]" />
       <div class="container-page relative">
         <nav class="flex items-center gap-2 text-xs text-navy-500">
-          <NuxtLink to="/services" class="hover:text-navy-700">Services</NuxtLink>
+          <NuxtLinkLocale to="/services" class="hover:text-navy-700">{{ t('nav.services') }}</NuxtLinkLocale>
           <Icon name="lucide:chevron-right" size="12" />
           <span class="text-navy-700">{{ service.title }}</span>
         </nav>
@@ -53,13 +54,13 @@ useSchemaOrg([
             </h1>
             <p class="mt-4 text-lg text-navy-500">{{ service.tagline }}</p>
           </div>
-          <NuxtLink
+          <NuxtLinkLocale
             to="/contact"
             class="inline-flex w-fit shrink-0 items-center gap-1.5 rounded-lg bg-navy-900 px-6 py-3.5 text-sm font-semibold text-white shadow-sm transition hover:bg-brand-600"
           >
-            Discuss your project
+            {{ t('common.discussProject') }}
             <Icon name="lucide:arrow-right" size="15" />
-          </NuxtLink>
+          </NuxtLinkLocale>
         </div>
       </div>
     </section>
@@ -69,7 +70,7 @@ useSchemaOrg([
         <div class="lg:col-span-2">
           <p class="text-lg leading-relaxed text-navy-600">{{ service.description }}</p>
 
-          <h2 class="mt-12 text-xl font-semibold text-navy-900">What's included</h2>
+          <h2 class="mt-12 text-xl font-semibold text-navy-900">{{ t('serviceDetail.whatsIncluded') }}</h2>
           <ul class="mt-5 grid grid-cols-1 gap-3 sm:grid-cols-2">
             <li
               v-for="capability in service.capabilities"
@@ -84,7 +85,7 @@ useSchemaOrg([
 
         <aside class="space-y-6">
           <div class="rounded-2xl border border-navy-100 p-6">
-            <h3 class="text-sm font-semibold uppercase tracking-wider text-navy-500">Technologies</h3>
+            <h3 class="text-sm font-semibold uppercase tracking-wider text-navy-500">{{ t('serviceDetail.technologies') }}</h3>
             <div class="mt-4 flex flex-wrap gap-2">
               <span
                 v-for="tech in service.techStack"
@@ -97,7 +98,7 @@ useSchemaOrg([
           </div>
 
           <div class="rounded-2xl border border-navy-100 p-6">
-            <h3 class="text-sm font-semibold uppercase tracking-wider text-navy-500">Ideal for</h3>
+            <h3 class="text-sm font-semibold uppercase tracking-wider text-navy-500">{{ t('serviceDetail.idealFor') }}</h3>
             <ul class="mt-4 space-y-2.5">
               <li v-for="item in service.idealFor" :key="item" class="flex items-start gap-2.5 text-sm text-navy-700">
                 <Icon name="lucide:arrow-right" size="14" class="mt-1 shrink-0 text-brand-500" />
@@ -111,7 +112,7 @@ useSchemaOrg([
 
     <section class="border-t border-navy-100 bg-navy-50/50 py-16 sm:py-20">
       <div class="container-page">
-        <h2 class="text-2xl font-bold tracking-tight text-navy-900">Related services</h2>
+        <h2 class="text-2xl font-bold tracking-tight text-navy-900">{{ t('serviceDetail.relatedServices') }}</h2>
         <div class="mt-8 grid grid-cols-1 gap-5 sm:grid-cols-3">
           <ServiceCard v-for="s in related" :key="s.slug" :service="s" />
         </div>
@@ -119,7 +120,7 @@ useSchemaOrg([
     </section>
 
     <CtaBanner
-      :title="`Ready to talk about ${service.title.toLowerCase()}?`"
+      :title="t('serviceDetail.ctaTitle', { service: service.title })"
     />
   </div>
 </template>

@@ -1,0 +1,323 @@
+{
+  "common": {
+    "bookACall": "Boek een gesprek",
+    "startProject": "Start een project",
+    "seeOurWork": "Bekijk ons werk",
+    "learnMore": "Meer informatie",
+    "readCaseStudy": "Lees de case study",
+    "readArticle": "Lees het artikel",
+    "discussProject": "Bespreek je project",
+    "backToHome": "Terug naar de homepage",
+    "close": "Sluiten",
+    "language": "Taal"
+  },
+  "nav": {
+    "services": "Diensten",
+    "portfolio": "Portfolio",
+    "about": "Over ons",
+    "blog": "Blog",
+    "toggleMenu": "Menu openen/sluiten"
+  },
+  "footer": {
+    "tagline": "Een team van 20 mensen in de VS en Pakistan, dat webplatforms, AI-automatisering en e-commerce ERP-systemen bouwt.",
+    "servicesHeading": "Diensten",
+    "viewAllServices": "Bekijk alle diensten →",
+    "companyHeading": "Bedrijf",
+    "contact": "Contact",
+    "getInTouchHeading": "Neem contact op",
+    "team": "Verspreid team, VS & Pakistan",
+    "copyright": "© {year} DigSolutions. Alle rechten voorbehouden.",
+    "privacyPolicy": "Privacybeleid",
+    "termsOfService": "Algemene voorwaarden",
+    "cookiePreferences": "Cookievoorkeuren"
+  },
+  "cookieBanner": {
+    "title": "We gebruiken cookies",
+    "description": "We gebruiken essentiële cookies om deze site te laten werken, en optionele analysecookies (Google Analytics / Tag Manager) om te begrijpen hoe bezoekers de site gebruiken. Lees ons",
+    "descriptionAfterLink": "voor meer informatie.",
+    "necessaryTitle": "Noodzakelijk",
+    "necessaryDescription": "Vereist om de site te laten functioneren. Altijd actief.",
+    "alwaysActive": "Altijd actief",
+    "analyticsTitle": "Analyse",
+    "analyticsDescription": "Google Analytics / Tag Manager, helpt ons het gebruik van de site te begrijpen.",
+    "toggleAriaLabel": "Analysecookies in-/uitschakelen",
+    "acceptAll": "Alles accepteren",
+    "rejectAll": "Niet-noodzakelijke weigeren",
+    "managePreferences": "Voorkeuren beheren",
+    "savePreferences": "Voorkeuren opslaan"
+  },
+  "ctaBanner": {
+    "defaultTitle": "Klaar om over je project te praten?",
+    "defaultDescription": "Vertel ons wat je aan het bouwen bent. We reageren binnen één werkdag met de volgende stappen, zonder verkooppraatjes."
+  },
+  "error": {
+    "notFoundTitle": "Deze pagina bestaat niet",
+    "genericTitle": "Er is iets misgegaan",
+    "defaultMessage": "Controleer de URL, of ga terug naar de homepage.",
+    "helpHeading": "Of probeer een van deze pagina's"
+  },
+  "home": {
+    "seo": {
+      "title": "Web-, .NET-, AI- en E-commerce ERP-ontwikkeling",
+      "description": "DigSolutions bouwt maatwerk web- en .NET-platforms, AI-gestuurde contentautomatisering, native Windows-desktoptoepassingen en multichannel e-commerce ERP-systemen voor teams die zijn uitgegroeid boven handmatige processen en kant-en-klare tools.",
+      "ogTitle": "DigSolutions {'|'} Web-, .NET-, AI- en E-commerce ERP-ontwikkeling",
+      "ogDescription": "Maatwerk web- en .NET-platforms, AI-gestuurde automatisering, desktoptoepassingen en e-commerce ERP-systemen, gebouwd door een verspreid team in de VS en Pakistan."
+    },
+    "badge": "Web & .NET · AI-automatisering · E-commerce ERP · Desktopapps",
+    "title": "Eén engineeringpartner, vier disciplines die je kunt verifiëren",
+    "subtitle": "Web- en .NET-ontwikkeling, AI-automatisering, e-commerce ERP en desktoptoepassingen, elk onderbouwd met werk dat we daadwerkelijk hebben opgeleverd, gebouwd door een verspreid team in de VS en Pakistan.",
+    "toolsHeading": "Tools waarmee we bouwen",
+    "servicesEyebrow": "Wat we bouwen",
+    "servicesTitle": "Vier disciplines, gekozen omdat we ze daadwerkelijk kunnen bewijzen",
+    "servicesSubtitle": "We zijn liever specifiek over vier dingen dan vaag over tien.",
+    "aiEyebrow": "AI & Maatwerk LLM-integratie",
+    "aiTitle": "AI afgebakend tot één taak, gekoppeld aan een systeem dat je al gebruikt",
+    "aiDescription": "We verkopen geen algemene chatbot. We zetten AI in voor een specifieke taak binnen een pipeline: het vinden van de clip die het publiceren waard is uit een uur beeldmateriaal, of de productvermelding die daadwerkelijk aandacht nodig heeft uit honderden.",
+    "aiPoints": [
+      "Maatwerk LLM-integratie in een bestaand product of workflow",
+      "AI afgebakend tot één nauwkeurig omschreven, verifieerbare taak, geen open-eind assistent",
+      "Gebouwd om te synchroniseren met de webshops en tools die je al gebruikt",
+      "Getest aan de hand van echte voorbeelden voordat het live gaat"
+    ],
+    "aiCta": "Ontdek AI & LLM-integratie",
+    "codeTabs": {
+      "clipExtraction": "Clipextractie",
+      "storefrontSync": "Webshopsynchronisatie",
+      "productFlagging": "Productsignalering"
+    },
+    "whyEyebrow": "Waarom DigSolutions",
+    "whyTitle": "Gebouwd om bij jouw stack te passen, niet andersom",
+    "valueProps": [
+      {
+        "title": "Gebouwd om handmatig werk te vervangen",
+        "description": "Onze beste trajecten beginnen met een proces dat iemand nog steeds handmatig uitvoert: voorraad afstemmen tussen webshops, video op het oog knippen. Dat automatiseren we, niet alleen de makkelijke onderdelen eromheen."
+      },
+      {
+        "title": "AI afgebakend tot een echte taak",
+        "description": "We gebruiken AI voor specifieke, goed afgebakende taken binnen een systeem, zoals het signaleren van de juiste videoclip of het juiste product om bij te werken, niet als een algemene chatbot die aan het product is vastgeplakt."
+      },
+      {
+        "title": "Gebouwd rond je bestaande systemen",
+        "description": "Het meeste van ons werk sluit aan op platforms die je al gebruikt, Amazon, Shopify, WooCommerce en meer, zodat je één bron van waarheid krijgt in plaats van een systeem waar je naartoe moet migreren."
+      },
+      {
+        "title": "Een team waarmee je rechtstreeks samenwerkt",
+        "description": "We zijn een team van 20 mensen, verspreid over de VS en Pakistan. Je werkt samen met de engineers die jouw product bouwen, niet met een wisselende laag van accountmanagers."
+      }
+    ],
+    "statsLabels": [
+      "Mensen in het team",
+      "Landen van waaruit we werken",
+      "Kerndisciplines"
+    ],
+    "processEyebrow": "Hoe we werken",
+    "processTitle": "Een proces gebouwd voor verantwoording, niet voor de show",
+    "process": [
+      {
+        "step": "01",
+        "title": "Ontdekken",
+        "description": "We brengen je eisen, randvoorwaarden en bestaande systemen in kaart voordat we een regel code schrijven."
+      },
+      {
+        "step": "02",
+        "title": "Ontwerpen",
+        "description": "Stack-, datamodel- en AI-/infrastructuurbeslissingen worden weloverwogen genomen, en vastgelegd."
+      },
+      {
+        "step": "03",
+        "title": "Bouwen",
+        "description": "Agile oplevering in korte cycli, met stagingomgevingen en demo's waar je daadwerkelijk doorheen kunt klikken."
+      },
+      {
+        "step": "04",
+        "title": "Lancering & support",
+        "description": "We blijven betrokken na de lancering. Monitoring, iteratie en support maken deel uit van elk traject."
+      }
+    ],
+    "recentWorkEyebrow": "Recent werk",
+    "recentWorkTitle": "Resultaten, niet alleen opleveringen",
+    "viewAllCaseStudies": "Bekijk alle case studies",
+    "referencesTitle": "We brengen je liever in contact met een echte klant dan dat we een quote plaatsen die je niet kunt verifiëren",
+    "referencesDescription": "We hebben hier geen klantnamen of testimonials gepubliceerd uit respect voor vertrouwelijkheid, niet omdat het werk niet echt is. Vraag ernaar tijdens een gesprek en we regelen een referentie voor een van bovenstaande trajecten."
+  },
+  "about": {
+    "seo": {
+      "title": "Over ons",
+      "description": "DigSolutions is een full-stack softwareontwikkelingsbedrijf dat web-, mobiele, AI- en enterprise-systemen bouwt voor klanten wereldwijd. Lees meer over onze aanpak en ons team.",
+      "ogTitle": "Over ons {'|'} DigSolutions",
+      "ogDescription": "Een full-stack engineeringteam dat web-, mobiele, AI- en enterprise software bouwt."
+    },
+    "eyebrow": "Over DigSolutions",
+    "title": "Een verspreid team dat de automatisering bouwt achter content en multichannel commerce",
+    "subtitle": "We zijn een team van 20 mensen dat werkt vanuit de VS en Pakistan. We pakken problemen aan waarbij AI en integratiewerk een echt handmatig proces kunnen vervangen, niet waar AI toevallig trending is.",
+    "distributedTitle": "Verspreid door ontwerp, niet door kostenbesparing",
+    "distributedP1": "We zijn een team van 20 mensen, verdeeld over de VS en Pakistan. We hebben het bewust zo opgebouwd: het betekent dat klanten overlap krijgen met Amerikaanse kantooruren en een grotere, senior technische bezetting dan een even groot bureau dat alleen in de VS zit, zou kunnen bemannen.",
+    "distributedP2": "We richten ons op drie disciplines: webplatforms, AI-functies afgebakend tot een specifieke taak, en ERP/e-commerce-integratie, omdat dat de gebieden zijn waarop we daadwerkelijk productiesystemen hebben opgeleverd, niet een lange lijst technologieën waarvoor we graag ingehuurd zouden willen worden.",
+    "stats": [
+      "Mensen in het team",
+      "Landen: VS & Pakistan",
+      "Kerndisciplines",
+      "Opgeleverde productiesystemen"
+    ],
+    "operateEyebrow": "Hoe we werken",
+    "operateTitle": "Principes waarop we niet inleveren",
+    "values": [
+      {
+        "title": "We bouwen wat we kunnen bewijzen",
+        "description": "We beperken ons tot vier disciplines, web- & .NET-platforms, AI-automatisering, ERP/e-commerce-integratie en Windows-desktoptoepassingen, omdat dat de disciplines zijn die we daadwerkelijk hebben opgeleverd, niet een lijst van elke technologie waarvoor we graag ingehuurd zouden willen worden."
+      },
+      {
+        "title": "Geen black boxes",
+        "description": "Je krijgt toegang tot dezelfde repositories, boards en omgevingen die wij intern gebruiken. Niets aan de werking van jouw product zou een mysterie voor je moeten zijn."
+      },
+      {
+        "title": "Engineering op de juiste schaal",
+        "description": "We bouwen voor de schaal die je nu daadwerkelijk hebt, met een duidelijk pad naar de schaal waar je naartoe groeit, geen speculatieve architectuur voor verkeer dat je misschien nooit krijgt."
+      },
+      {
+        "title": "Langetermijnrelaties boven eenmalige projecten",
+        "description": "De meeste van onze trajecten beginnen als een enkel project en groeien uit tot langdurige samenwerkingen, omdat de software na de lancering moet blijven evolueren."
+      }
+    ],
+    "teamEyebrow": "Ons team",
+    "teamTitle": "Senior engineers binnen elke discipline",
+    "teamSubtitle": "Je werkt rechtstreeks met de mensen die jouw product bouwen, niet met een wisselende cast van accountmanagers.",
+    "team": [
+      {
+        "role": "Web & Platform Engineering",
+        "description": "Engineers die de webplatforms, automatiseringspipelines en integraties bouwen waarop klanten dagelijks draaien."
+      },
+      {
+        "role": "AI Engineering",
+        "description": "Engineers die de AI-functies binnen die systemen afbakenen en opleveren, van clipextractie tot catalogusbeoordeling."
+      },
+      {
+        "role": ".NET & Desktop Engineering",
+        "description": "Engineers die .NET-backends, Angular-frontends en native Windows-desktoptoepassingen bouwen."
+      },
+      {
+        "role": "Delivery",
+        "description": "De mensen die trajecten verantwoordelijk houden voor scope, planning en resultaten."
+      }
+    ],
+    "ctaTitle": "Samen aan de slag?"
+  },
+  "contact": {
+    "seo": {
+      "title": "Contact",
+      "description": "Vertel DigSolutions over je web-, mobiele, AI- of enterprise softwareproject. We reageren binnen één werkdag.",
+      "ogTitle": "Contact {'|'} DigSolutions",
+      "ogDescription": "Start een gesprek over je volgende softwareproject."
+    },
+    "eyebrow": "Contact",
+    "title": "Laten we praten over wat je aan het bouwen bent",
+    "subtitle": "Vertel ons over je project en we reageren binnen één werkdag met de volgende stappen.",
+    "bookCallDirectly": "Boek direct een gesprek",
+    "emailLabel": "E-mail",
+    "phoneLabel": "Telefoon",
+    "teamLabel": "Team",
+    "teamValue": "Verspreid over de VS en Pakistan",
+    "fullName": "Volledige naam",
+    "namePlaceholder": "Jane Doe",
+    "workEmail": "Zakelijk e-mailadres",
+    "emailPlaceholder": "jane{'@'}bedrijf.com",
+    "company": "Bedrijf",
+    "companyPlaceholder": "Bedrijf B.V.",
+    "serviceOfInterest": "Dienst van interesse",
+    "notSureYet": "Nog niet zeker",
+    "projectDetails": "Projectdetails",
+    "messagePlaceholder": "Wat ga je bouwen, en wat is je tijdlijn?",
+    "sending": "Bezig met verzenden…",
+    "sendMessage": "Bericht versturen",
+    "genericError": "Er is iets misgegaan. Probeer het opnieuw.",
+    "successTitle": "Bericht verzonden",
+    "successDescription": "Bedankt voor je bericht, we nemen binnen één werkdag contact met je op.",
+    "sendAnother": "Nog een bericht versturen"
+  },
+  "services": {
+    "seo": {
+      "title": "Diensten",
+      "description": "Webapplicatieontwikkeling, AI- en maatwerk LLM-integratie, en CRM/ERP-systemen voor multichannel e-commerce en contentactiviteiten.",
+      "ogTitle": "Diensten {'|'} DigSolutions",
+      "ogDescription": "Webapplicatieontwikkeling, AI-integratie en CRM/ERP-systemen."
+    },
+    "eyebrow": "Diensten",
+    "title": "Eén engineeringpartner, elke discipline die jouw roadmap nodig heeft",
+    "subtitle": "Of je nu een nieuw product vanaf nul wilt laten bouwen, AI wilt integreren in een bestaand product, of een enterprise systeem wilt laten herbouwen rond hoe jouw team daadwerkelijk werkt, wij dekken de volledige stack.",
+    "ctaTitle": "Niet zeker welke dienst je nodig hebt?",
+    "ctaDescription": "Vertel ons over het probleem dat je wilt oplossen. We helpen je de juiste scope en stack te bepalen."
+  },
+  "serviceDetail": {
+    "whatsIncluded": "Wat is inbegrepen",
+    "technologies": "Technologieën",
+    "idealFor": "Ideaal voor",
+    "relatedServices": "Gerelateerde diensten",
+    "ctaTitle": "Klaar om te praten over {service}?"
+  },
+  "portfolio": {
+    "seo": {
+      "title": "Portfolio & Case Studies",
+      "description": "Case studies van klantwerk van DigSolutions: AI-gestuurde contentautomatisering en multichannel e-commerce ERP-systemen.",
+      "ogTitle": "Portfolio {'|'} DigSolutions",
+      "ogDescription": "Echte trajecten in AI-gestuurde automatisering en e-commerce ERP-integratie."
+    },
+    "eyebrow": "Portfolio",
+    "title": "Werk gebouwd voor echte resultaten, niet alleen lanceringen",
+    "subtitle": "Klantnamen zijn geanonimiseerd waar we geen toestemming hebben om ze te delen, maar de problemen en resultaten zijn echt. Vraag ons naar referenties voor een van beide trajecten."
+  },
+  "portfolioDetail": {
+    "clientLabel": "Klant",
+    "timelineLabel": "Tijdlijn",
+    "challengeHeading": "De uitdaging",
+    "approachHeading": "Onze aanpak",
+    "solutionHeading": "De oplossing",
+    "resultsHeading": "Resultaten",
+    "technologies": "Technologieën",
+    "relatedService": "Gerelateerde dienst",
+    "moreCaseStudies": "Meer case studies",
+    "ctaTitle": "Wil je vergelijkbare resultaten voor jouw product?"
+  },
+  "blog": {
+    "seo": {
+      "title": "Blog",
+      "description": "Inzichten over engineering, AI en softwarestrategie van het DigSolutions-team, over framework-keuzes, AI-systemen in productie, SaaS-architectuur en modernisering van enterprise software.",
+      "ogTitle": "Blog {'|'} DigSolutions",
+      "ogDescription": "Inzichten over engineering en AI van het DigSolutions-team."
+    },
+    "eyebrow": "Blog",
+    "title": "Notities van het engineeringteam",
+    "subtitle": "Praktische artikelen over framework-keuzes, AI-systemen in productie, SaaS-architectuur en het moderniseren van enterprise software.",
+    "allCategory": "Alle",
+    "latestBadge": "Nieuwste"
+  },
+  "blogDetail": {
+    "keyTakeaways": "Belangrijkste inzichten",
+    "moreFromBlog": "Meer van de blog"
+  },
+  "privacy": {
+    "seo": {
+      "title": "Privacybeleid",
+      "description": "Privacybeleid van DigSolutions: hoe we informatie verzamelen, gebruiken en beschermen die via onze website wordt verstrekt.",
+      "ogTitle": "Privacybeleid {'|'} DigSolutions",
+      "ogDescription": "Hoe DigSolutions informatie verzamelt, gebruikt en beschermt die via onze website wordt verstrekt."
+    },
+    "title": "Privacybeleid",
+    "lastUpdated": "Laatst bijgewerkt: 27 augustus 2026",
+    "p1": "Dit voorlopige privacybeleid heeft betrekking op de informatie die DigSolutions via deze website verzamelt, voornamelijk gegevens uit contactformulieren (naam, e-mail, bedrijf en projectdetails) en standaard analysegegevens die worden verzameld via Google Analytics en Google Tag Manager.",
+    "p2": "Informatie uit het contactformulier wordt uitsluitend gebruikt om te reageren op je aanvraag en wordt niet verkocht of gedeeld met derden, buiten de tools die we rechtstreeks gebruiken om onze diensten te leveren (zoals onze e-mailleverancier).",
+    "p3": "Wanneer je deze site voor het eerst bezoekt, kun je via een cookiebanner optionele analysecookies accepteren of weigeren; noodzakelijke cookies die vereist zijn om de site te laten functioneren, zijn altijd actief. Je kunt je keuze op elk moment wijzigen via de link \"Cookievoorkeuren\" in de footer.",
+    "p4": "Vervang deze pagina vóór lancering door een volledig privacybeleid dat is beoordeeld door een jurist, vooral als je van plan bent gebruikers te bedienen in rechtsgebieden met specifieke vereisten zoals de AVG (GDPR) of CCPA."
+  },
+  "terms": {
+    "seo": {
+      "title": "Algemene voorwaarden",
+      "description": "Algemene voorwaarden van de website van DigSolutions.",
+      "ogTitle": "Algemene voorwaarden {'|'} DigSolutions",
+      "ogDescription": "De algemene voorwaarden die van toepassing zijn op het gebruik van de website van DigSolutions."
+    },
+    "title": "Algemene voorwaarden",
+    "lastUpdated": "Laatst bijgewerkt: 27 augustus 2026",
+    "p1": "Dit is voorlopige inhoud voor de algemene voorwaarden van de website van DigSolutions. Het heeft betrekking op het algemene gebruik van de inhoud en contacttools van deze site en vormt geen dienstverleningsovereenkomst. Daadwerkelijke klanttrajecten worden geregeld door afzonderlijke ondertekende contracten (statements of work, master service agreements, enz.).",
+    "p2": "Vervang deze pagina vóór lancering door voorwaarden die zijn beoordeeld door een jurist."
+  }
+}

@@ -1,11 +1,12 @@
 <script setup lang="ts">
-import { services } from '~/data/services'
+const { services } = useContent()
+const { t } = useI18n()
 
 useSeoMeta({
-  title: 'Contact',
-  description: 'Tell DigSolutions about your web, mobile, AI, or enterprise software project. We respond within one business day.',
-  ogTitle: 'Contact | DigSolutions',
-  ogDescription: 'Start a conversation about your next software project.'
+  title: () => t('contact.seo.title'),
+  description: () => t('contact.seo.description'),
+  ogTitle: () => t('contact.seo.ogTitle'),
+  ogDescription: () => t('contact.seo.ogDescription')
 })
 
 const form = reactive({
@@ -16,6 +17,15 @@ const form = reactive({
   message: ''
 })
 
+// Spam protection: a hidden field bots tend to fill in, plus a render timestamp
+// so submissions faster than a human could type are rejected server-side.
+const honeypot = ref('')
+const formRenderedAt = ref(0)
+
+onMounted(() => {
+  formRenderedAt.value = Date.now()
+})
+
 const status = ref<'idle' | 'submitting' | 'success' | 'error'>('idle')
 const errorMessage = ref('')
 
@@ -24,7 +34,10 @@ async function onSubmit() {
   errorMessage.value = ''
 
   try {
-    await $fetch('/api/contact', { method: 'POST', body: form })
+    await $fetch('/api/contact', {
+      method: 'POST',
+      body: { ...form, website: honeypot.value, startedAt: formRenderedAt.value }
+    })
     status.value = 'success'
     form.name = ''
     form.email = ''
@@ -33,15 +46,15 @@ async function onSubmit() {
     form.message = ''
   } catch (err: any) {
     status.value = 'error'
-    errorMessage.value = err?.data?.statusMessage || 'Something went wrong. Please try again.'
+    errorMessage.value = err?.data?.statusMessage || t('contact.genericError')
   }
 }
 
-const contactPoints = [
-  { icon: 'lucide:mail', label: 'Email', value: 'hello@digsolutions.net', href: 'mailto:hello@digsolutions.net' },
-  { icon: 'lucide:phone', label: 'Phone', value: '+1 (307) 500-3832', href: 'tel:+13075003832' },
-  { icon: 'lucide:globe', label: 'Team', value: 'Distributed across the US and Pakistan', href: null }
-]
+const contactPoints = computed(() => [
+  { icon: 'lucide:mail', label: t('contact.emailLabel'), value: 'hello@digsolutions.net', href: 'mailto:hello@digsolutions.net' },
+  { icon: 'lucide:phone', label: t('contact.phoneLabel'), value: '+1 (307) 500-3832', href: 'tel:+13075003832' },
+  { icon: 'lucide:globe', label: t('contact.teamLabel'), value: t('contact.teamValue'), href: null }
+])
 
 const calendlyUrl = 'https://calendly.com/digsolutions/consultation'
 </script>
@@ -51,12 +64,12 @@ const calendlyUrl = 'https://calendly.com/digsolutions/consultation'
     <section class="relative overflow-hidden border-b border-navy-100 bg-navy-50/50 py-16 sm:py-20">
       <div class="absolute inset-0 bg-dot-grid opacity-50 [mask-image:radial-gradient(ellipse_65%_60%_at_50%_0%,black,transparent)]" />
       <div class="container-page relative text-center" v-reveal>
-        <span class="text-sm font-semibold uppercase tracking-wider text-brand-600">Contact</span>
+        <span class="text-sm font-semibold uppercase tracking-wider text-brand-600">{{ t('contact.eyebrow') }}</span>
         <h1 class="mx-auto mt-3 max-w-2xl text-balance text-4xl font-bold tracking-tight text-navy-900 sm:text-5xl">
-          Let's talk about what you're building
+          {{ t('contact.title') }}
         </h1>
         <p class="mx-auto mt-5 max-w-xl text-balance text-navy-500">
-          Tell us about your project and we'll respond within one business day with next steps.
+          {{ t('contact.subtitle') }}
         </p>
         <a
           :href="calendlyUrl"
@@ -65,7 +78,7 @@ const calendlyUrl = 'https://calendly.com/digsolutions/consultation'
           class="mt-8 inline-flex items-center gap-2 rounded-lg bg-navy-900 px-6 py-3.5 text-sm font-semibold text-white shadow-sm transition hover:bg-brand-600"
         >
           <Icon name="lucide:calendar" size="16" />
-          Book a call directly
+          {{ t('contact.bookCallDirectly') }}
         </a>
       </div>
     </section>
@@ -89,47 +102,59 @@ const calendlyUrl = 'https://calendly.com/digsolutions/consultation'
 
         <div class="lg:col-span-2">
           <form v-if="status !== 'success'" class="rounded-2xl border border-navy-100 p-6 sm:p-8" @submit.prevent="onSubmit">
+            <div class="absolute left-[-9999px] top-auto" aria-hidden="true">
+              <label for="website">Leave this field blank</label>
+              <input
+                id="website"
+                v-model="honeypot"
+                type="text"
+                name="website"
+                tabindex="-1"
+                autocomplete="off"
+              >
+            </div>
+
             <div class="grid grid-cols-1 gap-5 sm:grid-cols-2">
               <div>
-                <label for="name" class="text-sm font-medium text-navy-700">Full name</label>
+                <label for="name" class="text-sm font-medium text-navy-700">{{ t('contact.fullName') }}</label>
                 <input
                   id="name"
                   v-model="form.name"
                   type="text"
                   required
                   class="mt-1.5 w-full rounded-lg border border-navy-200 px-3.5 py-2.5 text-sm text-navy-900 outline-none transition focus:border-brand-500 focus:ring-2 focus:ring-brand-100"
-                  placeholder="Jane Doe"
+                  :placeholder="t('contact.namePlaceholder')"
                 >
               </div>
               <div>
-                <label for="email" class="text-sm font-medium text-navy-700">Work email</label>
+                <label for="email" class="text-sm font-medium text-navy-700">{{ t('contact.workEmail') }}</label>
                 <input
                   id="email"
                   v-model="form.email"
                   type="email"
                   required
                   class="mt-1.5 w-full rounded-lg border border-navy-200 px-3.5 py-2.5 text-sm text-navy-900 outline-none transition focus:border-brand-500 focus:ring-2 focus:ring-brand-100"
-                  placeholder="jane@company.com"
+                  :placeholder="t('contact.emailPlaceholder')"
                 >
               </div>
               <div>
-                <label for="company" class="text-sm font-medium text-navy-700">Company</label>
+                <label for="company" class="text-sm font-medium text-navy-700">{{ t('contact.company') }}</label>
                 <input
                   id="company"
                   v-model="form.company"
                   type="text"
                   class="mt-1.5 w-full rounded-lg border border-navy-200 px-3.5 py-2.5 text-sm text-navy-900 outline-none transition focus:border-brand-500 focus:ring-2 focus:ring-brand-100"
-                  placeholder="Company, Inc."
+                  :placeholder="t('contact.companyPlaceholder')"
                 >
               </div>
               <div>
-                <label for="service" class="text-sm font-medium text-navy-700">Service of interest</label>
+                <label for="service" class="text-sm font-medium text-navy-700">{{ t('contact.serviceOfInterest') }}</label>
                 <select
                   id="service"
                   v-model="form.service"
                   class="mt-1.5 w-full rounded-lg border border-navy-200 bg-white px-3.5 py-2.5 text-sm text-navy-900 outline-none transition focus:border-brand-500 focus:ring-2 focus:ring-brand-100"
                 >
-                  <option value="">Not sure yet</option>
+                  <option value="">{{ t('contact.notSureYet') }}</option>
                   <option v-for="service in services" :key="service.slug" :value="service.title">
                     {{ service.title }}
                   </option>
@@ -138,14 +163,14 @@ const calendlyUrl = 'https://calendly.com/digsolutions/consultation'
             </div>
 
             <div class="mt-5">
-              <label for="message" class="text-sm font-medium text-navy-700">Project details</label>
+              <label for="message" class="text-sm font-medium text-navy-700">{{ t('contact.projectDetails') }}</label>
               <textarea
                 id="message"
                 v-model="form.message"
                 required
                 rows="5"
                 class="mt-1.5 w-full rounded-lg border border-navy-200 px-3.5 py-2.5 text-sm text-navy-900 outline-none transition focus:border-brand-500 focus:ring-2 focus:ring-brand-100"
-                placeholder="What are you building, and what's your timeline?"
+                :placeholder="t('contact.messagePlaceholder')"
               />
             </div>
 
@@ -157,7 +182,7 @@ const calendlyUrl = 'https://calendly.com/digsolutions/consultation'
               class="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-lg bg-navy-900 px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-brand-600 disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto"
             >
               <Icon v-if="status === 'submitting'" name="lucide:loader-2" size="16" class="animate-spin" />
-              {{ status === 'submitting' ? 'Sending…' : 'Send message' }}
+              {{ status === 'submitting' ? t('contact.sending') : t('contact.sendMessage') }}
             </button>
           </form>
 
@@ -165,16 +190,16 @@ const calendlyUrl = 'https://calendly.com/digsolutions/consultation'
             <span class="flex h-14 w-14 items-center justify-center rounded-full bg-green-50 text-green-600">
               <Icon name="lucide:check" size="26" />
             </span>
-            <h2 class="mt-5 text-xl font-semibold text-navy-900">Message sent</h2>
+            <h2 class="mt-5 text-xl font-semibold text-navy-900">{{ t('contact.successTitle') }}</h2>
             <p class="mt-2 max-w-sm text-sm text-navy-500">
-              Thanks for reaching out, we'll get back to you within one business day.
+              {{ t('contact.successDescription') }}
             </p>
             <button
               type="button"
               class="mt-6 text-sm font-semibold text-brand-600 hover:text-brand-700"
               @click="status = 'idle'"
             >
-              Send another message
+              {{ t('contact.sendAnother') }}
             </button>
           </div>
         </div>

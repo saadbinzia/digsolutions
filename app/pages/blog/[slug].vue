@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { getBlogPostBySlug, blogPosts } from '~/data/blog'
+const { getBlogPostBySlug, blogPosts } = useContent()
+const { t, locale } = useI18n()
 
 const route = useRoute()
 const post = getBlogPostBySlug(route.params.slug as string)
@@ -8,10 +9,10 @@ if (!post) {
   throw createError({ statusCode: 404, statusMessage: 'Article not found' })
 }
 
-const more = blogPosts.filter(p => p.slug !== post.slug).slice(0, 3)
+const more = computed(() => blogPosts.value.filter(p => p.slug !== post.slug).slice(0, 3))
 
 function formatDate(date: string) {
-  return new Date(date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })
+  return new Date(date).toLocaleDateString(locale.value, { year: 'numeric', month: 'long', day: 'numeric' })
 }
 
 useSeoMeta({
@@ -47,7 +48,7 @@ useSchemaOrg([
     <section class="border-b border-navy-100 bg-navy-50/50 py-16 sm:py-20">
       <div class="container-page mx-auto max-w-3xl" v-reveal>
         <nav class="flex items-center gap-2 text-xs text-navy-500">
-          <NuxtLink to="/blog" class="hover:text-navy-700">Blog</NuxtLink>
+          <NuxtLinkLocale to="/blog" class="hover:text-navy-700">{{ t('nav.blog') }}</NuxtLinkLocale>
           <Icon name="lucide:chevron-right" size="12" />
           <span class="text-navy-700">{{ post.category }}</span>
         </nav>
@@ -80,7 +81,7 @@ useSchemaOrg([
         <div class="rounded-2xl border border-brand-100 bg-brand-50/60 p-6" v-reveal>
           <h2 class="flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-brand-700">
             <Icon name="lucide:list-checks" size="16" />
-            Key takeaways
+            {{ t('blogDetail.keyTakeaways') }}
           </h2>
           <ul class="mt-4 space-y-2.5">
             <li v-for="point in post.keyTakeaways" :key="point" class="flex items-start gap-2.5 text-sm leading-relaxed text-navy-700">
@@ -104,7 +105,7 @@ useSchemaOrg([
 
     <section class="border-t border-navy-100 bg-navy-50/50 py-16 sm:py-20">
       <div class="container-page">
-        <h2 class="text-2xl font-bold tracking-tight text-navy-900">More from the blog</h2>
+        <h2 class="text-2xl font-bold tracking-tight text-navy-900">{{ t('blogDetail.moreFromBlog') }}</h2>
         <div class="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-3">
           <BlogPostCard v-for="p in more" :key="p.slug" :post="p" />
         </div>

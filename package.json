@@ -10,6 +10,7 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@nuxtjs/i18n": "^10.6.0",
     "nuxt": "^4.5.2",
     "vue": "^3.5.41",
     "vue-router": "^5.2.0"
@@ -19,6 +20,7 @@
     "@nuxt/image": "^2.1.0",
     "@nuxtjs/seo": "^5.3.14",
     "@oxc-parser/binding-win32-x64-msvc": "0.147.0",
+    "@oxc-transform/binding-win32-x64-msvc": "^0.150.0",
     "@resvg/resvg-js": "^2.6.2",
     "@rolldown/binding-win32-x64-msvc": "1.2.6",
     "@tailwindcss/vite": "^4.3.3",

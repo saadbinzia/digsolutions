@@ -1,0 +1,323 @@
+{
+  "common": {
+    "bookACall": "Book a call",
+    "startProject": "Start a project",
+    "seeOurWork": "See our work",
+    "learnMore": "Learn more",
+    "readCaseStudy": "Read case study",
+    "readArticle": "Read article",
+    "discussProject": "Discuss your project",
+    "backToHome": "Back to homepage",
+    "close": "Close",
+    "language": "Language"
+  },
+  "nav": {
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "about": "About",
+    "blog": "Blog",
+    "toggleMenu": "Toggle menu"
+  },
+  "footer": {
+    "tagline": "A 20-person team across the US and Pakistan, building web platforms, AI automation, and e-commerce ERP systems.",
+    "servicesHeading": "Services",
+    "viewAllServices": "View all services →",
+    "companyHeading": "Company",
+    "contact": "Contact",
+    "getInTouchHeading": "Get in touch",
+    "team": "Distributed team, US & Pakistan",
+    "copyright": "© {year} DigSolutions. All rights reserved.",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "cookiePreferences": "Cookie Preferences"
+  },
+  "cookieBanner": {
+    "title": "We use cookies",
+    "description": "We use essential cookies to run this site, and optional analytics cookies (Google Analytics / Tag Manager) to understand how visitors use it. Read our",
+    "descriptionAfterLink": "for details.",
+    "necessaryTitle": "Necessary",
+    "necessaryDescription": "Required for the site to function. Always on.",
+    "alwaysActive": "Always active",
+    "analyticsTitle": "Analytics",
+    "analyticsDescription": "Google Analytics / Tag Manager, helps us understand site usage.",
+    "toggleAriaLabel": "Toggle analytics cookies",
+    "acceptAll": "Accept all",
+    "rejectAll": "Reject non-essential",
+    "managePreferences": "Manage preferences",
+    "savePreferences": "Save preferences"
+  },
+  "ctaBanner": {
+    "defaultTitle": "Ready to talk about your project?",
+    "defaultDescription": "Tell us what you're building. We'll respond within one business day with next steps, no sales runaround."
+  },
+  "error": {
+    "notFoundTitle": "This page doesn't exist",
+    "genericTitle": "Something went wrong",
+    "defaultMessage": "Please check the URL, or head back to the homepage.",
+    "helpHeading": "Or try one of these"
+  },
+  "home": {
+    "seo": {
+      "title": "Web, .NET, AI & E-commerce ERP Development",
+      "description": "DigSolutions builds custom web and .NET platforms, AI-powered content automation, native Windows desktop applications, and multi-channel e-commerce ERP systems for teams that have outgrown manual processes and off-the-shelf tools.",
+      "ogTitle": "DigSolutions {'|'} Web, .NET, AI & E-commerce ERP Development",
+      "ogDescription": "Custom web and .NET platforms, AI-powered automation, desktop applications, and e-commerce ERP systems, built by a distributed team across the US and Pakistan."
+    },
+    "badge": "Web & .NET · AI automation · E-commerce ERP · Desktop apps",
+    "title": "One engineering partner, four disciplines you can verify",
+    "subtitle": "Web & .NET development, AI automation, e-commerce ERP, and desktop applications, each backed by work we've actually shipped, built by a distributed team across the US and Pakistan.",
+    "toolsHeading": "Tools we build with",
+    "servicesEyebrow": "What we build",
+    "servicesTitle": "Four disciplines, chosen because we can actually prove them",
+    "servicesSubtitle": "We'd rather be specific about four things than vague about ten.",
+    "aiEyebrow": "AI & Custom LLM Integration",
+    "aiTitle": "AI scoped to one job, wired into a system you already run",
+    "aiDescription": "We don't sell a general-purpose chatbot. We use AI for a specific task inside a pipeline: finding the clip worth publishing out of an hour of footage, or the product listing that actually needs attention out of hundreds.",
+    "aiPoints": [
+      "Custom LLM integration into an existing product or workflow",
+      "AI scoped to one narrow, verifiable task, not an open-ended assistant",
+      "Built to sync with the storefronts and tools you already use",
+      "Evaluated against real examples before it ships"
+    ],
+    "aiCta": "Explore AI & LLM integration",
+    "codeTabs": {
+      "clipExtraction": "Clip extraction",
+      "storefrontSync": "Storefront sync",
+      "productFlagging": "Product flagging"
+    },
+    "whyEyebrow": "Why DigSolutions",
+    "whyTitle": "Built to fit your stack, not the other way around",
+    "valueProps": [
+      {
+        "title": "Built to replace manual work",
+        "description": "Our best engagements start with a process someone is still doing by hand: reconciling stock across storefronts, clipping video by eye. We automate that, not just the easy parts around it."
+      },
+      {
+        "title": "AI scoped to a real task",
+        "description": "We use AI for specific, well-defined jobs inside a system, like flagging the right video clip or the right product to update, not as a general-purpose chatbot bolted onto the product."
+      },
+      {
+        "title": "Built around your existing systems",
+        "description": "Most of our work connects to platforms you already run, Amazon, Shopify, WooCommerce, and more, so you get one source of truth instead of a system to migrate to."
+      },
+      {
+        "title": "A team you work with directly",
+        "description": "We're a 20-person team spread across the US and Pakistan. You work with the engineers building your product, not a rotating account-management layer."
+      }
+    ],
+    "statsLabels": [
+      "People on the team",
+      "Countries we work from",
+      "Core disciplines"
+    ],
+    "processEyebrow": "How we work",
+    "processTitle": "A process built for accountability, not ceremony",
+    "process": [
+      {
+        "step": "01",
+        "title": "Discover",
+        "description": "We map your requirements, constraints, and existing systems before writing a line of code."
+      },
+      {
+        "step": "02",
+        "title": "Architect",
+        "description": "Stack, data model, and AI/infrastructure decisions get made deliberately, and documented."
+      },
+      {
+        "step": "03",
+        "title": "Build",
+        "description": "Agile delivery in short cycles, with staging environments and demos you can actually click through."
+      },
+      {
+        "step": "04",
+        "title": "Launch & support",
+        "description": "We stay engaged post-launch. Monitoring, iteration, and support are built into every engagement."
+      }
+    ],
+    "recentWorkEyebrow": "Recent work",
+    "recentWorkTitle": "Results, not just deliverables",
+    "viewAllCaseStudies": "View all case studies",
+    "referencesTitle": "We'd rather connect you with a real client than post a quote you can't verify",
+    "referencesDescription": "We haven't published client names or testimonials here out of respect for confidentiality, not because the work isn't real. Ask us during a call and we'll arrange a reference from either engagement above."
+  },
+  "about": {
+    "seo": {
+      "title": "About",
+      "description": "DigSolutions is a full-stack software development company building web, mobile, AI, and enterprise systems for clients worldwide. Learn about our approach and team.",
+      "ogTitle": "About {'|'} DigSolutions",
+      "ogDescription": "A full-stack engineering team building web, mobile, AI, and enterprise software."
+    },
+    "eyebrow": "About DigSolutions",
+    "title": "A distributed team that builds the automation behind content and multi-channel commerce",
+    "subtitle": "We're a 20-person team working across the US and Pakistan. We take on problems where AI and integration work can replace a genuinely manual process, not wherever AI happens to be trendy.",
+    "distributedTitle": "Distributed by design, not by cost-cutting",
+    "distributedP1": "We're a 20-person team split across the US and Pakistan. We built it that way on purpose: it means clients get overlap with US business hours and a larger, senior engineering bench than a US-only shop the same size could staff.",
+    "distributedP2": "We focus on three disciplines: web platforms, AI features scoped to a specific task, and ERP/e-commerce integration, because those are the areas where we've actually shipped production systems, not a long list of technologies we'd like to be hired for.",
+    "stats": [
+      "People on the team",
+      "Countries: US & Pakistan",
+      "Core disciplines",
+      "Production systems shipped"
+    ],
+    "operateEyebrow": "How we operate",
+    "operateTitle": "Principles we don't compromise on",
+    "values": [
+      {
+        "title": "We build what we can prove",
+        "description": "We stay to four disciplines, web & .NET platforms, AI automation, ERP/e-commerce integration, and Windows desktop applications, because those are the ones we've actually shipped, not a list of every technology we'd like to be hired for."
+      },
+      {
+        "title": "No black boxes",
+        "description": "You get access to the same repos, boards, and environments we use internally. Nothing about how your product works should be a mystery to you."
+      },
+      {
+        "title": "Right-sized engineering",
+        "description": "We build for the scale you actually have, with a clear path to the scale you're growing into, not speculative architecture for traffic you may never see."
+      },
+      {
+        "title": "Long-term relationships over one-off builds",
+        "description": "Most of our engagements start as a single project and turn into ongoing partnerships, because the software keeps needing to evolve after launch."
+      }
+    ],
+    "teamEyebrow": "Our team",
+    "teamTitle": "Senior engineers across every discipline",
+    "teamSubtitle": "You work directly with the people building your product, not a rotating cast of account managers.",
+    "team": [
+      {
+        "role": "Web & Platform Engineering",
+        "description": "Engineers building the web platforms, automation pipelines, and integrations clients run on day to day."
+      },
+      {
+        "role": "AI Engineering",
+        "description": "Engineers scoping and shipping the AI features embedded inside those systems, from clip extraction to catalog review."
+      },
+      {
+        "role": ".NET & Desktop Engineering",
+        "description": "Engineers building .NET backends, Angular front ends, and native Windows desktop applications."
+      },
+      {
+        "role": "Delivery",
+        "description": "The people keeping engagements accountable to scope, timeline, and outcomes."
+      }
+    ],
+    "ctaTitle": "Want to work together?"
+  },
+  "contact": {
+    "seo": {
+      "title": "Contact",
+      "description": "Tell DigSolutions about your web, mobile, AI, or enterprise software project. We respond within one business day.",
+      "ogTitle": "Contact {'|'} DigSolutions",
+      "ogDescription": "Start a conversation about your next software project."
+    },
+    "eyebrow": "Contact",
+    "title": "Let's talk about what you're building",
+    "subtitle": "Tell us about your project and we'll respond within one business day with next steps.",
+    "bookCallDirectly": "Book a call directly",
+    "emailLabel": "Email",
+    "phoneLabel": "Phone",
+    "teamLabel": "Team",
+    "teamValue": "Distributed across the US and Pakistan",
+    "fullName": "Full name",
+    "namePlaceholder": "Jane Doe",
+    "workEmail": "Work email",
+    "emailPlaceholder": "jane{'@'}company.com",
+    "company": "Company",
+    "companyPlaceholder": "Company, Inc.",
+    "serviceOfInterest": "Service of interest",
+    "notSureYet": "Not sure yet",
+    "projectDetails": "Project details",
+    "messagePlaceholder": "What are you building, and what's your timeline?",
+    "sending": "Sending…",
+    "sendMessage": "Send message",
+    "genericError": "Something went wrong. Please try again.",
+    "successTitle": "Message sent",
+    "successDescription": "Thanks for reaching out, we'll get back to you within one business day.",
+    "sendAnother": "Send another message"
+  },
+  "services": {
+    "seo": {
+      "title": "Services",
+      "description": "Web application development, AI & custom LLM integration, and CRM/ERP systems for multi-channel e-commerce and content operations.",
+      "ogTitle": "Services {'|'} DigSolutions",
+      "ogDescription": "Web application development, AI integration, and CRM/ERP systems."
+    },
+    "eyebrow": "Services",
+    "title": "One engineering partner, every discipline your roadmap needs",
+    "subtitle": "Whether you need a new product built from scratch, AI embedded into an existing one, or an enterprise system rebuilt around how your team actually works, we cover the full stack.",
+    "ctaTitle": "Not sure which service you need?",
+    "ctaDescription": "Tell us about the problem you're solving. We'll help you figure out the right scope and stack."
+  },
+  "serviceDetail": {
+    "whatsIncluded": "What's included",
+    "technologies": "Technologies",
+    "idealFor": "Ideal for",
+    "relatedServices": "Related services",
+    "ctaTitle": "Ready to talk about {service}?"
+  },
+  "portfolio": {
+    "seo": {
+      "title": "Portfolio & Case Studies",
+      "description": "Case studies from DigSolutions client work: AI-powered content automation and multi-channel e-commerce ERP systems.",
+      "ogTitle": "Portfolio {'|'} DigSolutions",
+      "ogDescription": "Real engagements in AI-powered automation and e-commerce ERP integration."
+    },
+    "eyebrow": "Portfolio",
+    "title": "Work built for real outcomes, not just launches",
+    "subtitle": "Client names are anonymized where we don't have permission to share them, but the problems and results are real. Ask us for references on either engagement."
+  },
+  "portfolioDetail": {
+    "clientLabel": "Client",
+    "timelineLabel": "Timeline",
+    "challengeHeading": "The challenge",
+    "approachHeading": "Our approach",
+    "solutionHeading": "The solution",
+    "resultsHeading": "Results",
+    "technologies": "Technologies",
+    "relatedService": "Related service",
+    "moreCaseStudies": "More case studies",
+    "ctaTitle": "Want results like this for your product?"
+  },
+  "blog": {
+    "seo": {
+      "title": "Blog",
+      "description": "Engineering, AI, and software strategy insights from the DigSolutions team, covering framework choice, production AI systems, SaaS architecture, and enterprise modernization.",
+      "ogTitle": "Blog {'|'} DigSolutions",
+      "ogDescription": "Engineering and AI insights from the DigSolutions team."
+    },
+    "eyebrow": "Blog",
+    "title": "Notes from the engineering team",
+    "subtitle": "Practical write-ups on framework choices, production AI systems, SaaS architecture, and modernizing enterprise software.",
+    "allCategory": "All",
+    "latestBadge": "Latest"
+  },
+  "blogDetail": {
+    "keyTakeaways": "Key takeaways",
+    "moreFromBlog": "More from the blog"
+  },
+  "privacy": {
+    "seo": {
+      "title": "Privacy Policy",
+      "description": "DigSolutions privacy policy: how we collect, use, and protect information submitted through our website.",
+      "ogTitle": "Privacy Policy {'|'} DigSolutions",
+      "ogDescription": "How DigSolutions collects, uses, and protects information submitted through our website."
+    },
+    "title": "Privacy Policy",
+    "lastUpdated": "Last updated: August 27, 2026",
+    "p1": "This placeholder privacy policy covers the information DigSolutions collects through this website, primarily contact form submissions (name, email, company, and project details) and standard analytics data collected via Google Analytics and Google Tag Manager.",
+    "p2": "Contact form information is used solely to respond to your inquiry and is not sold or shared with third parties outside the tools directly used to deliver our services (such as our email delivery provider).",
+    "p3": "When you first visit this site, a cookie banner lets you accept or decline optional analytics cookies; necessary cookies required for the site to function are always active. You can change your choice at any time via the \"Cookie Preferences\" link in the footer.",
+    "p4": "Replace this page with a full privacy policy reviewed by counsel before launch, particularly if you plan to serve users in jurisdictions with specific requirements such as GDPR or CCPA."
+  },
+  "terms": {
+    "seo": {
+      "title": "Terms of Service",
+      "description": "DigSolutions website terms of service.",
+      "ogTitle": "Terms of Service {'|'} DigSolutions",
+      "ogDescription": "The terms of service governing use of the DigSolutions website."
+    },
+    "title": "Terms of Service",
+    "lastUpdated": "Last updated: August 27, 2026",
+    "p1": "This is placeholder terms-of-service content for the DigSolutions website. It covers general use of this site's content and contact tools, and does not constitute a services agreement. Actual client engagements are governed by separate signed contracts (statements of work, master service agreements, etc.).",
+    "p2": "Replace this page with terms reviewed by counsel before launch."
+  }
+}
