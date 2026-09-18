@@ -61,11 +61,13 @@ export default defineNuxtConfig({
   },
 
   // https://nuxtseo.com/sitemap (dynamic routes aren't file-based, so register them explicitly)
+  // _i18nTransform expands each entry into one URL per locale with hreflang alternates,
+  // matching the auto-generated entries for file-based pages.
   sitemap: {
     urls: () => [
-      ...services.map(s => ({ loc: `/services/${s.slug}` })),
-      ...caseStudies.map(c => ({ loc: `/portfolio/${c.slug}` })),
-      ...blogPosts.map(p => ({ loc: `/blog/${p.slug}`, lastmod: p.date }))
+      ...services.map(s => ({ loc: `/services/${s.slug}`, _i18nTransform: true })),
+      ...caseStudies.map(c => ({ loc: `/portfolio/${c.slug}`, _i18nTransform: true })),
+      ...blogPosts.map(p => ({ loc: `/blog/${p.slug}`, lastmod: p.date, _i18nTransform: true }))
     ]
   },
 
