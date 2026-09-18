@@ -70,8 +70,13 @@ useSchemaOrg([
 
     <div class="container-page -mt-10 mx-auto max-w-4xl sm:-mt-14" v-reveal>
       <img
-        :src="post.image"
+        :src="unsplashSize(post.image, 900)"
+        :srcset="`${unsplashSize(post.image, 900)} 1x, ${unsplashSize(post.image, 1200)} 2x`"
         :alt="post.imageAlt"
+        width="900"
+        height="450"
+        fetchpriority="high"
+        decoding="async"
         class="aspect-[16/8] w-full rounded-2xl object-cover shadow-lg shadow-navy-900/10"
       >
     </div>

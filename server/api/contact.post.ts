@@ -14,8 +14,22 @@ const MIN_SUBMIT_MS = 3000
 const RATE_LIMIT_MAX = 5
 const RATE_LIMIT_WINDOW_MS = 10 * 60 * 1000
 
+// Caps how much CPU/bandwidth a single request can burn (and how much gets
+// forwarded to Resend) regardless of rate limiting.
+const MAX_FIELD_LENGTH = 200
+const MAX_MESSAGE_LENGTH = 5000
+
 export default defineEventHandler(async (event) => {
   const body = await readBody<Partial<ContactPayload>>(event)
+
+  for (const field of ['name', 'email', 'company', 'service'] as const) {
+    if (typeof body[field] === 'string' && body[field]!.length > MAX_FIELD_LENGTH) {
+      throw createError({ statusCode: 400, statusMessage: 'One or more fields are too long.' })
+    }
+  }
+  if (typeof body.message === 'string' && body.message.length > MAX_MESSAGE_LENGTH) {
+    throw createError({ statusCode: 400, statusMessage: 'Message is too long.' })
+  }
 
   // Honeypot field: hidden from real users, so a non-empty value means a bot filled it in.
   // Report success anyway so the bot doesn't know to retry.

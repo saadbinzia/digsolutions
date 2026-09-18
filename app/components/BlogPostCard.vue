@@ -17,9 +17,13 @@ function formatDate(date: string) {
   >
     <div class="relative h-44 overflow-hidden">
       <img
-        :src="post.image"
+        :src="unsplashSize(post.image, 400)"
+        :srcset="`${unsplashSize(post.image, 400)} 1x, ${unsplashSize(post.image, 800)} 2x`"
         :alt="post.imageAlt"
+        width="400"
+        height="176"
         loading="lazy"
+        decoding="async"
         class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
       >
       <div class="absolute inset-0 bg-gradient-to-t from-navy-950/60 via-transparent to-transparent" />

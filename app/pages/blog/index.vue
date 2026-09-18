@@ -64,8 +64,13 @@ function formatDate(date: string) {
         >
           <div class="relative h-64 overflow-hidden lg:h-full">
             <img
-              :src="featuredPost.image"
+              :src="unsplashSize(featuredPost.image, 700)"
+              :srcset="`${unsplashSize(featuredPost.image, 700)} 1x, ${unsplashSize(featuredPost.image, 1200)} 2x`"
               :alt="featuredPost.imageAlt"
+              width="700"
+              height="256"
+              fetchpriority="high"
+              decoding="async"
               class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
             >
             <span class="absolute left-5 top-5 rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-navy-700 backdrop-blur">

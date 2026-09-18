@@ -17,6 +17,22 @@ export default defineNuxtConfig({
 
   css: ['~/assets/css/main.css'],
 
+  // The whole site is built from static data (no per-request/per-user content)
+  // except the contact form. Prerendering everything else means page requests
+  // are served from Vercel's edge cache instead of invoking the server on every
+  // hit — faster loads, and a traffic spike can't overwhelm serverless compute.
+  routeRules: {
+    '/**': { prerender: true },
+    '/api/**': { prerender: false, isr: false }
+  },
+
+  nitro: {
+    prerender: {
+      crawlLinks: true,
+      routes: ['/']
+    }
+  },
+
   vite: {
     plugins: [tailwindcss()]
   },
