@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { services } from '~/data/services'
 
+const { openPreferences } = useCookieConsent()
+
 const year = new Date().getFullYear()
 
 const company = [
@@ -75,6 +77,7 @@ const company = [
         <div class="flex gap-6">
           <NuxtLink to="/privacy" class="hover:text-navy-300">Privacy Policy</NuxtLink>
           <NuxtLink to="/terms" class="hover:text-navy-300">Terms of Service</NuxtLink>
+          <button type="button" class="hover:text-navy-300" @click="openPreferences">Cookie Preferences</button>
         </div>
       </div>
     </div>

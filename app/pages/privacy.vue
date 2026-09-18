@@ -22,6 +22,9 @@ useSeoMeta({
           Contact form information is used solely to respond to your inquiry and is not sold or shared with third parties outside the tools directly used to deliver our services (such as our email delivery provider).
         </p>
         <p>
+          When you first visit this site, a cookie banner lets you accept or decline optional analytics cookies; necessary cookies required for the site to function are always active. You can change your choice at any time via the "Cookie Preferences" link in the footer.
+        </p>
+        <p>
           Replace this page with a full privacy policy reviewed by counsel before launch, particularly if you plan to serve users in jurisdictions with specific requirements such as GDPR or CCPA.
         </p>
       </div>
