@@ -4,12 +4,34 @@ interface ContactPayload {
   company?: string
   service?: string
   message: string
+  website?: string
+  startedAt?: number
 }
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
+const MIN_SUBMIT_MS = 3000
+const RATE_LIMIT_MAX = 5
+const RATE_LIMIT_WINDOW_MS = 10 * 60 * 1000
+
 export default defineEventHandler(async (event) => {
   const body = await readBody<Partial<ContactPayload>>(event)
+
+  // Honeypot field: hidden from real users, so a non-empty value means a bot filled it in.
+  // Report success anyway so the bot doesn't know to retry.
+  if (body.website) {
+    return { ok: true, delivered: false }
+  }
+
+  // Timing trap: a human needs at least a few seconds to fill out the form.
+  if (typeof body.startedAt === 'number' && Date.now() - body.startedAt < MIN_SUBMIT_MS) {
+    return { ok: true, delivered: false }
+  }
+
+  const ip = getRequestIP(event, { xForwardedFor: true }) || 'unknown'
+  if (isRateLimited(`contact:${ip}`, RATE_LIMIT_MAX, RATE_LIMIT_WINDOW_MS)) {
+    throw createError({ statusCode: 429, statusMessage: 'Too many requests. Please try again in a few minutes.' })
+  }
 
   const name = body.name?.trim()
   const email = body.email?.trim()
