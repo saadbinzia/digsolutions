@@ -37,7 +37,7 @@ const currentLocale = computed(() => availableLocales.value.find(l => l.code ===
         class="absolute right-0 top-full w-40 pt-2"
       >
         <div class="overflow-hidden rounded-xl border border-navy-100 bg-white p-1.5 shadow-xl shadow-navy-900/5">
-          <NuxtLinkLocale
+          <NuxtLink
             v-for="loc in availableLocales"
             :key="loc.code"
             :to="switchLocalePath(loc.code)"
@@ -46,7 +46,7 @@ const currentLocale = computed(() => availableLocales.value.find(l => l.code ===
             @click="isOpen = false"
           >
             {{ loc.name }}
-          </NuxtLinkLocale>
+          </NuxtLink>
         </div>
       </div>
     </Transition>

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { t, tm } = useI18n()
+const { t } = useI18n()
 
 useSeoMeta({
   title: () => t('about.seo.title'),
@@ -10,18 +10,23 @@ useSeoMeta({
 
 const valueIcons = ['lucide:target', 'lucide:eye', 'lucide:scale', 'lucide:handshake']
 const values = computed(() =>
-  (tm('about.values') as Array<{ title: string, description: string }>).map((item, i) => ({
-    ...item,
-    icon: valueIcons[i]
+  valueIcons.map((icon, i) => ({
+    icon,
+    title: t(`about.values.${i}.title`),
+    description: t(`about.values.${i}.description`)
   }))
 )
 
-const team = computed(() => tm('about.team') as Array<{ role: string, description: string }>)
+const team = computed(() =>
+  [0, 1, 2, 3].map(i => ({
+    role: t(`about.team.${i}.role`),
+    description: t(`about.team.${i}.description`)
+  }))
+)
 
 const aboutStats = computed(() => {
-  const labels = tm('about.stats') as string[]
   const targets = [20, 2, 3, 2]
-  return labels.map((label, i) => ({ target: targets[i], suffix: '', label }))
+  return targets.map((target, i) => ({ target, suffix: '', label: t(`about.stats.${i}`) }))
 })
 </script>
 

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const { services, caseStudies } = useContent()
-const { t, tm } = useI18n()
+const { t } = useI18n()
 
 useSeoMeta({
   title: () => t('home.seo.title'),
@@ -16,19 +16,27 @@ const techStack = [
 
 const valuePropIcons = ['lucide:workflow', 'lucide:sparkles', 'lucide:git-merge', 'lucide:users']
 const valueProps = computed(() =>
-  (tm('home.valueProps') as Array<{ title: string, description: string }>).map((item, i) => ({
-    ...item,
-    icon: valuePropIcons[i]
+  valuePropIcons.map((icon, i) => ({
+    icon,
+    title: t(`home.valueProps.${i}.title`),
+    description: t(`home.valueProps.${i}.description`)
   }))
 )
 
 const stats = computed(() => {
-  const labels = tm('home.statsLabels') as string[]
   const targets = [20, 2, 4]
-  return labels.map((label, i) => ({ target: targets[i], suffix: '', label }))
+  return targets.map((target, i) => ({ target, suffix: '', label: t(`home.statsLabels.${i}`) }))
 })
 
-const process = computed(() => tm('home.process') as Array<{ step: string, title: string, description: string }>)
+const process = computed(() =>
+  [0, 1, 2, 3].map(i => ({
+    step: t(`home.process.${i}.step`),
+    title: t(`home.process.${i}.title`),
+    description: t(`home.process.${i}.description`)
+  }))
+)
+
+const aiPoints = computed(() => [0, 1, 2, 3].map(i => t(`home.aiPoints.${i}`)))
 
 const featuredCaseStudies = computed(() => caseStudies.value.slice(0, 3))
 
@@ -169,7 +177,7 @@ const activeTab = ref(0)
               {{ t('home.aiDescription') }}
             </p>
             <ul class="mt-8 space-y-3">
-              <li v-for="item in tm('home.aiPoints') as string[]" :key="item" class="flex items-start gap-3 text-sm text-navy-200">
+              <li v-for="item in aiPoints" :key="item" class="flex items-start gap-3 text-sm text-navy-200">
                 <Icon name="lucide:check" size="16" class="mt-0.5 shrink-0 text-brand-400" />
                 {{ item }}
               </li>
