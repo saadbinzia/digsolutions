@@ -2,6 +2,8 @@
 useSeoMeta({
   title: 'Privacy Policy',
   description: 'DigSolutions privacy policy: how we collect, use, and protect information submitted through our website.',
+  ogTitle: 'Privacy Policy | DigSolutions',
+  ogDescription: 'How DigSolutions collects, uses, and protects information submitted through our website.',
   robots: 'noindex, follow'
 })
 </script>

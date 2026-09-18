@@ -2,6 +2,8 @@
 useSeoMeta({
   title: 'Terms of Service',
   description: 'DigSolutions website terms of service.',
+  ogTitle: 'Terms of Service | DigSolutions',
+  ogDescription: 'The terms of service governing use of the DigSolutions website.',
   robots: 'noindex, follow'
 })
 </script>
