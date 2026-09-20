@@ -317,7 +317,7 @@
     "p2": "La información del formulario de contacto se utiliza únicamente para responder a su consulta y no se vende ni se comparte con terceros fuera de las herramientas utilizadas directamente para prestar nuestros servicios, como nuestro proveedor de envío de correo electrónico (Resend) y, si finalmente se convierte en cliente, los sistemas usados para gestionar ese proyecto.",
     "p3": "Cuando visita este sitio por primera vez, un aviso de cookies le permite aceptar o rechazar las cookies analíticas opcionales; las cookies necesarias para el funcionamiento del sitio siempre están activas. Puede cambiar su elección en cualquier momento a través del enlace \"Preferencias de cookies\" en el pie de página.",
     "p4": "Conservamos los envíos del formulario de contacto durante el tiempo necesario para responder a su consulta y mantener registros comerciales razonables, y los datos analíticos durante el período de retención configurado en nuestra cuenta de Google Analytics. No vendemos información personal.",
-    "p5": "Si se encuentra en el EEE, el Reino Unido, Suiza o California, tiene derechos sobre los datos personales que nos haya enviado, incluido el derecho a solicitar acceso, corrección o eliminación de esos datos. Para ejercer cualquiera de estos derechos, o ante cualquier otra consulta sobre privacidad, escríbanos a hello@digsolutions.net."
+    "p5": "Si se encuentra en el EEE, el Reino Unido, Suiza o California, tiene derechos sobre los datos personales que nos haya enviado, incluido el derecho a solicitar acceso, corrección o eliminación de esos datos. Para ejercer cualquiera de estos derechos, o ante cualquier otra consulta sobre privacidad, escríbanos a hello{'@'}digsolutions.net."
   },
   "terms": {
     "seo": {
@@ -331,6 +331,6 @@
     "p1": "Estos términos rigen su uso del sitio web de DigSolutions: navegar por su contenido, usar el formulario de contacto y cualquier otra interacción con este sitio. No constituyen un acuerdo de servicios. Los proyectos reales con clientes se rigen por contratos firmados independientes (declaraciones de trabajo, acuerdos marco de servicios, etc.) negociados directamente con usted.",
     "p2": "El contenido de este sitio, incluidos su texto, diseño y código, pertenece a DigSolutions salvo que se indique lo contrario, y se ofrece con fines informativos sobre nuestros servicios. No puede reproducirlo ni redistribuirlo con fines comerciales sin nuestro permiso.",
     "p3": "Este sitio y su contenido se ofrecen \"tal cual\", sin garantías de ningún tipo. En la medida permitida por la ley, DigSolutions no es responsable de los daños derivados del uso de este sitio web; nuestra responsabilidad bajo cualquier contrato firmado con un cliente se rige por dicho contrato.",
-    "p4": "Podemos actualizar estos términos periódicamente; la fecha de \"última actualización\" arriba refleja la revisión más reciente. Si tiene preguntas sobre estos términos, escríbanos a hello@digsolutions.net."
+    "p4": "Podemos actualizar estos términos periódicamente; la fecha de \"última actualización\" arriba refleja la revisión más reciente. Si tiene preguntas sobre estos términos, escríbanos a hello{'@'}digsolutions.net."
   }
 }

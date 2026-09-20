@@ -317,7 +317,7 @@
     "p2": "Contact form information is used solely to respond to your inquiry and is not sold or shared with third parties outside the tools directly used to deliver our services, such as our email delivery provider (Resend) and, if you go on to become a client, the systems used to manage that engagement.",
     "p3": "When you first visit this site, a cookie banner lets you accept or decline optional analytics cookies; necessary cookies required for the site to function are always active. You can change your choice at any time via the \"Cookie Preferences\" link in the footer.",
     "p4": "We keep contact form submissions for as long as needed to respond to your inquiry and to maintain reasonable business records, and analytics data for the retention period configured in our Google Analytics account. We don't sell personal information.",
-    "p5": "If you're located in the EEA, UK, Switzerland, or California, you have rights over the personal data you've submitted to us, including the right to request access to, correction of, or deletion of that data. To exercise any of these rights, or with any other privacy question, email us at hello@digsolutions.net."
+    "p5": "If you're located in the EEA, UK, Switzerland, or California, you have rights over the personal data you've submitted to us, including the right to request access to, correction of, or deletion of that data. To exercise any of these rights, or with any other privacy question, email us at hello{'@'}digsolutions.net."
   },
   "terms": {
     "seo": {
@@ -331,6 +331,6 @@
     "p1": "These terms govern your use of the DigSolutions website: browsing its content, using the contact form, and any other interaction with this site. They don't constitute a services agreement. Actual client engagements are governed by separate signed contracts (statements of work, master service agreements, etc.) negotiated directly with you.",
     "p2": "The content on this site, including its text, design, and code, belongs to DigSolutions unless otherwise noted, and is provided for informational purposes about our services. You may not reproduce or redistribute it for commercial purposes without our permission.",
     "p3": "This site and its content are provided \"as is,\" without warranties of any kind. To the extent permitted by law, DigSolutions is not liable for any damages arising from your use of this website; our liability under any signed client agreement is governed by that agreement instead.",
-    "p4": "We may update these terms from time to time; the \"last updated\" date above reflects the most recent revision. If you have questions about these terms, email us at hello@digsolutions.net."
+    "p4": "We may update these terms from time to time; the \"last updated\" date above reflects the most recent revision. If you have questions about these terms, email us at hello{'@'}digsolutions.net."
   }
 }
