@@ -103,7 +103,7 @@ const navLinks = computed(() => [
 
       <button
         type="button"
-        class="flex h-10 w-10 items-center justify-center rounded-lg text-navy-700 lg:hidden"
+        class="flex h-11 w-11 items-center justify-center rounded-lg text-navy-700 lg:hidden"
         :aria-label="t('nav.toggleMenu')"
         @click="isOpen = !isOpen"
       >

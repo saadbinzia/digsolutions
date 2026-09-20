@@ -9,7 +9,8 @@
     "discussProject": "Bespreek je project",
     "backToHome": "Terug naar de homepage",
     "close": "Sluiten",
-    "language": "Taal"
+    "language": "Taal",
+    "minRead": "{n} min leestijd"
   },
   "nav": {
     "services": "Diensten",
@@ -41,6 +42,7 @@
     "analyticsTitle": "Analyse",
     "analyticsDescription": "Google Analytics / Tag Manager, helpt ons het gebruik van de site te begrijpen.",
     "toggleAriaLabel": "Analysecookies in-/uitschakelen",
+    "closeAriaLabel": "Niet-essentiële cookies weigeren en sluiten",
     "acceptAll": "Alles accepteren",
     "rejectAll": "Niet-noodzakelijke weigeren",
     "managePreferences": "Voorkeuren beheren",
@@ -152,7 +154,7 @@
     "subtitle": "We zijn een team van 20 mensen dat werkt vanuit de VS en Pakistan. We pakken problemen aan waarbij AI en integratiewerk een echt handmatig proces kunnen vervangen, niet waar AI toevallig trending is.",
     "distributedTitle": "Verspreid door ontwerp, niet door kostenbesparing",
     "distributedP1": "We zijn een team van 20 mensen, verdeeld over de VS en Pakistan. We hebben het bewust zo opgebouwd: het betekent dat klanten overlap krijgen met Amerikaanse kantooruren en een grotere, senior technische bezetting dan een even groot bureau dat alleen in de VS zit, zou kunnen bemannen.",
-    "distributedP2": "We richten ons op drie disciplines: webplatforms, AI-functies afgebakend tot een specifieke taak, en ERP/e-commerce-integratie, omdat dat de gebieden zijn waarop we daadwerkelijk productiesystemen hebben opgeleverd, niet een lange lijst technologieën waarvoor we graag ingehuurd zouden willen worden.",
+    "distributedP2": "We richten ons op vier disciplines: web- en .NET-platforms, AI-functies afgebakend tot een specifieke taak, ERP/e-commerce-integratie, en native Windows-desktoptoepassingen, omdat dat de gebieden zijn waarop we daadwerkelijk productiesystemen hebben opgeleverd, niet een lange lijst technologieën waarvoor we graag ingehuurd zouden willen worden.",
     "stats": [
       "Mensen in het team",
       "Landen: VS & Pakistan",
@@ -244,6 +246,7 @@
     "eyebrow": "Diensten",
     "title": "Eén engineeringpartner, elke discipline die jouw roadmap nodig heeft",
     "subtitle": "Of je nu een nieuw product vanaf nul wilt laten bouwen, AI wilt integreren in een bestaand product, of een enterprise systeem wilt laten herbouwen rond hoe jouw team daadwerkelijk werkt, wij dekken de volledige stack.",
+    "gridHeading": "Onze diensten",
     "ctaTitle": "Niet zeker welke dienst je nodig hebt?",
     "ctaDescription": "Vertel ons over het probleem dat je wilt oplossen. We helpen je de juiste scope en stack te bepalen."
   },
@@ -251,6 +254,11 @@
     "whatsIncluded": "Wat is inbegrepen",
     "technologies": "Technologieën",
     "idealFor": "Ideaal voor",
+    "howWeApproach": "Hoe we dit aanpakken",
+    "faqHeading": "Veelgestelde vragen",
+    "seeItInPractice": "Bekijk het in de praktijk",
+    "caseStudyLabel": "Case study",
+    "articleLabel": "Vanuit de blog",
     "relatedServices": "Gerelateerde diensten",
     "ctaTitle": "Klaar om te praten over {service}?"
   },
@@ -263,7 +271,8 @@
     },
     "eyebrow": "Portfolio",
     "title": "Werk gebouwd voor echte resultaten, niet alleen lanceringen",
-    "subtitle": "Klantnamen zijn geanonimiseerd waar we geen toestemming hebben om ze te delen, maar de problemen en resultaten zijn echt. Vraag ons naar referenties voor een van beide trajecten."
+    "subtitle": "Klantnamen zijn geanonimiseerd waar we geen toestemming hebben om ze te delen, maar de problemen en resultaten zijn echt. Vraag ons naar referenties voor een van beide trajecten.",
+    "gridHeading": "Case studies"
   },
   "portfolioDetail": {
     "clientLabel": "Klant",
@@ -287,6 +296,7 @@
     "eyebrow": "Blog",
     "title": "Notities van het engineeringteam",
     "subtitle": "Praktische artikelen over framework-keuzes, AI-systemen in productie, SaaS-architectuur en het moderniseren van enterprise software.",
+    "gridHeading": "Alle artikelen",
     "allCategory": "Alle",
     "latestBadge": "Nieuwste"
   },
@@ -302,11 +312,12 @@
       "ogDescription": "Hoe DigSolutions informatie verzamelt, gebruikt en beschermt die via onze website wordt verstrekt."
     },
     "title": "Privacybeleid",
-    "lastUpdated": "Laatst bijgewerkt: 27 augustus 2026",
-    "p1": "Dit voorlopige privacybeleid heeft betrekking op de informatie die DigSolutions via deze website verzamelt, voornamelijk gegevens uit contactformulieren (naam, e-mail, bedrijf en projectdetails) en standaard analysegegevens die worden verzameld via Google Analytics en Google Tag Manager.",
-    "p2": "Informatie uit het contactformulier wordt uitsluitend gebruikt om te reageren op je aanvraag en wordt niet verkocht of gedeeld met derden, buiten de tools die we rechtstreeks gebruiken om onze diensten te leveren (zoals onze e-mailleverancier).",
+    "lastUpdated": "Laatst bijgewerkt: 21 september 2026",
+    "p1": "Dit privacybeleid heeft betrekking op de informatie die DigSolutions via deze website verzamelt: gegevens uit het contactformulier (naam, e-mail, bedrijf en de projectdetails die je wilt delen) en standaard analysegegevens via Google Analytics en Google Tag Manager, die pas worden geladen nadat je analysecookies accepteert.",
+    "p2": "Informatie uit het contactformulier wordt uitsluitend gebruikt om te reageren op je aanvraag en wordt niet verkocht of gedeeld met derden, buiten de tools die we rechtstreeks gebruiken om onze diensten te leveren, zoals onze e-mailleverancier (Resend) en, als je aanvraag een klantproject wordt, de systemen waarmee we dat project beheren.",
     "p3": "Wanneer je deze site voor het eerst bezoekt, kun je via een cookiebanner optionele analysecookies accepteren of weigeren; noodzakelijke cookies die vereist zijn om de site te laten functioneren, zijn altijd actief. Je kunt je keuze op elk moment wijzigen via de link \"Cookievoorkeuren\" in de footer.",
-    "p4": "Vervang deze pagina vóór lancering door een volledig privacybeleid dat is beoordeeld door een jurist, vooral als je van plan bent gebruikers te bedienen in rechtsgebieden met specifieke vereisten zoals de AVG (GDPR) of CCPA."
+    "p4": "We bewaren gegevens uit het contactformulier zo lang als nodig is om te reageren op je aanvraag en om redelijke bedrijfsadministratie bij te houden, en analysegegevens voor de bewaartermijn die is ingesteld in ons Google Analytics-account. We verkopen geen persoonsgegevens.",
+    "p5": "Als je je in de EER, het VK, Zwitserland of Californië bevindt, heb je rechten op de persoonsgegevens die je ons hebt verstrekt, waaronder het recht om inzage, correctie of verwijdering van die gegevens te vragen. Om een van deze rechten uit te oefenen, of bij andere privacyvragen, mail je naar hello@digsolutions.net."
   },
   "terms": {
     "seo": {
@@ -316,8 +327,10 @@
       "ogDescription": "De algemene voorwaarden die van toepassing zijn op het gebruik van de website van DigSolutions."
     },
     "title": "Algemene voorwaarden",
-    "lastUpdated": "Laatst bijgewerkt: 27 augustus 2026",
-    "p1": "Dit is voorlopige inhoud voor de algemene voorwaarden van de website van DigSolutions. Het heeft betrekking op het algemene gebruik van de inhoud en contacttools van deze site en vormt geen dienstverleningsovereenkomst. Daadwerkelijke klanttrajecten worden geregeld door afzonderlijke ondertekende contracten (statements of work, master service agreements, enz.).",
-    "p2": "Vervang deze pagina vóór lancering door voorwaarden die zijn beoordeeld door een jurist."
+    "lastUpdated": "Laatst bijgewerkt: 21 september 2026",
+    "p1": "Deze voorwaarden regelen je gebruik van de website van DigSolutions: het bekijken van de inhoud, het gebruik van het contactformulier en elke andere interactie met deze site. Ze vormen geen dienstverleningsovereenkomst. Daadwerkelijke klanttrajecten worden geregeld door afzonderlijke ondertekende contracten (statements of work, master service agreements, enz.) die rechtstreeks met jou worden overeengekomen.",
+    "p2": "De inhoud van deze site, waaronder tekst, ontwerp en code, is eigendom van DigSolutions tenzij anders vermeld, en wordt aangeboden ter informatie over onze diensten. Je mag deze niet zonder onze toestemming reproduceren of verspreiden voor commerciële doeleinden.",
+    "p3": "Deze site en de inhoud ervan worden \"as is\" aangeboden, zonder enige vorm van garantie. Voor zover wettelijk toegestaan is DigSolutions niet aansprakelijk voor schade die voortvloeit uit het gebruik van deze website; onze aansprakelijkheid onder een ondertekende klantovereenkomst wordt in plaats daarvan geregeld door die overeenkomst.",
+    "p4": "We kunnen deze voorwaarden van tijd tot tijd bijwerken; de datum \"laatst bijgewerkt\" hierboven geeft de meest recente wijziging weer. Heb je vragen over deze voorwaarden, mail dan naar hello@digsolutions.net."
   }
 }

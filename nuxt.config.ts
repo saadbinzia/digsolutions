@@ -3,6 +3,44 @@ import { services } from './app/data/services'
 import { caseStudies } from './app/data/portfolio'
 import { blogPosts } from './app/data/blog'
 
+// Date this content batch (service/case-study copy, cross-linking, schema) was
+// last edited - used as sitemap lastmod for pages with no per-item date field.
+const CONTENT_UPDATED = '2026-09-21'
+
+const SITE_URL = process.env.NUXT_PUBLIC_SITE_URL || 'https://www.digsolutions.net'
+const LOCALES = ['en', 'es', 'de', 'nl', 'fr'] as const
+type Locale = (typeof LOCALES)[number]
+
+// Mirrors i18n.pages below. Kept as a literal map (not a shared import) so this
+// file has no runtime dependency on the app/ directory beyond the data files
+// it already imports; the i18n.pages block is the source of truth for routing,
+// this one only has to stay in sync for sitemap generation.
+const LOCALIZED_BASE: Record<'services' | 'portfolio', Record<Locale, string>> = {
+  services: { en: '/services', es: '/servicios', de: '/dienstleistungen', nl: '/diensten', fr: '/services' },
+  portfolio: { en: '/portfolio', es: '/portafolio', de: '/portfolio', nl: '/portfolio', fr: '/realisations' }
+}
+
+function localizedPath(locale: Locale, path: string) {
+  return locale === 'en' ? path : `/${locale}${path}`
+}
+
+// @nuxtjs/sitemap's `_i18nTransform` only prefixes the locale code onto the
+// same path for every locale - it doesn't know these sections have translated
+// slugs (see i18n.pages), so it was generating dead /es/services/... URLs
+// instead of /es/servicios/.... Building each locale's entry (and its
+// hreflang alternatives) explicitly here is the fix.
+function buildLocalizedSitemapEntries(section: 'services' | 'portfolio', slug: string, lastmod: string) {
+  const hrefs = LOCALES.map(locale => ({
+    locale,
+    href: `${SITE_URL}${localizedPath(locale, `${LOCALIZED_BASE[section][locale]}/${slug}`)}`
+  }))
+  const alternatives = [
+    { hreflang: 'x-default', href: hrefs.find(h => h.locale === 'en')!.href },
+    ...hrefs.map(h => ({ hreflang: h.locale, href: h.href }))
+  ]
+  return hrefs.map(h => ({ loc: h.href, lastmod, alternatives }))
+}
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
@@ -31,7 +69,25 @@ export default defineNuxtConfig({
         'X-Frame-Options': 'DENY',
         'Referrer-Policy': 'strict-origin-when-cross-origin',
         'Permissions-Policy': 'camera=(), microphone=(), geolocation=()',
-        'Strict-Transport-Security': 'max-age=63072000; includeSubDomains; preload'
+        'Strict-Transport-Security': 'max-age=63072000; includeSubDomains; preload',
+        // Baseline matches the CSP h3/Nitro already applies to /api/* and error
+        // responses by default, extended for the analytics scripts and Unsplash
+        // images the site actually loads. No nonce/hash because the HTML is
+        // fully prerendered and static (a nonce baked into a static file would
+        // be identical for every visitor, which defeats the point).
+        'Content-Security-Policy': [
+          "default-src 'self'",
+          "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com",
+          "style-src 'self' 'unsafe-inline'",
+          "img-src 'self' data: https://images.unsplash.com",
+          "font-src 'self' data:",
+          "connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com",
+          "frame-src https://www.googletagmanager.com",
+          "object-src 'none'",
+          "base-uri 'self'",
+          "form-action 'self'",
+          "frame-ancestors 'none'"
+        ].join('; ')
       }
     },
     '/api/**': { prerender: false, isr: false }
@@ -41,6 +97,20 @@ export default defineNuxtConfig({
     prerender: {
       crawlLinks: true,
       routes: ['/']
+    }
+  },
+
+  hooks: {
+    // The sitemap module force-redirects /sitemap.xml -> /sitemap_index.xml via
+    // a plain `redirect` route rule (defaults to 307). It sets this up itself
+    // during module setup, after nuxt.config's own routeRules are read, so it
+    // has to be corrected here once module setup has finished instead.
+    'nitro:config': (nitroConfig) => {
+      const rule = nitroConfig.routeRules?.['/sitemap.xml']
+      if (rule && 'redirect' in rule) {
+        const to = typeof rule.redirect === 'string' ? rule.redirect : rule.redirect?.to
+        if (to) nitroConfig.routeRules!['/sitemap.xml'] = { redirect: { to, statusCode: 308 } }
+      }
     }
   },
 
@@ -71,6 +141,21 @@ export default defineNuxtConfig({
       useCookie: true,
       cookieKey: 'digsolutions_i18n_redirected',
       redirectOn: 'root'
+    },
+    // Localized slugs for regional SEO/GEO - each locale's own visitors and
+    // search engines see a path in their language instead of the English one.
+    // (customRoutes: 'config' makes the module read `pages` below instead of
+    // looking for per-page `definePageMeta({ i18n: ... })` blocks.)
+    customRoutes: 'config',
+    pages: {
+      about: { es: '/nosotros', de: '/ueber-uns', nl: '/over-ons', fr: '/a-propos' },
+      contact: { es: '/contacto', de: '/kontakt', nl: '/contact', fr: '/contact' },
+      services: { es: '/servicios', de: '/dienstleistungen', nl: '/diensten', fr: '/services' },
+      'services-slug': { es: '/servicios/[slug]', de: '/dienstleistungen/[slug]', nl: '/diensten/[slug]', fr: '/services/[slug]' },
+      portfolio: { es: '/portafolio', de: '/portfolio', nl: '/portfolio', fr: '/realisations' },
+      'portfolio-slug': { es: '/portafolio/[slug]', de: '/portfolio/[slug]', nl: '/portfolio/[slug]', fr: '/realisations/[slug]' },
+      privacy: { es: '/privacidad', de: '/datenschutz', nl: '/privacybeleid', fr: '/confidentialite' },
+      terms: { es: '/terminos', de: '/nutzungsbedingungen', nl: '/voorwaarden', fr: '/conditions-utilisation' }
     }
   },
 
@@ -92,8 +177,13 @@ export default defineNuxtConfig({
   // matching the auto-generated entries for file-based pages.
   sitemap: {
     urls: () => [
-      ...services.map(s => ({ loc: `/services/${s.slug}`, _i18nTransform: true })),
-      ...caseStudies.map(c => ({ loc: `/portfolio/${c.slug}`, _i18nTransform: true })),
+      // Services and case studies have no genuine per-item revision date in the
+      // data model (unlike blog posts, which carry a real publish date) - dated
+      // CONTENT_UPDATED below instead of a fabricated per-page date, so lastmod
+      // stays honest: it's the date this batch of pages was actually last edited.
+      ...services.flatMap(s => buildLocalizedSitemapEntries('services', s.slug, CONTENT_UPDATED)),
+      ...caseStudies.flatMap(c => buildLocalizedSitemapEntries('portfolio', c.slug, CONTENT_UPDATED)),
+      // Blog has no translated slug per locale, so straight locale-prefixing is correct here.
       ...blogPosts.map(p => ({ loc: `/blog/${p.slug}`, lastmod: p.date, _i18nTransform: true }))
     ]
   },
@@ -103,7 +193,18 @@ export default defineNuxtConfig({
     identity: {
       type: 'Organization',
       name: 'DigSolutions',
-      logo: '/logo.svg'
+      logo: { url: '/logo.svg', width: 34, height: 34 },
+      email: 'hello@digsolutions.net',
+      telephone: '+13075003832',
+      contactPoint: [{
+        contactType: 'customer service',
+        email: 'hello@digsolutions.net',
+        telephone: '+13075003832',
+        areaServed: 'Worldwide',
+        availableLanguage: ['English', 'Spanish', 'German', 'Dutch', 'French']
+      }],
+      // Real, already-published fact (see about/footer copy), not a placeholder number.
+      numberOfEmployees: { '@type': 'QuantitativeValue', value: 20 }
     }
   },
 

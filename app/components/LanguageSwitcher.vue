@@ -15,7 +15,7 @@ const currentLocale = computed(() => availableLocales.value.find(l => l.code ===
   >
     <button
       type="button"
-      class="flex items-center gap-1.5 rounded-lg px-3 py-2 text-sm font-medium text-navy-700 transition hover:bg-navy-50 hover:text-navy-900"
+      class="flex min-h-11 items-center gap-1.5 rounded-lg px-3 py-2 text-sm font-medium text-navy-700 transition hover:bg-navy-50 hover:text-navy-900"
       :aria-label="t('common.language')"
       @click="isOpen = !isOpen"
     >
@@ -41,7 +41,7 @@ const currentLocale = computed(() => availableLocales.value.find(l => l.code ===
             v-for="loc in availableLocales"
             :key="loc.code"
             :to="switchLocalePath(loc.code)"
-            class="block rounded-lg px-3 py-2 text-sm transition"
+            class="flex min-h-11 items-center rounded-lg px-3 py-2 text-sm transition"
             :class="loc.code === locale ? 'bg-brand-50 font-semibold text-brand-700' : 'text-navy-700 hover:bg-navy-50'"
             @click="isOpen = false"
           >

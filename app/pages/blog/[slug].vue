@@ -15,6 +15,8 @@ function formatDate(date: string) {
   return new Date(date).toLocaleDateString(locale.value, { year: 'numeric', month: 'long', day: 'numeric' })
 }
 
+const readingMinutes = computed(() => estimateReadingTime(...post.keyTakeaways, ...post.content))
+
 useSeoMeta({
   title: post.title,
   description: post.metaDescription,
@@ -63,7 +65,7 @@ useSchemaOrg([
           <span>·</span>
           <time :datetime="post.date">{{ formatDate(post.date) }}</time>
           <span>·</span>
-          <span>{{ post.readTime }}</span>
+          <span>{{ t('common.minRead', { n: readingMinutes }) }}</span>
         </div>
       </div>
     </section>

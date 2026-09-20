@@ -10,7 +10,9 @@ const props = withDefaults(defineProps<{
   duration: 1400
 })
 
-const displayValue = ref(0)
+// Rendered server-side (and until hydration finishes client-side), so this must
+// start at the real target value - otherwise SSR HTML and no-JS visitors see "0".
+const displayValue = ref(props.target)
 const el = ref<HTMLElement | null>(null)
 
 function easeOutExpo(t: number) {
@@ -35,6 +37,8 @@ function animate() {
 
 onMounted(() => {
   if (!el.value) return
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+  if (!reduceMotion) displayValue.value = 0
   const observer = new IntersectionObserver((entries) => {
     for (const entry of entries) {
       if (entry.isIntersecting) {

@@ -62,6 +62,12 @@ useSchemaOrg([
             <div class="mt-1 font-medium text-white">{{ caseStudy.timeline }}</div>
           </div>
         </div>
+        <NuxtLinkLocale
+          to="/contact"
+          class="mt-8 inline-flex w-full items-center justify-center rounded-lg bg-white px-6 py-3.5 text-sm font-semibold text-navy-900 shadow-sm transition hover:bg-brand-50 sm:w-auto lg:hidden"
+        >
+          {{ t('common.startProject') }}
+        </NuxtLinkLocale>
       </div>
     </section>
 

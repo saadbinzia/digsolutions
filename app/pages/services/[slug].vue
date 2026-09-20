@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { services, getServiceBySlug } = useContent()
+const { services, caseStudies, blogPosts, getServiceBySlug } = useContent()
 const { t } = useI18n()
 
 const route = useRoute()
@@ -10,6 +10,8 @@ if (!service) {
 }
 
 const related = computed(() => services.value.filter(s => s.slug !== service.slug).slice(0, 3))
+const relatedCaseStudies = computed(() => caseStudies.value.filter(c => c.serviceSlug === service.slug))
+const relatedPosts = computed(() => blogPosts.value.filter(p => p.relatedServiceSlugs?.includes(service.slug)).slice(0, 2))
 
 useSeoMeta({
   title: service.metaTitle,
@@ -81,6 +83,59 @@ useSchemaOrg([
               {{ capability }}
             </li>
           </ul>
+
+          <template v-if="service.process?.length">
+            <h2 class="mt-12 text-xl font-semibold text-navy-900">{{ t('serviceDetail.howWeApproach') }}</h2>
+            <ol class="mt-5 space-y-5">
+              <li v-for="(step, i) in service.process" :key="step.title" class="flex gap-4">
+                <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-navy-900 text-xs font-semibold text-white">{{ i + 1 }}</span>
+                <div>
+                  <p class="text-sm font-semibold text-navy-900">{{ step.title }}</p>
+                  <p class="mt-1 text-sm leading-relaxed text-navy-600">{{ step.description }}</p>
+                </div>
+              </li>
+            </ol>
+          </template>
+
+          <template v-if="service.faqs?.length">
+            <h2 class="mt-12 text-xl font-semibold text-navy-900">{{ t('serviceDetail.faqHeading') }}</h2>
+            <div class="mt-5 space-y-5">
+              <div v-for="faq in service.faqs" :key="faq.question">
+                <p class="text-sm font-semibold text-navy-900">{{ faq.question }}</p>
+                <p class="mt-1.5 text-sm leading-relaxed text-navy-600">{{ faq.answer }}</p>
+              </div>
+            </div>
+          </template>
+
+          <template v-if="relatedCaseStudies.length || relatedPosts.length">
+            <h2 class="mt-12 text-xl font-semibold text-navy-900">{{ t('serviceDetail.seeItInPractice') }}</h2>
+            <div class="mt-5 grid grid-cols-1 gap-3 sm:grid-cols-2">
+              <NuxtLinkLocale
+                v-for="c in relatedCaseStudies"
+                :key="c.slug"
+                :to="`/portfolio/${c.slug}`"
+                class="flex items-start gap-3 rounded-xl border border-navy-100 p-4 transition hover:border-brand-200"
+              >
+                <Icon name="lucide:briefcase" size="16" class="mt-0.5 shrink-0 text-brand-500" />
+                <span>
+                  <span class="block text-xs font-medium uppercase tracking-wider text-navy-400">{{ t('serviceDetail.caseStudyLabel') }}</span>
+                  <span class="mt-0.5 block text-sm font-semibold text-navy-900">{{ c.title }}</span>
+                </span>
+              </NuxtLinkLocale>
+              <NuxtLinkLocale
+                v-for="p in relatedPosts"
+                :key="p.slug"
+                :to="`/blog/${p.slug}`"
+                class="flex items-start gap-3 rounded-xl border border-navy-100 p-4 transition hover:border-brand-200"
+              >
+                <Icon name="lucide:newspaper" size="16" class="mt-0.5 shrink-0 text-brand-500" />
+                <span>
+                  <span class="block text-xs font-medium uppercase tracking-wider text-navy-400">{{ t('serviceDetail.articleLabel') }}</span>
+                  <span class="mt-0.5 block text-sm font-semibold text-navy-900">{{ p.title }}</span>
+                </span>
+              </NuxtLinkLocale>
+            </div>
+          </template>
         </div>
 
         <aside class="space-y-6">

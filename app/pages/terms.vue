@@ -19,6 +19,8 @@ useSeoMeta({
       <div class="prose-content mt-10 space-y-6 text-navy-600">
         <p>{{ t('terms.p1') }}</p>
         <p>{{ t('terms.p2') }}</p>
+        <p>{{ t('terms.p3') }}</p>
+        <p>{{ t('terms.p4') }}</p>
       </div>
     </div>
   </section>

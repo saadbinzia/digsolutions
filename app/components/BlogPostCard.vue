@@ -1,13 +1,15 @@
 <script setup lang="ts">
 import type { BlogPost } from '~/data/blog'
 
-defineProps<{ post: BlogPost }>()
+const props = defineProps<{ post: BlogPost }>()
 
-const { locale } = useI18n()
+const { t, locale } = useI18n()
 
 function formatDate(date: string) {
   return new Date(date).toLocaleDateString(locale.value, { year: 'numeric', month: 'long', day: 'numeric' })
 }
+
+const readingMinutes = computed(() => estimateReadingTime(...props.post.keyTakeaways, ...props.post.content))
 </script>
 
 <template>
@@ -41,7 +43,7 @@ function formatDate(date: string) {
         <span>·</span>
         <time :datetime="post.date">{{ formatDate(post.date) }}</time>
         <span>·</span>
-        <span>{{ post.readTime }}</span>
+        <span>{{ t('common.minRead', { n: readingMinutes }) }}</span>
       </div>
     </div>
   </NuxtLinkLocale>

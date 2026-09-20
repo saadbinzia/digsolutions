@@ -21,6 +21,7 @@ useSeoMeta({
         <p>{{ t('privacy.p2') }}</p>
         <p>{{ t('privacy.p3') }}</p>
         <p>{{ t('privacy.p4') }}</p>
+        <p>{{ t('privacy.p5') }}</p>
       </div>
     </div>
   </section>

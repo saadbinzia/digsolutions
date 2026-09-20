@@ -9,7 +9,8 @@
     "discussProject": "Hablar sobre su proyecto",
     "backToHome": "Volver al inicio",
     "close": "Cerrar",
-    "language": "Idioma"
+    "language": "Idioma",
+    "minRead": "{n} min de lectura"
   },
   "nav": {
     "services": "Servicios",
@@ -41,6 +42,7 @@
     "analyticsTitle": "Análisis",
     "analyticsDescription": "Google Analytics / Tag Manager, nos ayuda a entender el uso del sitio.",
     "toggleAriaLabel": "Alternar cookies de análisis",
+    "closeAriaLabel": "Rechazar cookies no esenciales y cerrar",
     "acceptAll": "Aceptar todo",
     "rejectAll": "Rechazar no esenciales",
     "managePreferences": "Gestionar preferencias",
@@ -152,7 +154,7 @@
     "subtitle": "Somos un equipo de 20 personas que trabaja entre Estados Unidos y Pakistán. Asumimos problemas donde la IA y el trabajo de integración pueden reemplazar un proceso genuinamente manual, no donde la IA simplemente está de moda.",
     "distributedTitle": "Distribuidos por diseño, no por recorte de costos",
     "distributedP1": "Somos un equipo de 20 personas repartido entre Estados Unidos y Pakistán. Lo construimos así a propósito: significa que los clientes obtienen superposición con el horario laboral de EE. UU. y un banco de ingenieros senior más amplio del que podría tener una empresa del mismo tamaño solo en EE. UU.",
-    "distributedP2": "Nos enfocamos en tres disciplinas: plataformas web, funciones de IA acotadas a una tarea específica, e integración de ERP/e-commerce, porque son las áreas donde realmente hemos puesto en producción sistemas reales, no una larga lista de tecnologías para las que nos gustaría que nos contrataran.",
+    "distributedP2": "Nos enfocamos en cuatro disciplinas: plataformas web y .NET, funciones de IA acotadas a una tarea específica, integración de ERP/e-commerce, y aplicaciones de escritorio nativas para Windows, porque son las áreas donde realmente hemos puesto en producción sistemas reales, no una larga lista de tecnologías para las que nos gustaría que nos contrataran.",
     "stats": [
       "Personas en el equipo",
       "Países: EE. UU. y Pakistán",
@@ -244,6 +246,7 @@
     "eyebrow": "Servicios",
     "title": "Un solo socio de ingeniería, cada disciplina que su hoja de ruta necesita",
     "subtitle": "Ya sea que necesite un producto nuevo desde cero, IA integrada en uno existente, o un sistema empresarial reconstruido en torno a cómo trabaja realmente su equipo, cubrimos todo el stack.",
+    "gridHeading": "Nuestros servicios",
     "ctaTitle": "¿No está seguro de qué servicio necesita?",
     "ctaDescription": "Cuéntenos el problema que está resolviendo. Le ayudaremos a definir el alcance y el stack adecuados."
   },
@@ -251,6 +254,11 @@
     "whatsIncluded": "Qué incluye",
     "technologies": "Tecnologías",
     "idealFor": "Ideal para",
+    "howWeApproach": "Cómo lo abordamos",
+    "faqHeading": "Preguntas frecuentes",
+    "seeItInPractice": "Véalo en la práctica",
+    "caseStudyLabel": "Caso de éxito",
+    "articleLabel": "Desde el blog",
     "relatedServices": "Servicios relacionados",
     "ctaTitle": "¿Listo para hablar sobre {service}?"
   },
@@ -263,7 +271,8 @@
     },
     "eyebrow": "Portafolio",
     "title": "Trabajo construido para resultados reales, no solo lanzamientos",
-    "subtitle": "Los nombres de los clientes se anonimizan cuando no tenemos permiso para compartirlos, pero los problemas y los resultados son reales. Pregúntenos por referencias de cualquiera de los proyectos."
+    "subtitle": "Los nombres de los clientes se anonimizan cuando no tenemos permiso para compartirlos, pero los problemas y los resultados son reales. Pregúntenos por referencias de cualquiera de los proyectos.",
+    "gridHeading": "Casos de éxito"
   },
   "portfolioDetail": {
     "clientLabel": "Cliente",
@@ -287,6 +296,7 @@
     "eyebrow": "Blog",
     "title": "Notas del equipo de ingeniería",
     "subtitle": "Artículos prácticos sobre elección de frameworks, sistemas de IA en producción, arquitectura SaaS y modernización de software empresarial.",
+    "gridHeading": "Todos los artículos",
     "allCategory": "Todos",
     "latestBadge": "Reciente"
   },
@@ -302,11 +312,12 @@
       "ogDescription": "Cómo DigSolutions recopila, usa y protege la información enviada a través de nuestro sitio web."
     },
     "title": "Política de Privacidad",
-    "lastUpdated": "Última actualización: 27 de agosto de 2026",
-    "p1": "Esta política de privacidad de referencia cubre la información que DigSolutions recopila a través de este sitio web, principalmente los envíos del formulario de contacto (nombre, correo electrónico, empresa y detalles del proyecto) y los datos analíticos estándar recopilados mediante Google Analytics y Google Tag Manager.",
-    "p2": "La información del formulario de contacto se utiliza únicamente para responder a su consulta y no se vende ni se comparte con terceros fuera de las herramientas utilizadas directamente para prestar nuestros servicios (como nuestro proveedor de envío de correo electrónico).",
+    "lastUpdated": "Última actualización: 21 de septiembre de 2026",
+    "p1": "Esta política de privacidad cubre la información que DigSolutions recopila a través de este sitio web: los envíos del formulario de contacto (nombre, correo electrónico, empresa y detalles del proyecto que decida compartir) y los datos analíticos estándar recopilados mediante Google Analytics y Google Tag Manager, que solo se cargan si acepta las cookies analíticas.",
+    "p2": "La información del formulario de contacto se utiliza únicamente para responder a su consulta y no se vende ni se comparte con terceros fuera de las herramientas utilizadas directamente para prestar nuestros servicios, como nuestro proveedor de envío de correo electrónico (Resend) y, si finalmente se convierte en cliente, los sistemas usados para gestionar ese proyecto.",
     "p3": "Cuando visita este sitio por primera vez, un aviso de cookies le permite aceptar o rechazar las cookies analíticas opcionales; las cookies necesarias para el funcionamiento del sitio siempre están activas. Puede cambiar su elección en cualquier momento a través del enlace \"Preferencias de cookies\" en el pie de página.",
-    "p4": "Reemplace esta página con una política de privacidad completa revisada por un asesor legal antes del lanzamiento, especialmente si planea atender a usuarios en jurisdicciones con requisitos específicos como el RGPD o la CCPA."
+    "p4": "Conservamos los envíos del formulario de contacto durante el tiempo necesario para responder a su consulta y mantener registros comerciales razonables, y los datos analíticos durante el período de retención configurado en nuestra cuenta de Google Analytics. No vendemos información personal.",
+    "p5": "Si se encuentra en el EEE, el Reino Unido, Suiza o California, tiene derechos sobre los datos personales que nos haya enviado, incluido el derecho a solicitar acceso, corrección o eliminación de esos datos. Para ejercer cualquiera de estos derechos, o ante cualquier otra consulta sobre privacidad, escríbanos a hello@digsolutions.net."
   },
   "terms": {
     "seo": {
@@ -316,8 +327,10 @@
       "ogDescription": "Los términos de servicio que rigen el uso del sitio web de DigSolutions."
     },
     "title": "Términos de Servicio",
-    "lastUpdated": "Última actualización: 27 de agosto de 2026",
-    "p1": "Este es contenido de referencia de términos de servicio para el sitio web de DigSolutions. Cubre el uso general del contenido de este sitio y las herramientas de contacto, y no constituye un acuerdo de servicios. Los proyectos reales con clientes se rigen por contratos firmados independientes (declaraciones de trabajo, acuerdos marco de servicios, etc.).",
-    "p2": "Reemplace esta página con términos revisados por un asesor legal antes del lanzamiento."
+    "lastUpdated": "Última actualización: 21 de septiembre de 2026",
+    "p1": "Estos términos rigen su uso del sitio web de DigSolutions: navegar por su contenido, usar el formulario de contacto y cualquier otra interacción con este sitio. No constituyen un acuerdo de servicios. Los proyectos reales con clientes se rigen por contratos firmados independientes (declaraciones de trabajo, acuerdos marco de servicios, etc.) negociados directamente con usted.",
+    "p2": "El contenido de este sitio, incluidos su texto, diseño y código, pertenece a DigSolutions salvo que se indique lo contrario, y se ofrece con fines informativos sobre nuestros servicios. No puede reproducirlo ni redistribuirlo con fines comerciales sin nuestro permiso.",
+    "p3": "Este sitio y su contenido se ofrecen \"tal cual\", sin garantías de ningún tipo. En la medida permitida por la ley, DigSolutions no es responsable de los daños derivados del uso de este sitio web; nuestra responsabilidad bajo cualquier contrato firmado con un cliente se rige por dicho contrato.",
+    "p4": "Podemos actualizar estos términos periódicamente; la fecha de \"última actualización\" arriba refleja la revisión más reciente. Si tiene preguntas sobre estos términos, escríbanos a hello@digsolutions.net."
   }
 }

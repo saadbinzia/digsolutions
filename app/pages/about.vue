@@ -42,6 +42,12 @@ const aboutStats = computed(() => {
         <p class="mt-5 max-w-2xl text-balance text-lg text-navy-500">
           {{ t('about.subtitle') }}
         </p>
+        <NuxtLinkLocale
+          to="/contact"
+          class="mt-8 inline-flex w-full items-center justify-center rounded-lg bg-navy-900 px-6 py-3.5 text-sm font-semibold text-white shadow-sm transition hover:bg-brand-600 sm:w-auto lg:hidden"
+        >
+          {{ t('common.startProject') }}
+        </NuxtLinkLocale>
       </div>
     </section>
 

@@ -22,6 +22,8 @@ const restPosts = computed(() => filteredPosts.value.slice(1))
 function formatDate(date: string) {
   return new Date(date).toLocaleDateString(locale.value, { year: 'numeric', month: 'long', day: 'numeric' })
 }
+
+const featuredReadingMinutes = computed(() => featuredPost.value ? estimateReadingTime(...featuredPost.value.keyTakeaways, ...featuredPost.value.content) : 0)
 </script>
 
 <template>
@@ -36,10 +38,17 @@ function formatDate(date: string) {
         <p class="mx-auto mt-5 max-w-2xl text-balance text-navy-500">
           {{ t('blog.subtitle') }}
         </p>
+        <NuxtLinkLocale
+          to="/contact"
+          class="mt-8 inline-flex w-full items-center justify-center rounded-lg bg-navy-900 px-6 py-3.5 text-sm font-semibold text-white shadow-sm transition hover:bg-brand-600 sm:w-auto lg:hidden"
+        >
+          {{ t('common.startProject') }}
+        </NuxtLinkLocale>
       </div>
     </section>
 
     <section class="container-page py-16 sm:py-20">
+      <h2 class="sr-only">{{ t('blog.gridHeading') }}</h2>
       <div class="flex flex-wrap justify-center gap-2" v-reveal>
         <button
           v-for="category in categories"
@@ -90,7 +99,7 @@ function formatDate(date: string) {
               <span>·</span>
               <time :datetime="featuredPost.date">{{ formatDate(featuredPost.date) }}</time>
               <span>·</span>
-              <span>{{ featuredPost.readTime }}</span>
+              <span>{{ t('common.minRead', { n: featuredReadingMinutes }) }}</span>
             </div>
             <span class="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-600">
               {{ t('common.readArticle') }}

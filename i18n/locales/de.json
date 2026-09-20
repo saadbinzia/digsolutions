@@ -9,7 +9,8 @@
     "discussProject": "Ihr Projekt besprechen",
     "backToHome": "Zurück zur Startseite",
     "close": "Schließen",
-    "language": "Sprache"
+    "language": "Sprache",
+    "minRead": "{n} Min. Lesezeit"
   },
   "nav": {
     "services": "Leistungen",
@@ -41,6 +42,7 @@
     "analyticsTitle": "Analyse",
     "analyticsDescription": "Google Analytics / Tag Manager hilft uns, die Nutzung der Website zu verstehen.",
     "toggleAriaLabel": "Analyse-Cookies ein-/ausschalten",
+    "closeAriaLabel": "Nicht notwendige Cookies ablehnen und schließen",
     "acceptAll": "Alle akzeptieren",
     "rejectAll": "Nicht notwendige ablehnen",
     "managePreferences": "Einstellungen verwalten",
@@ -152,7 +154,7 @@
     "subtitle": "Wir sind ein 20-köpfiges Team, das in den USA und Pakistan arbeitet. Wir nehmen uns Problemen an, bei denen KI und Integrationsarbeit einen wirklich manuellen Prozess ersetzen können, nicht überall dort, wo KI gerade im Trend liegt.",
     "distributedTitle": "Verteilt aus Überzeugung, nicht aus Kostengründen",
     "distributedP1": "Wir sind ein 20-köpfiges Team, aufgeteilt auf die USA und Pakistan. Das ist bewusst so aufgebaut: Kunden erhalten dadurch Überschneidungen mit den US-Geschäftszeiten und einen größeren Pool erfahrener Entwicklerinnen und Entwickler, als eine gleich große, rein US-basierte Agentur aufbauen könnte.",
-    "distributedP2": "Wir konzentrieren uns auf drei Disziplinen: Webplattformen, klar abgegrenzte KI-Funktionen und ERP-/E-Commerce-Integration, denn genau in diesen Bereichen haben wir tatsächlich Systeme in den produktiven Einsatz gebracht, statt eine lange Liste an Technologien anzubieten, für die wir gerne beauftragt würden.",
+    "distributedP2": "Wir konzentrieren uns auf vier Disziplinen: Web- & .NET-Plattformen, klar abgegrenzte KI-Funktionen, ERP-/E-Commerce-Integration und native Windows-Desktopanwendungen, denn genau in diesen Bereichen haben wir tatsächlich Systeme in den produktiven Einsatz gebracht, statt eine lange Liste an Technologien anzubieten, für die wir gerne beauftragt würden.",
     "stats": [
       "Personen im Team",
       "Länder: USA & Pakistan",
@@ -244,6 +246,7 @@
     "eyebrow": "Leistungen",
     "title": "Ein Entwicklungspartner für jede Disziplin, die Ihre Roadmap braucht",
     "subtitle": "Ob Sie ein neues Produkt von Grund auf entwickeln lassen, KI in ein bestehendes Produkt integrieren oder ein Enterprise-System so umbauen möchten, dass es wirklich zur Arbeitsweise Ihres Teams passt, wir decken den gesamten Stack ab.",
+    "gridHeading": "Unsere Leistungen",
     "ctaTitle": "Nicht sicher, welche Leistung Sie brauchen?",
     "ctaDescription": "Erzählen Sie uns von dem Problem, das Sie lösen möchten. Wir helfen Ihnen, den passenden Umfang und Stack zu finden."
   },
@@ -251,6 +254,11 @@
     "whatsIncluded": "Leistungsumfang",
     "technologies": "Technologien",
     "idealFor": "Ideal für",
+    "howWeApproach": "So gehen wir vor",
+    "faqHeading": "Häufige Fragen",
+    "seeItInPractice": "In der Praxis ansehen",
+    "caseStudyLabel": "Fallstudie",
+    "articleLabel": "Aus dem Blog",
     "relatedServices": "Verwandte Leistungen",
     "ctaTitle": "Bereit, über {service} zu sprechen?"
   },
@@ -263,7 +271,8 @@
     },
     "eyebrow": "Portfolio",
     "title": "Arbeit für echte Ergebnisse, nicht nur für den Launch",
-    "subtitle": "Kundennamen werden anonymisiert, wenn wir keine Freigabe zur Veröffentlichung haben, aber die Probleme und Ergebnisse sind real. Fragen Sie uns gerne nach Referenzen zu beiden Projekten."
+    "subtitle": "Kundennamen werden anonymisiert, wenn wir keine Freigabe zur Veröffentlichung haben, aber die Probleme und Ergebnisse sind real. Fragen Sie uns gerne nach Referenzen zu beiden Projekten.",
+    "gridHeading": "Fallstudien"
   },
   "portfolioDetail": {
     "clientLabel": "Kunde",
@@ -287,6 +296,7 @@
     "eyebrow": "Blog",
     "title": "Notizen aus dem Engineering-Team",
     "subtitle": "Praxisnahe Beiträge zu Framework-Entscheidungen, produktiven KI-Systemen, SaaS-Architektur und der Modernisierung von Enterprise-Software.",
+    "gridHeading": "Alle Artikel",
     "allCategory": "Alle",
     "latestBadge": "Neu"
   },
@@ -302,11 +312,12 @@
       "ogDescription": "Wie DigSolutions Informationen erfasst, nutzt und schützt, die über unsere Website übermittelt werden."
     },
     "title": "Datenschutzerklärung",
-    "lastUpdated": "Zuletzt aktualisiert: 27. August 2026",
-    "p1": "Diese Platzhalter-Datenschutzerklärung behandelt die Informationen, die DigSolutions über diese Website erfasst, vor allem Angaben aus dem Kontaktformular (Name, E-Mail, Unternehmen und Projektdetails) sowie standardmäßige Analysedaten, die über Google Analytics und den Google Tag Manager erfasst werden.",
-    "p2": "Angaben aus dem Kontaktformular werden ausschließlich zur Beantwortung Ihrer Anfrage verwendet und nicht an Dritte verkauft oder weitergegeben, mit Ausnahme der Tools, die unmittelbar zur Erbringung unserer Leistungen eingesetzt werden (etwa unser E-Mail-Zustelldienst).",
-    "p3": "Beim ersten Besuch dieser Website können Sie über ein Cookie-Banner optionale Analyse-Cookies akzeptieren oder ablehnen; notwendige Cookies, die für den Betrieb der Website erforderlich sind, sind immer aktiv. Sie können Ihre Auswahl jederzeit über den Link „Cookie-Einstellungen“ in der Fußzeile ändern.",
-    "p4": "Ersetzen Sie diese Seite vor dem Launch durch eine vollständige, rechtlich geprüfte Datenschutzerklärung, insbesondere, wenn Sie Nutzerinnen und Nutzer in Rechtsräumen mit spezifischen Anforderungen wie der DSGVO oder dem CCPA bedienen möchten."
+    "lastUpdated": "Zuletzt aktualisiert: 21. September 2026",
+    "p1": "Diese Datenschutzerklärung behandelt die Informationen, die DigSolutions über diese Website erfasst: Angaben aus dem Kontaktformular (Name, E-Mail, Unternehmen und die Projektdetails, die Sie angeben möchten) sowie standardmäßige Analysedaten über Google Analytics und den Google Tag Manager, die erst geladen werden, wenn Sie Analyse-Cookies akzeptieren.",
+    "p2": "Angaben aus dem Kontaktformular werden ausschließlich zur Beantwortung Ihrer Anfrage verwendet und nicht an Dritte verkauft oder weitergegeben, mit Ausnahme der Tools, die unmittelbar zur Erbringung unserer Leistungen eingesetzt werden, etwa unser E-Mail-Zustelldienst (Resend) und, sofern aus der Anfrage ein Kundenprojekt wird, die Systeme, mit denen wir dieses Projekt abwickeln.",
+    "p3": "Beim ersten Besuch dieser Website können Sie über ein Cookie-Banner optionale Analyse-Cookies akzeptieren oder ablehnen; notwendige Cookies, die für den Betrieb der Website erforderlich sind, sind immer aktiv. Sie können Ihre Auswahl jederzeit über den Link \"Cookie-Einstellungen\" in der Fußzeile ändern.",
+    "p4": "Wir speichern Angaben aus dem Kontaktformular so lange, wie es zur Beantwortung Ihrer Anfrage und zur Führung angemessener Geschäftsunterlagen erforderlich ist, und Analysedaten gemäß der in unserem Google-Analytics-Konto konfigurierten Aufbewahrungsdauer. Wir verkaufen keine personenbezogenen Daten.",
+    "p5": "Wenn Sie sich im EWR, im Vereinigten Königreich, in der Schweiz oder in Kalifornien befinden, haben Sie Rechte an den personenbezogenen Daten, die Sie uns übermittelt haben, einschließlich des Rechts, Zugang zu, Berichtigung oder Löschung dieser Daten zu verlangen. Um eines dieser Rechte auszuüben oder bei anderen Fragen zum Datenschutz schreiben Sie uns an hello@digsolutions.net."
   },
   "terms": {
     "seo": {
@@ -316,8 +327,10 @@
       "ogDescription": "Die Nutzungsbedingungen für die Nutzung der DigSolutions-Website."
     },
     "title": "Nutzungsbedingungen",
-    "lastUpdated": "Zuletzt aktualisiert: 27. August 2026",
-    "p1": "Dies sind Platzhalter-Nutzungsbedingungen für die DigSolutions-Website. Sie regeln die allgemeine Nutzung der Inhalte und Kontaktfunktionen dieser Website und stellen keinen Dienstleistungsvertrag dar. Tatsächliche Kundenprojekte werden durch separate, unterzeichnete Verträge geregelt (Leistungsbeschreibungen, Rahmenverträge usw.).",
-    "p2": "Ersetzen Sie diese Seite vor dem Launch durch rechtlich geprüfte Nutzungsbedingungen."
+    "lastUpdated": "Zuletzt aktualisiert: 21. September 2026",
+    "p1": "Diese Nutzungsbedingungen regeln Ihre Nutzung der DigSolutions-Website: das Durchsuchen ihrer Inhalte, die Nutzung des Kontaktformulars und jede weitere Interaktion mit dieser Website. Sie stellen keinen Dienstleistungsvertrag dar. Tatsächliche Kundenprojekte werden durch separate, unterzeichnete Verträge geregelt (Leistungsbeschreibungen, Rahmenverträge usw.), die direkt mit Ihnen ausgehandelt werden.",
+    "p2": "Die Inhalte dieser Website, einschließlich Text, Design und Code, gehören DigSolutions, sofern nicht anders angegeben, und dienen der Information über unsere Leistungen. Sie dürfen sie ohne unsere Zustimmung nicht zu kommerziellen Zwecken vervielfältigen oder weiterverbreiten.",
+    "p3": "Diese Website und ihre Inhalte werden \"wie besehen\" bereitgestellt, ohne jegliche Gewährleistung. Soweit gesetzlich zulässig, haftet DigSolutions nicht für Schäden, die aus der Nutzung dieser Website entstehen; unsere Haftung im Rahmen eines unterzeichneten Kundenvertrags richtet sich stattdessen nach diesem Vertrag.",
+    "p4": "Wir können diese Nutzungsbedingungen von Zeit zu Zeit aktualisieren; das oben genannte Datum \"Zuletzt aktualisiert\" gibt die letzte Änderung wieder. Bei Fragen zu diesen Bedingungen schreiben Sie uns an hello@digsolutions.net."
   }
 }
