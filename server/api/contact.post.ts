@@ -20,7 +20,7 @@ const MAX_FIELD_LENGTH = 200
 const MAX_MESSAGE_LENGTH = 5000
 
 export default defineEventHandler(async (event) => {
-  const body = await readBody<Partial<ContactPayload>>(event)
+  const body = (await readBody<Partial<ContactPayload>>(event)) || {}
 
   for (const field of ['name', 'email', 'company', 'service'] as const) {
     if (typeof body[field] === 'string' && body[field]!.length > MAX_FIELD_LENGTH) {

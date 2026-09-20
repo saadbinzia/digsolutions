@@ -22,7 +22,18 @@ export default defineNuxtConfig({
   // are served from Vercel's edge cache instead of invoking the server on every
   // hit — faster loads, and a traffic spike can't overwhelm serverless compute.
   routeRules: {
-    '/**': { prerender: true },
+    '/**': {
+      prerender: true,
+      // Applied by Nitro at the edge (no function invocation needed for
+      // prerendered routes), so this holds even under request flooding.
+      headers: {
+        'X-Content-Type-Options': 'nosniff',
+        'X-Frame-Options': 'DENY',
+        'Referrer-Policy': 'strict-origin-when-cross-origin',
+        'Permissions-Policy': 'camera=(), microphone=(), geolocation=()',
+        'Strict-Transport-Security': 'max-age=63072000; includeSubDomains; preload'
+      }
+    },
     '/api/**': { prerender: false, isr: false }
   },
 
